@@ -1,0 +1,42 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.EntregaProduto"   
+
+             Title="Entrega do Produto">
+
+    <Grid>
+        <Image Source="carro.png"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <Label Text="ENTREGA DO PRODUTO"
+               FontSize="Title"
+               HorizontalTextAlignment="Center"
+               Margin="0, 20" />
+
+        <Entry Placeholder="Produto Pedido"
+               Margin="20"
+               x:Name="produtoEntry" />
+
+        <Entry Placeholder="Endereço"
+               Margin="20"
+               x:Name="enderecoEntry" />
+
+        <Entry Placeholder="Nº da Casa"
+               Margin="20"
+               x:Name="numeroCasaEntry" />
+
+        <Entry Placeholder="Nome"
+               Margin="20"
+               x:Name="nomeEntry" />
+
+        <Button Text="CONFIRMAR"
+                Margin="20"
+                Clicked="Confirmar_Clicked" />
+
+        <Button Text="VOLTAR"
+                Margin="20"
+                Clicked="Voltar_Clicked" />
+    </Grid>
+</ContentPage>

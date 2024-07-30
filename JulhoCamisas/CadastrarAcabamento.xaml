@@ -1,0 +1,45 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.CadastrarAcabamento"   
+             Title="Cadastrar Acabamento">
+
+    <Grid>
+        <Image Source="camiseta.png"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <Label Text="Cadastrar Acabamento"
+               FontSize="Title"
+               HorizontalTextAlignment="Center"
+               Margin="0, 20" />
+
+        <Entry Placeholder="Tipo"
+               Keyboard="Text"
+               Margin="20"
+               x:Name="tipoEntry" />
+
+        <Entry Placeholder="Cor"
+               Keyboard="Text"
+               Margin="20"
+               x:Name="corEntry" />
+
+        <Entry Placeholder="Quantidade"
+               Keyboard="Numeric"
+               Margin="20"
+               x:Name="quantidadeEntry" />
+
+        <Entry Placeholder="Fornecedor"
+               Keyboard="Text"
+               Margin="20"
+               x:Name="fornecedorEntry" />
+
+        <Button Text="Confirmar"
+                Margin="20"
+                Clicked="Confirmar_Clicked" />
+
+        <Button Text="Voltar"
+                Margin="20"
+                Clicked="Voltar_Clicked" />
+    </Grid>
+</ContentPage>

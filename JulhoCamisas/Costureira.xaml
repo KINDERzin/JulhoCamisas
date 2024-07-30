@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.Costureira">
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="20">
+            <Image Source="logo.png" HeightRequest="100" VerticalOptions="CenterAndExpand" />
+            <Label Text="COSTUREIRA" FontSize="24" HorizontalOptions="Center" />
+            <StackLayout>
+                <Entry Placeholder="Nome" x:Name="NameEntry"/>
+                <Label Text="EDITAR" HorizontalOptions="End" />
+            </StackLayout>
+            <StackLayout>
+                <Entry Placeholder="Endereço" x:Name="AddressEntry"/>
+                <Label Text="EDITAR" HorizontalOptions="End" />
+            </StackLayout>
+            <StackLayout>
+                <Entry Placeholder="Email" x:Name="EmailEntry"/>
+                <Label Text="EDITAR" HorizontalOptions="End" />
+            </StackLayout>
+            <Button Text="CONFIRMAR DADOS" Clicked="OnConfirmClicked"/>
+            <Button Text="VOLTAR" Clicked="OnBackClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

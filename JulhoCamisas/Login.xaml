@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.Login"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="20">
+            <Image Source="logo.png" HeightRequest="100" VerticalOptions="CenterAndExpand" />
+            <Label Text="LOGIN" FontSize="24" HorizontalOptions="Center" />
+            <StackLayout Spacing="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="user_icon.png" Grid.Column="0" VerticalOptions="Center" />
+                    <Entry Placeholder="Nome:" Grid.Column="1" x:Name="usernameEntry"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="password_icon.png" Grid.Column="0" VerticalOptions="Center" />
+                    <Entry Placeholder="Senha:" IsPassword="True" Grid.Column="1" x:Name="passwordEntry"/>
+                </Grid>
+                <Label Text="ESQUECEU SUA SENHA?" FontSize="10" HorizontalOptions="End"/>
+            </StackLayout>
+            <Button Text="CONFIRMAR" Clicked="OnConfirmClicked" />
+            <Label Text="OU" HorizontalOptions="Center"/>
+            <Button Text="CRIAR CONTA" Clicked="OnCreateAccountClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

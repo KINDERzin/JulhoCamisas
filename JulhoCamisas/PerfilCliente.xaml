@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.PerfilCliente"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="20">
+            <Image Source="logo.png" HeightRequest="100" VerticalOptions="CenterAndExpand" />
+            <Label Text="PERFIL" FontSize="24" HorizontalOptions="Center" />
+            <StackLayout Spacing="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="user_icon.png" Grid.Column="0" VerticalOptions="Center" />
+                    <Entry Placeholder="Nome:" Grid.Column="1" x:Name="nameEntry" IsReadOnly="True"/>
+                    <Button Text="EDITAR" Grid.Column="2" Clicked="OnEditNameClicked"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="email_icon.png" Grid.Column="0" VerticalOptions="Center" />
+                    <Entry Placeholder="Email:" Grid.Column="1" x:Name="emailEntry" IsReadOnly="True"/>
+                    <Button Text="EDITAR" Grid.Column="2" Clicked="OnEditEmailClicked"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="address_icon.png" Grid.Column="0" VerticalOptions="Center" />
+                    <Entry Placeholder="Endereço:" Grid.Column="1" x:Name="addressEntry" IsReadOnly="True"/>
+                    <Button Text="EDITAR" Grid.Column="2" Clicked="OnEditAddressClicked"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="password_icon.png" Grid.Column="0" VerticalOptions="Center" />
+                    <Entry Placeholder="Senha:" IsPassword="True" Grid.Column="1" x:Name="passwordEntry" IsReadOnly="True"/>
+                    <Button Text="EDITAR" Grid.Column="2" Clicked="OnEditPasswordClicked"/>
+                </Grid>
+            </StackLayout>
+            <Button Text="EXCLUIR CONTA?" Clicked="OnDeleteAccountClicked" />
+            <Button Text="VOLTAR" Clicked="OnBackClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,69 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.Acabamento"   
+
+             Title="Editar Acabamento">
+
+    <Grid>
+        <Image Source="camiseta.png"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <Label Text="ACABAMENTO"
+               FontSize="Title"
+               HorizontalTextAlignment="Center"
+               Margin="0, 20" />
+
+        <Grid RowDefinitions="Auto, Auto, Auto"
+              ColumnDefinitions="*, Auto">
+            <Label Text="Tipo:"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Margin="20, 0" />
+            <Entry x:Name="tipoEntry"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Margin="5, 0" />
+            <Button Text="EDITAR"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Clicked="Editar_Clicked" />
+
+            <Label Text="Cor:"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="20, 0" />
+            <Entry x:Name="corEntry"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Margin="5, 0" />
+            <Button Text="EDITAR"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Clicked="Editar_Clicked" />
+
+            <Label Text="Quantidade:"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Margin="20, 0" />
+            <Entry x:Name="quantidadeEntry"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Margin="5, 0"
+                   Keyboard="Numeric" />
+            <Button Text="EDITAR"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Clicked="Editar_Clicked" />
+        </Grid>
+
+        <Button Text="CONFIRMAR DADOS"
+                Margin="20"
+                Clicked="Confirmar_Clicked" />
+
+        <Button Text="VOLTAR"
+                Margin="20"
+                Clicked="Voltar_Clicked" />
+    </Grid>
+</ContentPage>

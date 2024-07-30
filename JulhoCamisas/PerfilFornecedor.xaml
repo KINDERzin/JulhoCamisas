@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.PerfilFornecedor"
+             Title="Perfil do Fornecedor"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="15">
+            <Image Source="tshirt_image.png" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100"/>
+            <Label Text="PERFIL DO FORCEDOR" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"/>
+            
+            <StackLayout Spacing="10">
+                <Label Text="Nome:" FontSize="Medium"/>
+                <Entry x:Name="NomeEntry"/>
+                <Label Text="Email:" FontSize="Medium"/>
+                <Entry x:Name="EmailEntry"/>
+                <Label Text="Endereço:" FontSize="Medium"/>
+                <Entry x:Name="EnderecoEntry"/>
+                <Label Text="Produtos:" FontSize="Medium"/>
+                <Entry x:Name="ProdutosEntry"/>
+                <Label Text="Id:" FontSize="Medium"/>
+                <Entry x:Name="IdEntry"/>
+            </StackLayout>
+            
+            <Button Text="DELETAR FORNECEDOR" TextColor="White" BackgroundColor="Red" Clicked="OnDeleteButtonClicked"/>
+            <Button Text="VOLTAR" Clicked="OnBackButtonClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

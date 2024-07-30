@@ -1,0 +1,34 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JuhloCamisas.ExcluirCostureira"   
+             Title="Excluir Costureira">
+
+    <Grid>
+        <Image Source="camiseta.png"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <Label Text="Excluir Costureira"
+               FontSize="Title"
+               HorizontalTextAlignment="Center"
+               Margin="0, 20" />
+
+        <Entry Placeholder="Nome da Costureira"
+               Keyboard="Text"
+               Margin="20" />
+
+        <Entry Placeholder="Senha"
+               Keyboard="Text"
+               IsPassword="True"
+               Margin="20" />
+
+        <Button Text="Confirmar"
+                Margin="20"
+                Clicked="Confirmar_Clicked" />
+
+        <Button Text="Voltar"
+                Margin="20"
+                Clicked="Voltar_Clicked" />
+    </Grid>
+</ContentPage>

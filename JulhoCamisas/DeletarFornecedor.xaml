@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.DeletarFornecedor"
+             Title="Deletar Fornecedor">
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="20">
+            <Image Source="tshirt_image.png" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100"/>
+            <Label Text="DELETAR FORNECEDOR" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"/>
+
+            <StackLayout Spacing="15">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Source="user_icon.png" HeightRequest="24" WidthRequest="24" VerticalOptions="Center"/>
+                    <Entry x:Name="FornecedorEntry" Placeholder="Fornecedor" VerticalOptions="Center"/>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Source="password_icon.png" HeightRequest="24" WidthRequest="24" VerticalOptions="Center"/>
+                    <Entry x:Name="SenhaEntry" Placeholder="Senha" IsPassword="True" VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Button Text="CONFIRMAR" TextColor="White" BackgroundColor="Green" Clicked="OnConfirmarButtonClicked"/>
+            <Button Text="VOLTAR" Clicked="OnVoltarButtonClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,52 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.FinalizarCompra"   
+
+             Title="Finalizar Compra">
+
+    <Grid>
+        <Image Source="camiseta.png"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <Label Text="FINALIZAR COMPRA"
+               FontSize="Title"
+               HorizontalTextAlignment="Center"
+               Margin="0, 20" />
+
+        <StackLayout HorizontalAlignment="Center"
+                     Margin="0, 20">
+
+            <Image Source="user.png"
+                   WidthRequest="50"
+                   HeightRequest="50" />
+
+            <Label Text="Usuário" />
+
+        </StackLayout>
+
+        <Entry Placeholder="Nº da Camisa"
+               Margin="20"
+               x:Name="numeroCamisaEntry" />
+
+        <Entry Placeholder="Confirmar"
+               Margin="20"
+               x:Name="confirmarEntry" />
+
+        <Label Text="Sua Camisa:"
+               Margin="20, 0" />
+               
+        <Image Source="suaCamisa.png"
+               Aspect="AspectFit"
+               Margin="20"
+               x:Name="suaCamisaImage" />
+
+        <Button Text="VOLTAR"
+                Margin="20"
+                Clicked="Voltar_Clicked" />
+        <Button Text="CONFIRMAR"
+                Margin="20"
+                Clicked="Confirmar_Clicked" />
+    </Grid>
+</ContentPage>

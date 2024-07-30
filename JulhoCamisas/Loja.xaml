@@ -1,0 +1,31 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.Loja"   
+
+             Title="Loja">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="LOJA"
+                   FontSize="Title"
+                   HorizontalTextAlignment="Center" />
+
+            <Grid Padding="10">
+                <Image Source="camiseta.png"
+                       WidthRequest="50"
+                       HeightRequest="50" />
+                <StackLayout VerticalOptions="Center"
+                             Margin="10, 0"
+                             Spacing="2">
+                    <Label Text="Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at" />
+                    <Label Text="Preço: 20,00" />
+                </StackLayout>
+            </Grid>
+
+            <Button Text="COMPRAR"
+                    IconImageSource="cart.png"
+                    IconImageAlignment="Left"
+                    Clicked="Comprar_Clicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
