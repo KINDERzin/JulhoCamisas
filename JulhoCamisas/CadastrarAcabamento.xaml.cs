@@ -37,7 +37,7 @@ namespace JulhoCamisas
             // Chame sua API ou serviço, faça as validações necessárias
             // Retorne true se o cadastro for bem-sucedido, false caso contrário
             // Exemplo simplificado:
-            // return await Task.FromResult(true); // Substitua por sua lógica real
+             return await Task.FromResult(true); // Substitua por sua lógica real
 
             // **Importante:** Substitua este método pela sua lógica real de cadastro,
             // que pode envolver chamadas a uma API, banco de dados, etc.

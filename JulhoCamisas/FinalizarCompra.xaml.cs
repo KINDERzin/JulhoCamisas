@@ -41,7 +41,7 @@ namespace JulhoCamisas
             // Chame sua API ou serviço, faça as validações necessárias
             // Retorne true se a compra for bem-sucedida, false caso contrário
             // Exemplo simplificado:
-            // return await Task.FromResult(true); // Substitua por sua lógica real
+            return await Task.FromResult(true); // Substitua por sua lógica real
 
             // **Importante:** Substitua este método pela sua lógica real de finalização da compra,
             // que pode envolver chamadas a uma API de pagamento, banco de dados, etc.

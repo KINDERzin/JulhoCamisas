@@ -45,7 +45,7 @@ namespace JulhoCamisas
             // Chame sua API ou serviço, faça as validações necessárias
             // Retorne true se a atualização for bem-sucedida, false caso contrário
             // Exemplo simplificado:
-            // return await Task.FromResult(true); // Substitua por sua lógica real
+            return await Task.FromResult(true); // Substitua por sua lógica real
         }
 
         private void Voltar_Clicked(object sender, EventArgs e)
