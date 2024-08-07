@@ -5,7 +5,7 @@
              Title="Relatório de Vendas">
 
     <Grid>
-        <Image Source="camiseta.png"
+        <Image Source="logo.png"
                Aspect="AspectFit"
                HorizontalOptions="Center"
                VerticalOptions="Start" />
@@ -17,14 +17,17 @@
 
         <Grid RowDefinitions="Auto, Auto, Auto"
               ColumnDefinitions="*, Auto">
+
             <Label Text="Cliente:"
                    Grid.Row="0"
                    Grid.Column="0"
                    Margin="20, 0" />
+
             <Entry x:Name="clienteEntry"
                    Grid.Row="0"
                    Grid.Column="1"
                    Margin="5, 0" />
+
             <Button Text="EDITAR"
                     Grid.Row="0"
                     Grid.Column="1"
@@ -34,10 +37,12 @@
                    Grid.Row="1"
                    Grid.Column="0"
                    Margin="20, 0" />
+
             <Entry x:Name="produtoEntry"
                    Grid.Row="1"
                    Grid.Column="1"
                    Margin="5, 0" />
+
             <Button Text="EDITAR"
                     Grid.Row="1"
                     Grid.Column="1"
@@ -47,11 +52,12 @@
                    Grid.Row="2"
                    Grid.Column="0"
                    Margin="20, 0" />
+
             <Entry x:Name="quantidadeEntry"
                    Grid.Row="2"
                    Grid.Column="1"
-                   Margin="5, 0"
-                   Keyboard="Numeric" />
+                   Margin="5, 0"/>
+
             <Button Text="EDITAR"
                     Grid.Row="2"
                     Grid.Column="1"

@@ -9,7 +9,7 @@ namespace JulhoCamisas
             InitializeComponent();
         }
 
-        private void Confirmar_Clicked(object sender, EventArgs e)
+        private async void Confirmar_Clicked(object sender, EventArgs e)
         {
             // Obter os valores dos campos
             string produto = produtoEntry.Text;
@@ -37,7 +37,7 @@ namespace JulhoCamisas
             // Chame sua API ou serviço, faça as validações necessárias
             // Retorne true se a confirmação for bem-sucedida, false caso contrário
             // Exemplo simplificado:
-            // return await Task.FromResult(true); // Substitua por sua lógica real
+            return await Task.FromResult(true); // Substitua por sua lógica real
 
             // **Importante:** Substitua este método pela sua lógica real de confirmação da entrega,
             // que pode envolver chamadas a uma API, banco de dados, etc.

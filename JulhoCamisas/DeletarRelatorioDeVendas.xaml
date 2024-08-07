@@ -24,7 +24,7 @@
                Keyboard="Text"
                IsPassword="True"
                Margin="20"
-               x:Name="senhaEntry" />
+               x:Name="senhaEntry"/>
 
         <Button Text="CONFIRMAR"
                 Margin="20"

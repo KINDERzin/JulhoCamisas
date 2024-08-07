@@ -9,13 +9,12 @@ namespace JulhoCamisas
             InitializeComponent();
         }
 
-        private void Editar_Clicked(object sender, EventArgs e)
+        private async void Editar_Clicked(object sender, EventArgs e)
         {
             // Habilitar edição do campo correspondente
             if (sender is Button button)
             {
-                var entry = (Entry)button.Parent.Children.FirstOrDefault(c => c is Entry);
-                entry.IsEnabled = true;
+                var entry = tipoEntry.Text;
             }
         }
 

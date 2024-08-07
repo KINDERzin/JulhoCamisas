@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JuhloCamisas.ExcluirCostureira"
-             Title="Excluir Costureira">
+             x:Class="JulhoCamisas.DeletarCostureira">
 
     <Grid>
-        <Image Source="camiseta.png"
+        <Image Source="logo.png"
                Aspect="AspectFit"
                HorizontalOptions="Center"
                VerticalOptions="Start" />
 
         <Label Text="Excluir Costureira"
-               FontSize="Title"
+               FontSize="20"
                HorizontalTextAlignment="Center"
                Margin="0, 20" />
 
         <Entry Placeholder="Nome da Costureira"
+               x:Name="nomeCostureiraEntry"
                Keyboard="Text"
                Margin="20" />
 
         <Entry Placeholder="Senha"
+               x:Name="senhaEntry"
                Keyboard="Text"
                IsPassword="True"
                Margin="20" />
