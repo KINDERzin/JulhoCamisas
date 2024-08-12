@@ -2,9 +2,9 @@ using Microsoft.Maui.Controls;
 
 namespace JulhoCamisas
 {
-    public partial class ExcluirCostureira : ContentPage
+    public partial class DeletarCostureira : ContentPage
     {
-        public ExcluirCostureira()
+        public DeletarCostureira()
         {
             InitializeComponent();
         }

@@ -2,9 +2,9 @@ using Microsoft.Maui.Controls;
 
 namespace JulhoCamisas
 {
-    public partial class DeletarRelatorioVendas : ContentPage
+    public partial class DeletarRelatorioDeVendas : ContentPage
     {
-        public DeletarRelatorioVendas()
+        public DeletarRelatorioDeVendas()
         {
             InitializeComponent();
         }

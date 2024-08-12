@@ -2,9 +2,9 @@ using Microsoft.Maui.Controls;
 
 namespace JulhoCamisas
 {
-    public partial class RelatorioVendas : ContentPage
+    public partial class RelatorioDeVendas : ContentPage
     {
-        public RelatorioVendas()
+        public RelatorioDeVendas()
         {
             InitializeComponent();
         }

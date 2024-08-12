@@ -22,7 +22,7 @@
         <Entry Placeholder="Senha"
                x:Name="senhaEntry"
                Keyboard="Text"
-               IsPassword="True"
+               IsPassword="True"              
                Margin="20" />
 
         <Button Text="Confirmar"
