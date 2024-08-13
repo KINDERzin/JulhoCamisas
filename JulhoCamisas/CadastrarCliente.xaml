@@ -50,7 +50,7 @@
                 </Grid>
             </StackLayout>
             <Button Text="CONFIRMAR DADOS" Clicked="OnConfirmDataClicked" />
-            <Button Text="VOLTAR" Clicked="OnBackClicked" />
+            <Button Text="VOLTAR" Clicked="VoltarClicked" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

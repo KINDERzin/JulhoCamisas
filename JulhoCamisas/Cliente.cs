@@ -4,6 +4,7 @@ public class Cliente : Objeto{
 
     Int64 Id;
     String Nome;
+    String Sobrenome;
     String Cpf;
     String Email;
     String Endereco;
@@ -26,6 +27,12 @@ public class Cliente : Objeto{
     {
         Nome = n;
     }
+
+    public void SetSobrenome(String s)
+    {
+        Sobrenome = s;
+    }
+
     public void SetCpf(String c)
     {
         Cpf = c;
@@ -51,6 +58,11 @@ public class Cliente : Objeto{
     public String GetNome()
     {
         return Nome;
+    }
+
+    public String GetSobrenomecd()
+    {
+        return Sobrenome;
     }
 
     public String GetCpf()
