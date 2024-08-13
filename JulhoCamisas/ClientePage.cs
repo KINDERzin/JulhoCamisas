@@ -1,8 +1,9 @@
 namespace  JulhoCamisas;
 
-public class Cliente : Objeto{
+public class ClientePage : Objeto{
 
     Int64 Id;
+    String Telefone;
     String Nome;
     String Sobrenome;
     String Cpf;
@@ -11,7 +12,7 @@ public class Cliente : Objeto{
     
 //----------------------------------------------------
 
-	public Cliente()
+	public ClientePage()
 	{
         
 	}
@@ -21,6 +22,11 @@ public class Cliente : Objeto{
     public void SetId(Int64 i)
     {
         Id = i;
+    }
+
+    public void SetTelefone(String t)
+    {
+        Telefone = t;
     }
 
     public void SetNome(String n)
@@ -55,6 +61,11 @@ public class Cliente : Objeto{
         return Id;
     }
     
+    public String GetTelefone()
+    {
+        return Telefone;
+    }
+
     public String GetNome()
     {
         return Nome;

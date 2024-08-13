@@ -1,3 +1,4 @@
+using JulhoCamisas.Modelos;
 using Microsoft.Maui.Controls;
 
 namespace JulhoCamisas;

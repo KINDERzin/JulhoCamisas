@@ -1,3 +1,4 @@
+using JulhoCamisas.Modelos;
 using Microsoft.Maui.Controls;
 
 namespace JulhoCamisas
@@ -15,11 +16,13 @@ namespace JulhoCamisas
 
         private async void OnConfirmDataClicked(object sender, EventArgs e)
         {
-            string name = nameEntry.Text;
-            string email = emailEntry.Text;
-            string address = addressEntry.Text;
-            string password = passwordEntry.Text;
-            string confirmPassword = confirmPasswordEntry.Text;
+            string name = NomeEntry.Text;
+            string sobrenome = SobrenomeEntry.Text;
+            string email = EmailEntry.Text;
+            string telefone = TelefoneEntry.Text;
+            string address = EnderecoEntry.Text;
+            string password = SenhaEntry.Text;
+            string confirmPassword = ConfirmaSenhaEntry.Text;
 
             // Adicione a lógica de validação e registro aqui
 
@@ -39,10 +42,10 @@ namespace JulhoCamisas
 
             if (cliente != null)
             {
-            IdLabel.Text = Cliente.Id.ToString();
-            NomeEntry.Text = Cliente.Nome;
-            SobrenomeEntry.Text = Cliente.Sobrenome;
-            TelefoneEntry.Text = Cliente.Telefone;
+            IdLabel.Text = cliente.Id.ToString();
+            NomeEntry.Text = cliente.Nome;
+            SobrenomeEntry.Text = cliente.Sobrenome;
+            TelefoneEntry.Text = cliente.Telefone;
             }
         }
 

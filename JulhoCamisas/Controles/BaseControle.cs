@@ -1,4 +1,5 @@
-
+using LiteDB;
+using JulhoCamisas.Modelos;
 
 namespace Controles;
 
@@ -23,6 +24,7 @@ public class BaseControle
 
   public virtual void CriarOuAtualizar(Registro r)
   {
+    
   }
   
   //----------------------------------------------------------------------------

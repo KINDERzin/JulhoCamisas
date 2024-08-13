@@ -1,24 +1,47 @@
-namespace JulhoCamisas;
+using JulhoCamisas.Modelos;
 
-public class ClienteControle{
+namespace Controles;
 
-    public virtual void Criar(Objeto o)
-    {
+public class ClienteControle : BaseControle
+{
+  //----------------------------------------------------------------------------
 
-    }
+  public ClienteControle() : base()
+  {
+    NomeDaTabela = "Clientes";
+  }
 
-    public virtual void Atualizar(Objeto o)
-    {
+  //----------------------------------------------------------------------------
 
-    }
+  public virtual Registro? Ler(int idCliente)
+  {
+    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
+    return collection.FindOne(d => d.Id == idCliente);
+  }
 
-    public virtual Objeto Ler(Int64 Id)
-    {
-        return  null;
-    }
+  //----------------------------------------------------------------------------
 
-    public virtual void Apagar(Int64 Id)
-    {
+  public virtual List<Cliente>? LerTodos()
+  {
+    var tabela = liteDB.GetCollection<Cliente>(NomeDaTabela);
+    return new List<Cliente>(tabela.FindAll().OrderBy(d => d.Sobrenome));
+  }
 
-    }
+  //----------------------------------------------------------------------------
+
+  public virtual void Apagar(int idCliente)
+  {
+    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
+    collection.Delete(idCliente);
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void CriarOuAtualizar(Cliente cliente)
+  {
+    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
+    collection.Upsert(cliente);
+  }
+
+  //----------------------------------------------------------------------------
 }
