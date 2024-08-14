@@ -18,7 +18,7 @@ namespace JulhoCamisas
         {
             string name = NomeEntry.Text;
             string sobrenome = SobrenomeEntry.Text;
-            string email = EmailEntry.Text;
+            string email = CpfEntry.Text;
             string telefone = TelefoneEntry.Text;
             string address = EnderecoEntry.Text;
             string password = SenhaEntry.Text;
@@ -42,7 +42,6 @@ namespace JulhoCamisas
 
             if (cliente != null)
             {
-            IdLabel.Text = cliente.Id.ToString();
             NomeEntry.Text = cliente.Nome;
             SobrenomeEntry.Text = cliente.Sobrenome;
             TelefoneEntry.Text = cliente.Telefone;
@@ -51,25 +50,25 @@ namespace JulhoCamisas
 
         private void OnApagarDadosClicked(object sender, EventArgs e)
         {
-            IdLabel.Text = string.Empty;
             NomeEntry.Text = string.Empty;
             SobrenomeEntry.Text = string.Empty;
             TelefoneEntry.Text = string.Empty;
         }
 
-        private async void OnSalvarDadosClicked(object sender, EventArgs e)
+        void OnSalvarDadosClicked(object sender, EventArgs e)
         {
-            if (await VerificaSeDadosEstaoCorretos())
-            {
+            
             var cliente = new Modelos.Cliente();
-            cliente.Id   = int.Parse(IdLabel.Text);
+
             cliente.Nome = NomeEntry.Text;
             cliente.Sobrenome = SobrenomeEntry.Text;
             cliente.Telefone = TelefoneEntry.Text;
+            cliente.Cpf = CpfEntry.Text;
+            cliente.Endereco = EnderecoEntry.Text;
 
             clienteControle.CriarOuAtualizar(cliente);
-            }
-            await DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
+            
+            
         }
 
         private async Task<bool> VerificaSeDadosEstaoCorretos()
@@ -88,6 +87,17 @@ namespace JulhoCamisas
             {
             await DisplayAlert("Cadastrar", "O campo Telefone é obrigatório", "OK");
             return false;
+            }
+            else if (!String.IsNullOrEmpty(CpfEntry.Text))
+            {
+                await DisplayAlert("Cadastrar", "O campo Cpf é obrigatório", "Ok");
+                return false;
+            }
+
+            else if (!String.IsNullOrEmpty(EnderecoEntry.Text))
+            {
+                await DisplayAlert("Cadastrar", "O campo Endereco é obrigatório", "Ok");
+                return false;
             }
             else
             return true;

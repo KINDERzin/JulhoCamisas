@@ -21,6 +21,7 @@
               <ColumnDefinition Width="*"/>
               <ColumnDefinition Width="*"/>
        </Grid.ColumnDefinitions>
+       
        <Image Source="logo.png"
               Aspect="AspectFit"
               Grid.Row="0"

@@ -1,51 +1,113 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JulhoCamisas.CadastrarCliente">
+             x:Class="JulhoCamisas.CadastrarCliente"
+             Shell.NavBarIsVisible="False">
 
     <ScrollView BackgroundColor="#d9d9d9">
-        <VerticalStackLayout Padding="20" Spacing="10">            
+        <VerticalStackLayout Padding="20" Spacing="10">    
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+              
+
+            <Image Source="logo.png"
+                   Aspect="AspectFit"
+                   Margin="10, 20"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"/>
 
             <Label Text="Cadastrar cliente"
-                   FontSize="20"
+                   TextColor="Black"
+                   FontSize="Title"
                    HorizontalOptions="Center"
-                   Margin="0,20,0,20"/>
+                   Margin="0, 20"
+                   Grid.Row="1"                   />
 
-            <Label Text="ID:" />
-            <Label x:Name="IdLabel"/>
+            <Label Text="Nome:"
+                   TextColor="Black"
+                   Grid.Row="2"/>
 
-            <Label Text="Nome:" />
-            <Entry Placeholder="Digite o nome" x:Name="NomeEntry"/>
+            <Entry Placeholder="Digite o nome" 
+                   x:Name="NomeEntry"
+                   Grid.Row="3"/>
 
-            <Label Text="Sobrenome:" />
-            <Entry Placeholder="Digite o nome" x:Name="SobrenomeEntry"/>
+            <Label Text="Sobrenome:"
+                   TextColor="Black"
+                   Grid.Row="4" />
 
-            <Label Text="Email:" />
-            <Entry Placeholder="Digite o sobrenome" x:Name="EmailEntry"/>
+            <Entry Placeholder="Digite o nome" 
+                   x:Name="SobrenomeEntry"
+                   Grid.Row="5"/>
 
-            <Label Text="Telefone:" />
-            <Entry Placeholder="Digite o telefone" x:Name="TelefoneEntry"/>
+            <Label Text="CPF:"
+                   TextColor="Black"
+                   Grid.Row="6"/>
 
-            <Label Text="Endereço:" />
-            <Entry Placeholder="Digite o telefone" x:Name="EnderecoEntry"/>
+            <Entry Placeholder="Digite o sobrenome" 
+                   x:Name="CpfEntry"
+                   Grid.Row="7"/>
 
-            <Label Text="Senha:" />
-            <Entry Placeholder="Digite o telefone" x:Name="SenhaEntry"/>
+            <Label Text="Telefone:"
+                   TextColor="Black"
+                   Grid.Row="8"/>
 
-            <Label Text="Confirmar senha:" />
-            <Entry Placeholder="Digite o telefone" x:Name="ConfirmaSenhaEntry"/>
+            <Entry Placeholder="Digite o telefone" 
+                   x:Name="TelefoneEntry"
+                   Grid.Row="9"/>
+
+            <Label Text="Endereço:"
+                   Grid.Row="10"/>
+
+            <Entry Placeholder="Digite o telefone" 
+                   x:Name="EnderecoEntry"
+                   Grid.Row="11"/>
+
+            <Label Text="Senha:"
+                   Grid.Row="12"/>
+
+            <Entry Placeholder="Digite o telefone" 
+                   x:Name="SenhaEntry"
+                   Grid.Row="13"/>
+
+            <Label Text="Confirmar senha:"
+                   Grid.Row="14"/>
+
+            <Entry Placeholder="Digite o telefone" x:Name="ConfirmaSenhaEntry"
+                   Grid.Row="15"/>
 
             <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
 
                 <Button Text="Limpar"
                         TextColor="Red"
                         BackgroundColor="Transparent"
-                        Clicked="OnApagarDadosClicked"/>
+                        Clicked="OnApagarDadosClicked"
+                        Grid.Row="16"/>
 
                 <Button Text="SALVAR DADOS"
                         TextColor="Green"
                         BackgroundColor="Transparent"
-                        Clicked="OnSalvarDadosClicked"/>
+                        Clicked="OnSalvarDadosClicked"
+                        Grid.Row="17"/>
 
 
             </HorizontalStackLayout>
@@ -53,8 +115,9 @@
             <Button Text="voltar"
                     Clicked="VoltarClicked"
                     BackgroundColor="Orange"
+                    Grid.Row="18"
                     TextColor="Black"/>
-
+        </Grid>  
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

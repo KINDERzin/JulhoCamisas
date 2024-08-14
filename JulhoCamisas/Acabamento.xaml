@@ -2,66 +2,135 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JulhoCamisas.Acabamento"
-             Title="Editar Acabamento">
+             Shell.NavBarIsVisible="False">
 
-    <Grid>
-        <Image Source="camiseta.png"
-               Aspect="AspectFit"
-               HorizontalOptions="Center"
-               VerticalOptions="Start" />
+    <Grid BackgroundColor="#d9d9d9">
+       <Grid.RowDefinitions>
+              <RowDefinition Height="200"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/> 
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+       </Grid.RowDefinitions>
+       <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="90"/>
+       </Grid.ColumnDefinitions>
 
-        <Label Text="ACABAMENTO"
-               FontSize="Title"
-               HorizontalTextAlignment="Center"
-               Margin="0, 20" />
+       <Image Source="logo.png"
+              Aspect="AspectFit"
+              Margin="10, 20"
+              Grid.Row="0"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"/>
 
-        
-            <Label Text="Tipo:"
-                   Grid.Row="0"
-                   Grid.Column="0"
-                   Margin="20, 0" />
-            <Entry x:Name="tipoEntry"
-                   Grid.Row="0"
-                   Grid.Column="1"
-                   Margin="5, 0" />
-            <Button Text="EDITAR"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Clicked="Editar_Clicked" />
+       <Label Text="ACABAMENTO"
+              FontSize="50"
+              TextColor="Black"
+              HorizontalTextAlignment="Center"
+              Margin="0, 10"
+              Grid.Row="1"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"/>
 
-            <Label Text="Cor:"
-                   Grid.Row="1"
-                   Grid.Column="0"
-                   Margin="20, 0" />
-            <Entry x:Name="corEntry"
-                   Grid.Row="1"
-                   Grid.Column="1"
-                   Margin="5, 0" />
-            <Button Text="EDITAR"
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Clicked="Editar_Clicked" />
+       
+       <Label Text="Tipo:"
+              TextColor="Black"
+              Margin="40, 40, 0, 5"
+              Grid.Row="2"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"/>
 
-            <Label Text="Quantidade:"
-                   Grid.Row="2"
-                   Grid.Column="0"
-                   Margin="20, 0" />
-            <Entry x:Name="quantidadeEntry"
-                   Grid.Row="2"
-                   Grid.Column="1"
-                   Margin="5, 0"
-                   Keyboard="Numeric" />
-            <Button Text="EDITAR"
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    Clicked="Editar_Clicked" />
+       <Entry x:Name="tipoEntry"
+              TextColor="Black"
+              Margin="40, 5, 10, 0"
+              Grid.Row="3"
+              Grid.Column="0"/>
 
-        <Button Text="CONFIRMAR DADOS"
-                Margin="20"
-                Clicked="Confirmar_Clicked" />
+       <Button Text="EDITAR"
+              TextColor="Black"
+               HorizontalOptions="Start"
+               Clicked="Editar_Clicked"
+               BackgroundColor="#d9d9d9"
+               Grid.Row="3"
+               Grid.Column="1"/>
 
-        <Button Text="VOLTAR"
-                Margin="20"
-                Clicked="Voltar_Clicked" />
+       <Label Text="Cor:"
+              TextColor="Black"
+              Margin="40, 5, 10, 0"
+              Grid.Row="4"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"/>
+
+       <Entry x:Name="corEntry"
+              Margin="40, 5, 10, 0"
+              Grid.Row="5"
+              Grid.Column="0"/>
+       <Button Text="EDITAR"
+              TextColor="Black"
+               HorizontalOptions="Start"
+               Clicked="Editar_Clicked"
+               BackgroundColor="#d9d9d9"
+               Grid.Row="5"
+               Grid.Column="1"/>
+
+       <Label Text="Quantidade:"
+              TextColor="Black"
+              Margin="40, 5, 10, 0"
+              Grid.Row="6"
+              Grid.Column="0"/>
+
+       <Entry x:Name="quantidadeEntry"
+              Margin="40, 5, 10, 0"
+              Keyboard="Numeric"
+              Grid.Row="7"
+              Grid.Column="0"/>
+       <Button Text="EDITAR"
+               HorizontalOptions="Start"
+               Clicked="Editar_Clicked"
+               BackgroundColor="#d9d9d9"
+               Grid.Row="7"
+               Grid.Column="1"/>
+
+       <Label Text="Fornecedor:"
+              TextColor="Black"
+              Margin="40, 5, 10, 0"
+              Grid.Row="8"
+              Grid.Column="0"/>
+
+       <Entry x:Name="FornecedorEntry"
+              Margin="40, 5, 10, 0"
+              Keyboard="Numeric"
+              Grid.Row="9"
+              Grid.Column="0"/>
+       <Button Text="EDITAR"
+               HorizontalOptions="Start"
+               Clicked="Editar_Clicked"
+               BackgroundColor="#d9d9d9"
+               Grid.Row="9"
+               Grid.Column="1"/>
+
+       <Button Text="SALVAR"
+              Margin="20, 20, 20, 5"
+              Clicked="Confirmar_Clicked"
+              BackgroundColor="#d9d9d9"
+              Grid.Row="10"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"/>
+
+       <Button Text="VOLTAR"
+              Margin="20, 5"
+              Clicked="Voltar_Clicked"
+              BackgroundColor="#d9d9d9"
+              Grid.Row="11"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"/>
     </Grid>
 </ContentPage>
