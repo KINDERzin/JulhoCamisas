@@ -7,9 +7,8 @@
     Shell.FlyoutBehavior="Disabled"
     Title="JulhoCamisas">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:CadastrarCostureira}"
-        Route="MainPage" />
+    <ShellContent Title="Home"
+                  ContentTemplate="{DataTemplate local:Acabamento}"
+                  Route="MainPage" />
 
 </Shell>

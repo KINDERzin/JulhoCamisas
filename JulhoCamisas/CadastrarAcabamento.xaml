@@ -6,7 +6,7 @@
     <ScrollView BackgroundColor="#d9d9d9">
     <Grid>
        <Grid.RowDefinitions>
-              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="250"/>
               <RowDefinition Height="Auto"/>
               <RowDefinition Height="Auto"/>
               <RowDefinition Height="Auto"/>
@@ -28,7 +28,7 @@
               Grid.Row="0"
               Grid.Column="0"
               Grid.ColumnSpan="2"
-              Margin="0, 10, 0, 0"/>
+              Margin="0, 20, 0, 0"/>
 
        <Label Text="CADASTRAR ACABAMENTO"
               TextColor="Black"
@@ -41,14 +41,14 @@
 
        <Label Text="Tipo:"
               TextColor="Black"
-              Margin="20, 10"
+              Margin="20, 10, 0, 5"
               Grid.Row="2"
               Grid.Column="0"
               Grid.ColumnSpan="2"/>       
 
        <Entry Placeholder="Tipo"
               Keyboard="Text"
-              Margin="20, 10"
+              Margin="20, 0, 20, 10"
               x:Name="tipoEntry"
               Grid.Row="3"
               Grid.Column="0"
@@ -56,14 +56,14 @@
 
        <Label Text="Cor:"
               TextColor="Black"
-              Margin="20, 10"
+              Margin="20, 10, 0, 5"
               Grid.Row="4"
               Grid.Column="0"
               Grid.ColumnSpan="2"/>
 
        <Entry Placeholder="Cor"
               Keyboard="Text"
-              Margin="20, 10"
+              Margin="20, 0, 20, 10"
               x:Name="corEntry"
               Grid.Row="5"
               Grid.Column="0"
@@ -71,14 +71,14 @@
 
        <Label Text="Quantidade:"
               TextColor="Black"
-              Margin="20, 10"
+              Margin="20, 10, 0, 5"
               Grid.Row="6"
               Grid.Column="0"
               Grid.ColumnSpan="2"/>
 
        <Entry Placeholder="Quantidade"
               Keyboard="Numeric"
-              Margin="20, 10"
+              Margin="20, 0, 20, 10"
               x:Name="quantidadeEntry"
               Grid.Row="7"
               Grid.Column="0"
@@ -86,14 +86,14 @@
 
        <Label Text="Fornecedor:"
               TextColor="Black"
-              Margin="20, 10"
+              Margin="20, 10, 0, 5"
               Grid.Row="8"
               Grid.Column="0"
               Grid.ColumnSpan="2"/>
 
        <Entry Placeholder="Fornecedor"
               Keyboard="Text"
-              Margin="20, 10"
+              Margin="20, 0, 20, 10"
               x:Name="fornecedorEntry"
               Grid.Row="9"
               Grid.Column="0"
@@ -101,7 +101,7 @@
 
        <Button Text="CONFIRMAR"
                BackgroundColor="#d9d9d9"
-               Margin="20, 10"
+               Margin="20, 40"
                Clicked="Confirmar_Clicked"
                Grid.Row="10"
                Grid.Column="0"/>

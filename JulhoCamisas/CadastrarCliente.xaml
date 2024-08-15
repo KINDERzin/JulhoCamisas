@@ -9,7 +9,7 @@
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="250"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -31,7 +31,7 @@
 
             <Image Source="logo.png"
                    Aspect="AspectFit"
-                   Margin="10, 20"
+                   Margin="0, 20, 0, 0"
                    Grid.Row="0"
                    Grid.Column="0"
                    Grid.ColumnSpan="2"/>
@@ -41,45 +41,60 @@
                    FontSize="Title"
                    HorizontalOptions="Center"
                    Margin="0, 20"
-                   Grid.Row="1"                   />
+                   Grid.Row="1"/>
 
             <Label Text="Nome:"
                    TextColor="Black"
+                   Margin="20, 10, 0, 5"
                    Grid.Row="2"/>
 
             <Entry Placeholder="Digite o nome" 
+                   TextColor="Black"
+                   Margin="20, 0, 20, 10"
                    x:Name="NomeEntry"
                    Grid.Row="3"/>
 
             <Label Text="Sobrenome:"
+                   Margin="20, 10, 0, 5"
                    TextColor="Black"
                    Grid.Row="4" />
 
             <Entry Placeholder="Digite o nome" 
+                   TextColor="Black"
                    x:Name="SobrenomeEntry"
+                   Margin="20, 0, 20, 10"
                    Grid.Row="5"/>
 
             <Label Text="CPF:"
                    TextColor="Black"
+                   Margin="20, 10, 0, 5"
                    Grid.Row="6"/>
 
             <Entry Placeholder="Digite o sobrenome" 
+                   TextColor="Black"
+                   Margin="20, 0, 20, 10"
                    x:Name="CpfEntry"
                    Grid.Row="7"/>
 
             <Label Text="Telefone:"
                    TextColor="Black"
+                   Margin="20, 10, 0, 5"
                    Grid.Row="8"/>
 
-            <Entry Placeholder="Digite o telefone" 
+            <Entry Placeholder="Digite o telefone"
+                   TextColor="Black"
+                   Margin="20, 0, 20, 10" 
                    x:Name="TelefoneEntry"
                    Grid.Row="9"/>
 
             <Label Text="Endereço:"
                    TextColor="Black"
+                   Margin="20, 10, 0, 5"
                    Grid.Row="10"/>
 
             <Entry Placeholder="Digite o endereço" 
+                   TextColor="Black"
+                   Margin="20, 0, 20, 10"
                    x:Name="EnderecoEntry"
                    Grid.Row="11"/>
 

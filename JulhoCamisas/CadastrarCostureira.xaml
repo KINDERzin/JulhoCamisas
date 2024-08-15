@@ -3,31 +3,98 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JulhoCamisas.CadastrarCostureira"
              Shell.NavBarIsVisible="False">
-    <ScrollView>
+             
     <Grid BackgroundColor="#d9d9d9">
         <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
             <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/> 
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/> 
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-    
-        <StackLayout Padding="30" Spacing="20">
-            <Image Source="logo.png" HeightRequest="100" VerticalOptions="CenterAndExpand" />
-            <Label Text="CADASTRAR COSTUREIRA" FontSize="24" HorizontalOptions="Center" />
-            <Entry Placeholder="Tipo" x:Name="TypeEntry"/>
-            <Entry Placeholder="Quantidade" x:Name="QuantityEntry"/>
-            <Entry Placeholder="Fornecedor" x:Name="SupplierEntry"/>
-            <Entry Placeholder="Id" x:Name="IdEntry"/>
-            <Button Text="CONFIRMAR" Clicked="OnConfirmClicked"/>
-            <Button Text="VOLTAR" Clicked="OnBackClicked"/>
-        </StackLayout>
-        </Grid>
-    </ScrollView>
+        
+        <Image Source="logo.png" 
+                Aspect="AspectFit"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="0, 20, 0, 0"/>
+        
+        <Label Text="CADASTRAR COSTUREIRA"
+                TextColor="Black"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Margin="0, 20"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"/>
+
+        <Label Text="Nome:"
+               TextColor="Black"
+               Margin="20, 10, 0, 5"
+               Grid.Row="2"/>  
+
+        <Entry Placeholder="Nome"
+               TextColor="Black"
+               Keyboard="Text"
+               Margin="20, 0, 20, 10"
+               x:Name="NomeEntry"
+               Grid.Row="3"/>
+
+        <Label Text="Endereço:"
+               TextColor="Black"
+               Margin="20, 10, 0, 5"
+               Grid.Row="4"/>  
+
+        <Entry Placeholder="Endereço"
+               TextColor="Black"
+               Keyboard="Text"
+               Margin="20, 0, 20, 10"
+               x:Name="EnderecoEntry"
+               Grid.Row="5"/>
+
+        <Label Text="Email:"
+               TextColor="Black"
+               Margin="20, 10, 0, 5"
+               Grid.Row="6"/> 
+
+        <Entry Placeholder="Email"
+               TextColor="Black"
+               Keyboard="Text"
+               Margin="20, 0, 20, 10"
+               x:Name="EmailEntry"
+               Grid.Row="7"/>
+
+        <Label Text="CPF:"
+               TextColor="Black"
+               Margin="20, 10, 0, 5"
+               Grid.Row="8"/> 
+
+        <Entry Placeholder="CPF"
+               TextColor="Black"
+               Keyboard="Text"
+               Margin="20, 0, 20, 10"
+               x:Name="CpfEntry"
+               Grid.Row="9"/>
+
+        <Button Text="CONFIRMAR"
+                BackgroundColor="#d9d9d9"
+                Margin="20, 5"
+                Clicked="OnConfirmClicked"
+                Grid.Row="10"/>
+
+        <Button Text="VOLTAR"
+                BackgroundColor="#d9d9d9"
+                Margin="20, 5"
+                Clicked="OnBackClicked"
+                Grid.Row="11"/>
+        
+    </Grid> 
 </ContentPage>

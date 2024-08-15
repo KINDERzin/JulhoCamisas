@@ -51,6 +51,8 @@ namespace JulhoCamisas
             NomeEntry.Text = string.Empty;
             SobrenomeEntry.Text = string.Empty;
             TelefoneEntry.Text = string.Empty;
+            CpfEntry.Text = string.Empty;
+            EnderecoEntry.Text = string.Empty;
         }
 
         void OnSalvarDadosClicked(object sender, EventArgs e)

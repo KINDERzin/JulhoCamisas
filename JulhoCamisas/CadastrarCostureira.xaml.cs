@@ -11,10 +11,10 @@ namespace JulhoCamisas
 
         private async void OnConfirmClicked(object sender, EventArgs e)
         {
-            string type = TypeEntry.Text;
-            string quantity = QuantityEntry.Text;
-            string supplier = SupplierEntry.Text;
-            string id = IdEntry.Text;
+            string nome = NomeEntry.Text;
+            string endereco = EnderecoEntry.Text;
+            string email = EmailEntry.Text;
+            string cpf = CpfEntry.Text;
 
             // Adicione a lógica para registrar a costureira aqui
 

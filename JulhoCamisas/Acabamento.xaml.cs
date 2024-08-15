@@ -9,24 +9,41 @@ namespace JulhoCamisas
             InitializeComponent();
         }
 
-        private async void Editar_Clicked(object sender, EventArgs e)
+        private async void EditarTipo_Clicked(object sender, EventArgs e)
         {
-            // Habilitar edição do campo correspondente
-            if (sender is Button button)
-            {
-                var entry = tipoEntry.Text;
-            }
+            TipoEntry.IsEnabled = true;
         }
 
-        private async void Confirmar_Clicked(object sender, EventArgs e)
+        private async void EditarCor_Clicked(object sender, EventArgs e)
+        {
+            CorEntry.IsEnabled = true;
+        }
+
+        private async void EditarQuantidade_Clicked(object sender, EventArgs e)
+        {
+            QuantidadeEntry.IsEnabled = true;
+        }
+
+        private async void EditarFornecedor_Clicked(object sender, EventArgs e)
+        {
+            FornecedorEntry.IsEnabled = true;
+        }
+
+        private async void Salvar_Clicked(object sender, EventArgs e)
         {
             // Obter os valores dos campos
-            string tipo = tipoEntry.Text;
-            string cor = corEntry.Text;
-            int quantidade = int.Parse(quantidadeEntry.Text);
+            string tipo = TipoEntry.Text;
+            string cor = CorEntry.Text;
+            string fornecedor = FornecedorEntry.Text;
+            int quantidade = int.Parse(QuantidadeEntry.Text);
+
+            TipoEntry.IsEnabled = false;
+            CorEntry.IsEnabled = true;            
+            QuantidadeEntry.IsEnabled = true;
+            FornecedorEntry.IsEnabled = true;
 
             // Lógica para atualizar o acabamento (chamar sua API ou serviço)
-            bool sucesso = await AtualizarAcabamentoAsync(tipo, cor, quantidade);
+            bool sucesso = await AtualizarAcabamentoAsync(tipo, cor, quantidade, fornecedor);
 
             if (sucesso)
             {
@@ -38,7 +55,7 @@ namespace JulhoCamisas
             }
         }
 
-        private async Task<bool> AtualizarAcabamentoAsync(string tipo, string cor, int quantidade)
+        private async Task<bool> AtualizarAcabamentoAsync(string tipo, string cor, int quantidade, string fornecedor)
         {
             // Implemente aqui a lógica para atualizar o acabamento
             // Chame sua API ou serviço, faça as validações necessárias

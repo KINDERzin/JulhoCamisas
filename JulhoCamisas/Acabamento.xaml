@@ -6,7 +6,7 @@
 
     <Grid BackgroundColor="#d9d9d9">
        <Grid.RowDefinitions>
-              <RowDefinition Height="200"/>
+              <RowDefinition Height="250"/>
               <RowDefinition Height="Auto"/>
               <RowDefinition Height="Auto"/>
               <RowDefinition Height="Auto"/>
@@ -21,21 +21,21 @@
        </Grid.RowDefinitions>
        <Grid.ColumnDefinitions>
               <ColumnDefinition Width="*"/>
-              <ColumnDefinition Width="90"/>
+              <ColumnDefinition Width="80"/>
        </Grid.ColumnDefinitions>
 
        <Image Source="logo.png"
               Aspect="AspectFit"
-              Margin="10, 20"
+              Margin="0, 20, 0, 0"
               Grid.Row="0"
               Grid.Column="0"
               Grid.ColumnSpan="2"/>
 
        <Label Text="ACABAMENTO"
-              FontSize="50"
+              FontSize="Title"
               TextColor="Black"
               HorizontalTextAlignment="Center"
-              Margin="0, 10"
+              Margin="0, 20"
               Grid.Row="1"
               Grid.Column="0"
               Grid.ColumnSpan="2"/>
@@ -43,90 +43,93 @@
        
        <Label Text="Tipo:"
               TextColor="Black"
-              Margin="40, 40, 0, 5"
+              Margin="20, 10, 0, 5"
               Grid.Row="2"
               Grid.Column="0"
               Grid.ColumnSpan="2"/>
 
-       <Entry x:Name="tipoEntry"
+       <Entry x:Name="TipoEntry"
               TextColor="Black"
-              Margin="40, 5, 10, 0"
+              IsEnabled="False"
+              Margin="20, 0, 20, 10"
               Grid.Row="3"
               Grid.Column="0"/>
-
        <Button Text="EDITAR"
-              TextColor="Black"
+               TextColor="Black"
                HorizontalOptions="Start"
-               Clicked="Editar_Clicked"
+               Clicked="EditarTipo_Clicked"
                BackgroundColor="#d9d9d9"
                Grid.Row="3"
                Grid.Column="1"/>
 
        <Label Text="Cor:"
               TextColor="Black"
-              Margin="40, 5, 10, 0"
+              Margin="20, 10, 0, 5"
               Grid.Row="4"
               Grid.Column="0"
               Grid.ColumnSpan="2"/>
 
-       <Entry x:Name="corEntry"
-              Margin="40, 5, 10, 0"
+       <Entry x:Name="CorEntry"
+              Margin="20, 0, 20, 10"
+              IsEnabled="False"
               Grid.Row="5"
               Grid.Column="0"/>
        <Button Text="EDITAR"
               TextColor="Black"
                HorizontalOptions="Start"
-               Clicked="Editar_Clicked"
+               Clicked="EditarCor_Clicked"
                BackgroundColor="#d9d9d9"
                Grid.Row="5"
                Grid.Column="1"/>
 
        <Label Text="Quantidade:"
               TextColor="Black"
-              Margin="40, 5, 10, 0"
+              Margin="20, 10, 0, 5"
               Grid.Row="6"
               Grid.Column="0"/>
 
-       <Entry x:Name="quantidadeEntry"
-              Margin="40, 5, 10, 0"
+       <Entry x:Name="QuantidadeEntry"
+              Margin="20, 0, 20, 10"
+              IsEnabled="False"
               Keyboard="Numeric"
               Grid.Row="7"
               Grid.Column="0"/>
        <Button Text="EDITAR"
                HorizontalOptions="Start"
-               Clicked="Editar_Clicked"
+               Clicked="EditarQuantidade_Clicked"
                BackgroundColor="#d9d9d9"
                Grid.Row="7"
                Grid.Column="1"/>
 
        <Label Text="Fornecedor:"
               TextColor="Black"
-              Margin="40, 5, 10, 0"
+              Margin="20, 10, 0, 5"
               Grid.Row="8"
               Grid.Column="0"/>
 
        <Entry x:Name="FornecedorEntry"
-              Margin="40, 5, 10, 0"
+              Margin="20, 0, 20, 10"
+              IsEnabled="False"
               Keyboard="Numeric"
               Grid.Row="9"
               Grid.Column="0"/>
        <Button Text="EDITAR"
                HorizontalOptions="Start"
-               Clicked="Editar_Clicked"
+               Clicked="EditarFornecedor_Clicked"
                BackgroundColor="#d9d9d9"
                Grid.Row="9"
                Grid.Column="1"/>
 
        <Button Text="SALVAR"
-              Margin="20, 20, 20, 5"
-              Clicked="Confirmar_Clicked"
+              Margin="20, 0, 20, 5"
+              Clicked="Salvar_Clicked"
               BackgroundColor="#d9d9d9"
               Grid.Row="10"
               Grid.Column="0"
               Grid.ColumnSpan="2"/>
 
        <Button Text="VOLTAR"
-              Margin="20, 5"
+              Margin="20, 0"
               Clicked="Voltar_Clicked"
               BackgroundColor="#d9d9d9"
               Grid.Row="11"
