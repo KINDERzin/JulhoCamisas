@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:CadastrarCliente}"
+        ContentTemplate="{DataTemplate local:CadastrarCostureira}"
         Route="MainPage" />
 
 </Shell>

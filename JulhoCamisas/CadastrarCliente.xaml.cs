@@ -21,8 +21,6 @@ namespace JulhoCamisas
             string email = CpfEntry.Text;
             string telefone = TelefoneEntry.Text;
             string address = EnderecoEntry.Text;
-            string password = SenhaEntry.Text;
-            string confirmPassword = ConfirmaSenhaEntry.Text;
 
             // Adicione a lógica de validação e registro aqui
 

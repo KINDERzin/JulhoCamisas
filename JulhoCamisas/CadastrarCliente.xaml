@@ -36,7 +36,7 @@
                    Grid.Column="0"
                    Grid.ColumnSpan="2"/>
 
-            <Label Text="Cadastrar cliente"
+            <Label Text="CADASTRAR CLIENTE"
                    TextColor="Black"
                    FontSize="Title"
                    HorizontalOptions="Center"
@@ -76,45 +76,33 @@
                    Grid.Row="9"/>
 
             <Label Text="Endereço:"
+                   TextColor="Black"
                    Grid.Row="10"/>
 
-            <Entry Placeholder="Digite o telefone" 
+            <Entry Placeholder="Digite o endereço" 
                    x:Name="EnderecoEntry"
                    Grid.Row="11"/>
 
-            <Label Text="Senha:"
-                   Grid.Row="12"/>
+           
 
-            <Entry Placeholder="Digite o telefone" 
-                   x:Name="SenhaEntry"
-                   Grid.Row="13"/>
-
-            <Label Text="Confirmar senha:"
-                   Grid.Row="14"/>
-
-            <Entry Placeholder="Digite o telefone" x:Name="ConfirmaSenhaEntry"
-                   Grid.Row="15"/>
-
-            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
-
-                <Button Text="Limpar"
+                <Button Text="LIMPAR"
                         TextColor="Red"
                         BackgroundColor="Transparent"
                         Clicked="OnApagarDadosClicked"
-                        Grid.Row="16"/>
+                        Grid.Row="12"/>
 
                 <Button Text="SALVAR DADOS"
                         TextColor="Green"
                         BackgroundColor="Transparent"
                         Clicked="OnSalvarDadosClicked"
-                        Grid.Row="17"/>
+                        Grid.Row="13"/>
 
 
-            </HorizontalStackLayout>
+            
 
-            <Button Text="voltar"
+            <Button Text="VOLTAR"
                     Clicked="VoltarClicked"
-                    BackgroundColor="Orange"
+                    BackgroundColor="#d9d9d9"
                     Grid.Row="18"
                     TextColor="Black"/>
         </Grid>  
