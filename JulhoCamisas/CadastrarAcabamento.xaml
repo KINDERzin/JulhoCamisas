@@ -47,6 +47,7 @@
               Grid.ColumnSpan="2"/>       
 
        <Entry Placeholder="Tipo"
+              TextColor="Black"
               Keyboard="Text"
               Margin="20, 0, 20, 10"
               x:Name="tipoEntry"
@@ -62,6 +63,7 @@
               Grid.ColumnSpan="2"/>
 
        <Entry Placeholder="Cor"
+              TextColor="Black"
               Keyboard="Text"
               Margin="20, 0, 20, 10"
               x:Name="corEntry"
@@ -77,6 +79,7 @@
               Grid.ColumnSpan="2"/>
 
        <Entry Placeholder="Quantidade"
+              TextColor="Black"
               Keyboard="Numeric"
               Margin="20, 0, 20, 10"
               x:Name="quantidadeEntry"
@@ -92,6 +95,7 @@
               Grid.ColumnSpan="2"/>
 
        <Entry Placeholder="Fornecedor"
+              TextColor="Black"
               Keyboard="Text"
               Margin="20, 0, 20, 10"
               x:Name="fornecedorEntry"

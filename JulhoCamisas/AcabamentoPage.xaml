@@ -70,12 +70,13 @@
               Grid.ColumnSpan="2"/>
 
        <Entry x:Name="CorEntry"
+              TextColor="Black"
               Margin="20, 0, 20, 10"
               IsEnabled="False"
               Grid.Row="5"
               Grid.Column="0"/>
        <Button Text="EDITAR"
-              TextColor="Black"
+               TextColor="Black"
                HorizontalOptions="Start"
                Clicked="EditarCor_Clicked"
                BackgroundColor="#d9d9d9"
@@ -89,9 +90,10 @@
               Grid.Column="0"/>
 
        <Entry x:Name="QuantidadeEntry"
+              TextColor="Black"
               Margin="20, 0, 20, 10"
               IsEnabled="False"
-              Keyboard="Numeric"
+              Keyboard="Text"
               Grid.Row="7"
               Grid.Column="0"/>
        <Button Text="EDITAR"
@@ -108,9 +110,10 @@
               Grid.Column="0"/>
 
        <Entry x:Name="FornecedorEntry"
+              TextColor="Black"
+              Keyboard="Text"
               Margin="20, 0, 20, 10"
               IsEnabled="False"
-              Keyboard="Numeric"
               Grid.Row="9"
               Grid.Column="0"/>
        <Button Text="EDITAR"

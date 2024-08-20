@@ -1,12 +1,20 @@
+using Controles;
 using Microsoft.Maui.Controls;
 
 namespace JulhoCamisas
 {
     public partial class Acabamento : ContentPage
     {
+
+        Acabamento acabamento;
+        AcabamentoControle acabamentoControle;
+
         public Acabamento()
         {
             InitializeComponent();
+
+            acabamento = new Acabamento();
+            acabamentoControle = new AcabamentoControle();
         }
 
         private async void EditarTipo_Clicked(object sender, EventArgs e)
@@ -32,18 +40,22 @@ namespace JulhoCamisas
         private async void Salvar_Clicked(object sender, EventArgs e)
         {
             // Obter os valores dos campos
-            string tipo = TipoEntry.Text;
-            string cor = CorEntry.Text;
-            string fornecedor = FornecedorEntry.Text;
-            int quantidade = int.Parse(QuantidadeEntry.Text);
+            TipoEntry.Text = acabamento.Tipo;
+            CorEntry.Text = acabamento.Cor;
+            FornecedorEntry.Text = acabamento.Fornecedor;
+            QuantidadeEntry.Text = acabamento.Quantidade;
 
             TipoEntry.IsEnabled = false;
-            CorEntry.IsEnabled = true;            
-            QuantidadeEntry.IsEnabled = true;
-            FornecedorEntry.IsEnabled = true;
+            CorEntry.IsEnabled = false;            
+            QuantidadeEntry.IsEnabled = false;
+            FornecedorEntry.IsEnabled = false;
 
-            // Lógica para atualizar o acabamento (chamar sua API ou serviço)
-            bool sucesso = await AtualizarAcabamentoAsync(tipo, cor, quantidade, fornecedor);
+            if(TipoEntry.Text == string.Empty || CorEntry.Text == string.Empty || FornecedorEntry.Text == string.Empty || QuantidadeEntry.Text == string.Empty)
+            {
+                await DisplayAlert("Erro", "Os campos acima estão vazios.", "OK");
+            }
+            else{
+                bool sucesso = await AtualizarAcabamentoAsync(Tipo, Cor, Quantidade, Fornecedor);
 
             if (sucesso)
             {
@@ -53,9 +65,13 @@ namespace JulhoCamisas
             {
                 await DisplayAlert("Erro", "Erro ao atualizar o acabamento.", "OK");
             }
+            }
+
+            // Lógica para atualizar o acabamento (chamar sua API ou serviço)
+            
         }
 
-        private async Task<bool> AtualizarAcabamentoAsync(string tipo, string cor, int quantidade, string fornecedor)
+        private async Task<bool> AtualizarAcabamentoAsync(string tipo, string cor, string quantidade, string fornecedor)
         {
             // Implemente aqui a lógica para atualizar o acabamento
             // Chame sua API ou serviço, faça as validações necessárias
