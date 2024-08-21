@@ -1,17 +1,18 @@
 using Controles;
+using JulhoCamisas.Modelos;
 using Microsoft.Maui.Controls;
 
 namespace JulhoCamisas
 {
-    public partial class Acabamento : ContentPage
+    public partial class AcabamentoPage : ContentPage
     {
 
         Acabamento acabamento;
         AcabamentoControle acabamentoControle;
-
-        public Acabamento()
+        
+        public AcabamentoPage()
         {
-            InitializeComponent();
+            InitializeComponent();  
 
             acabamento = new Acabamento();
             acabamentoControle = new AcabamentoControle();
@@ -55,29 +56,12 @@ namespace JulhoCamisas
                 await DisplayAlert("Erro", "Os campos acima estão vazios.", "OK");
             }
             else{
-                bool sucesso = await AtualizarAcabamentoAsync(Tipo, Cor, Quantidade, Fornecedor);
-
-            if (sucesso)
-            {
-                await DisplayAlert("Sucesso", "Acabamento atualizado com sucesso!", "OK");
+                await DisplayAlert("CONCUÍDO", "Os dados foram salvos", "Ok");
             }
-            else
-            {
-                await DisplayAlert("Erro", "Erro ao atualizar o acabamento.", "OK");
-            }
-            }
+            
 
             // Lógica para atualizar o acabamento (chamar sua API ou serviço)
             
-        }
-
-        private async Task<bool> AtualizarAcabamentoAsync(string tipo, string cor, string quantidade, string fornecedor)
-        {
-            // Implemente aqui a lógica para atualizar o acabamento
-            // Chame sua API ou serviço, faça as validações necessárias
-            // Retorne true se a atualização for bem-sucedida, false caso contrário
-            // Exemplo simplificado:
-            return await Task.FromResult(true); // Substitua por sua lógica real
         }
 
         private void Voltar_Clicked(object sender, EventArgs e)

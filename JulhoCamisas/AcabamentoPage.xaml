@@ -1,52 +1,81 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JulhoCamisas.Acabamento"
+             x:Class="JulhoCamisas.AcabamentoPage"
              Shell.NavBarIsVisible="False">
-
+      
     <Grid BackgroundColor="#d9d9d9">
        <Grid.RowDefinitions>
               <RowDefinition Height="250"/>
               <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/> 
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
+              
        </Grid.RowDefinitions>
        <Grid.ColumnDefinitions>
               <ColumnDefinition Width="*"/>
               <ColumnDefinition Width="80"/>
        </Grid.ColumnDefinitions>
 
+       <HorizontalStackLayout >
        <Image Source="logo.png"
               Aspect="AspectFit"
-              Margin="0, 20, 0, 0"
+              Margin="50, 20, 0, 0"
               Grid.Row="0"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+              Grid.Column="0"/>
 
        <Label Text="ACABAMENTO"
               FontSize="Title"
               TextColor="Black"
               HorizontalTextAlignment="Center"
-              Margin="0, 20"
-              Grid.Row="1"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+              VerticalTextAlignment="Center"
+              Margin="300, 20"
+              Grid.Row="0"
+              Grid.Column="1"/>
+       </HorizontalStackLayout>
 
+       <Frame BackgroundColor="#d1d1d1"
+              Grid.Row="1"
+              Grid.ColumnSpan="2"
+              Margin="50"
+              IsVisible="False">
+              <Grid>
+                     <Grid.RowDefinitions>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+                     <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="80"/>
+              </Grid.ColumnDefinitions>
+              
+       <Label Text="ID:"
+              TextColor="Black"
+              Margin="20, 10, 0, 5"
+              Grid.Row="0"
+              Grid.Column="0"/>
+
+       <Label Text="ARRUMAR"
+              TextColor="Black"
+              Margin="20, 10, 0, 5"
+              Grid.Row="1"
+              Grid.Column="0"/>
        
        <Label Text="Tipo:"
               TextColor="Black"
               Margin="20, 10, 0, 5"
               Grid.Row="2"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+              Grid.Column="0"/>
 
        <Entry x:Name="TipoEntry"
               TextColor="Black"
@@ -59,15 +88,14 @@
                HorizontalOptions="Start"
                Clicked="EditarTipo_Clicked"
                BackgroundColor="#d9d9d9"
-               Grid.Row="3"
-               Grid.Column="1"/>
+              Grid.Row="3"
+              Grid.Column="1"/>
 
        <Label Text="Cor:"
               TextColor="Black"
               Margin="20, 10, 0, 5"
               Grid.Row="4"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+              Grid.Column="0"/>
 
        <Entry x:Name="CorEntry"
               TextColor="Black"
@@ -97,11 +125,12 @@
               Grid.Row="7"
               Grid.Column="0"/>
        <Button Text="EDITAR"
+               TextColor="Black"
                HorizontalOptions="Start"
                Clicked="EditarQuantidade_Clicked"
                BackgroundColor="#d9d9d9"
-               Grid.Row="7"
-               Grid.Column="1"/>
+              Grid.Row="7"
+              Grid.Column="1"/>
 
        <Label Text="Fornecedor:"
               TextColor="Black"
@@ -117,26 +146,31 @@
               Grid.Row="9"
               Grid.Column="0"/>
        <Button Text="EDITAR"
+               TextColor="Black"
                HorizontalOptions="Start"
                Clicked="EditarFornecedor_Clicked"
                BackgroundColor="#d9d9d9"
-               Grid.Row="9"
-               Grid.Column="1"/>
+              Grid.Row="9"
+              Grid.Column="1"/>
 
        <Button Text="SALVAR"
-              Margin="20, 0, 20, 5"
-              Clicked="Salvar_Clicked"
-              BackgroundColor="#d9d9d9"
+               TextColor="Black"
+               Margin="20, 0, 20, 5"
+               Clicked="Salvar_Clicked"
+               BackgroundColor="#d9d9d9"
               Grid.Row="10"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+              Grid.Column="0"/>
 
        <Button Text="VOLTAR"
-              Margin="20, 0"
-              Clicked="Voltar_Clicked"
-              BackgroundColor="#d9d9d9"
+               TextColor="Black"
+               Margin="20, 0"
+               Clicked="Voltar_Clicked"
+               BackgroundColor="#d9d9d9"
               Grid.Row="11"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+              Grid.Column="0"/>
+               
+               </Grid>
+       </Frame>
     </Grid>
+    
 </ContentPage>

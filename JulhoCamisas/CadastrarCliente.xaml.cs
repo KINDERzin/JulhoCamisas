@@ -55,7 +55,7 @@ namespace JulhoCamisas
             EnderecoEntry.Text = string.Empty;
         }
 
-        void OnSalvarDadosClicked(object sender, EventArgs e)
+        async void OnSalvarDadosClicked(object sender, EventArgs e)
         {
             
             var cliente = new Modelos.Cliente();
@@ -67,6 +67,7 @@ namespace JulhoCamisas
             cliente.Endereco = EnderecoEntry.Text;
 
             clienteControle.CriarOuAtualizar(cliente);
+            await DisplayAlert("CONCLUÍDO","Dados salvos com sucesso","OK");
             
             
         }

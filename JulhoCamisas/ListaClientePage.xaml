@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JulhoCamisas.ListaClientesPage"
-             BackgroundColor="LightBlue"
-             Title="Cadastrar cliente">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#d9d9d9">
+             
     <VerticalStackLayout>
         <Button Text="Criar Novo Cliente"
                 BackgroundColor="Orange"

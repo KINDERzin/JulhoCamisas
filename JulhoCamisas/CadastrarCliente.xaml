@@ -112,9 +112,6 @@
                         Clicked="OnSalvarDadosClicked"
                         Grid.Row="13"/>
 
-
-            
-
             <Button Text="VOLTAR"
                     Clicked="VoltarClicked"
                     BackgroundColor="#d9d9d9"
