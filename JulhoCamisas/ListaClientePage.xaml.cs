@@ -13,7 +13,7 @@ public partial class ListaClientesPage : ContentPage
     ListaClientes.ItemsSource = clienteControle.LerTodos();
 	}
 
-  void Josefina(object sender, SelectedItemChangedEventArgs e)
+  void itemSelecionado(object sender, SelectedItemChangedEventArgs e)
   {
     var page = new CadastrarCliente();
     page.cliente = e.SelectedItem as Cliente;
@@ -24,4 +24,11 @@ public partial class ListaClientesPage : ContentPage
   {
     Application.Current.MainPage = new CadastrarCliente();
   }
+
+  void clicouBotaoVoltar(object sender, EventArgs e)
+  {
+    Application.Current.MainPage = new MainPage();
+  }
+
 }
+

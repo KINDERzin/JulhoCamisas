@@ -1,7 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JulhoCamisas.MainPage">
+             x:Class="JulhoCamisas.MainPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#d9d9d9">
 
-    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <HorizontalStackLayout Grid.Row="0"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="2">
+            <Image Source="logo.png"
+                Aspect="AspectFit"
+                Margin="50, 20, 0, 0"/>
+
+            <Label Text="Menu principal"
+                   TextColor="Black"
+                   FontSize="50"
+                   VerticalOptions="Center"
+                   Margin="300, 10"/>
+        </HorizontalStackLayout>
+
+        <Button Text="Clientes"
+                BackgroundColor="#8b8b8b"
+                Margin="50,100, 10, 5"
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="clicouBotaoClientes"/>
+        
+        <Button Text="Acabamento"
+                BackgroundColor="#8b8b8b"
+                Margin="50,100, 10, 5"
+                Grid.Row="1"
+                Grid.Column="1"
+                Clicked="clicouBotaoAcabamento"/>
+
+    </Grid>
 </ContentPage>

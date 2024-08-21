@@ -5,43 +5,85 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="#d9d9d9">
              
-    <VerticalStackLayout>
-        <Button Text="Criar Novo Cliente"
-                BackgroundColor="Orange"
-                FontSize="16"
-                TextColor="Black"
-                Clicked="NovoClienteClicked"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+    
+        <HorizontalStackLayout Grid.Row="0">
 
+            <Image Source="logo.png"
+                Aspect="AspectFit"
+                Margin="50, 20, 0, 0"/>
+
+            <Label Text="Lista de clientes"
+                   TextColor="Black"
+                   FontSize="50"
+                   VerticalOptions="Center"
+                   Margin="300, 10"/>
+
+        </HorizontalStackLayout>
+
+        <Frame BackgroundColor="#d1d1d1"
+               Margin="50, 30"
+               HeightRequest="300"
+               Grid.Row="1">
+               <VerticalStackLayout>
         <ListView x:Name="ListaClientes"
                 HasUnevenRows="True"
-                ItemSelected="Josefina"
+                ItemSelected="itemSelecionado"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <VerticalStackLayout Padding="20"
-                                             BackgroundColor="Pink">
+                        <VerticalStackLayout 
+                                             BackgroundColor="#d1d1d1">
 
                         <HorizontalStackLayout>
 
                             <Label Text="{Binding Nome}"
-                                FontSize="20"/>
+                                   TextColor="Black"
+                                   FontSize="20"/>
 
                             <Label Text="{Binding Sobrenome}"
-                                FontSize="20"
-                                Margin="10,0,0,0"/>
+                                   TextColor="Black"
+                                   FontSize="20"
+                                   Margin="10,0,0,0"/>
 
                         </HorizontalStackLayout>
 
                         <Label Text="{Binding Telefone}"
-                                FontSize="20"/>
+                               TextColor="Black"
+                               FontSize="20"/>
 
                         </VerticalStackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+        </Frame>
+        
+        <Button Text="Criar novo cliente"
+                BackgroundColor="#8b8b8b"
+                FontSize="16"
+                TextColor="Black"
+                Clicked="NovoClienteClicked"
+                Margin="50,5"
+                Grid.Row="2"/>
+
+        <Button Text="Voltar"
+                BackgroundColor="#8b8b8b"
+                FontSize="16"
+                TextColor="Black"
+                Clicked="clicouBotaoVoltar"
+                Margin="50,5"
+                Grid.Row="3"/>
+        
+    </Grid>
 </ContentPage>

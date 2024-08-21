@@ -59,7 +59,7 @@
                    TextColor="Black"
                    Grid.Row="4" />
 
-            <Entry Placeholder="Digite o nome" 
+            <Entry Placeholder="Digite o sobrenome" 
                    TextColor="Black"
                    x:Name="SobrenomeEntry"
                    Margin="20, 0, 20, 10"
@@ -70,7 +70,7 @@
                    Margin="20, 10, 0, 5"
                    Grid.Row="6"/>
 
-            <Entry Placeholder="Digite o sobrenome" 
+            <Entry Placeholder="Digite o CPF" 
                    TextColor="Black"
                    Margin="20, 0, 20, 10"
                    x:Name="CpfEntry"
@@ -82,6 +82,7 @@
                    Grid.Row="8"/>
 
             <Entry Placeholder="Digite o telefone"
+                   Keyboard="Telephone"  
                    TextColor="Black"
                    Margin="20, 0, 20, 10" 
                    x:Name="TelefoneEntry"
@@ -92,7 +93,7 @@
                    Margin="20, 10, 0, 5"
                    Grid.Row="10"/>
 
-            <Entry Placeholder="Digite o endereço" 
+            <Entry Placeholder="Digite o endereço c/ número" 
                    TextColor="Black"
                    Margin="20, 0, 20, 10"
                    x:Name="EnderecoEntry"
