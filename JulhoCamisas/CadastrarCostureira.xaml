@@ -85,12 +85,14 @@
                Grid.Row="9"/>
 
         <Button Text="CONFIRMAR"
+                TextColor="Black"
                 BackgroundColor="#d9d9d9"
                 Margin="20, 5"
                 Clicked="OnConfirmClicked"
                 Grid.Row="10"/>
 
         <Button Text="VOLTAR"
+                TextColor="Black"
                 BackgroundColor="#d9d9d9"
                 Margin="20, 5"
                 Clicked="OnBackClicked"

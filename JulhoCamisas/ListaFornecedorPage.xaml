@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JulhoCamisas.ListaFornecedorPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#d9d9d9">
+             
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+    
+        <HorizontalStackLayout Grid.Row="0">
+
+            <Image Source="logo.png"
+                Aspect="AspectFit"
+                Margin="50, 20, 0, 0"/>
+
+            <Label Text="Lista de fornecedores"
+                   TextColor="Black"
+                   FontSize="50"
+                   VerticalOptions="Center"
+                   Margin="300, 10"/>
+
+        </HorizontalStackLayout>
+
+        <Frame BackgroundColor="#d1d1d1"
+               Margin="50, 30"
+               HeightRequest="300"
+               Grid.Row="1">
+               <VerticalStackLayout>
+        <ListView x:Name="ListaForncedor"
+                  HasUnevenRows="True"
+                  ItemSelected="itemSelecionado"
+                  HorizontalOptions="Fill"
+                  VerticalOptions="Fill">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <VerticalStackLayout BackgroundColor="#d1d1d1">
+
+                        <HorizontalStackLayout>
+
+                            <Label Text="{Binding Nome}"
+                                   TextColor="Black"
+                                   FontSize="20"/>
+
+                        </HorizontalStackLayout>
+
+                        <Label Text="{Binding Telefone}"
+                               TextColor="Black"
+                               FontSize="20"/>
+
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </VerticalStackLayout>
+        </Frame>
+        
+        <Button Text="Adicionar novo acabamento"
+                BackgroundColor="#8b8b8b"
+                FontSize="16"
+                TextColor="Black"
+                Clicked="NovoFornecedorClicked"
+                Margin="50,5"
+                Grid.Row="2"/>
+
+        <Button Text="Voltar"
+                BackgroundColor="#8b8b8b"
+                FontSize="16"
+                TextColor="Black"
+                Clicked="clicouBotaoVoltar"
+                Margin="50,5"
+                Grid.Row="3"/>
+        
+    </Grid>
+</ContentPage>

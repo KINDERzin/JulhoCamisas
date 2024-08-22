@@ -15,7 +15,17 @@ public partial class MainPage : ContentPage
 
 	void clicouBotaoAcabamento(object sender, EventArgs e)
     {
-    	Application.Current.MainPage = new AcabamentoPage();
+    	Application.Current.MainPage = new ListaAcabamentoPage();
+    }
+
+	void clicouBotaoEmpregado(object sender, EventArgs e)
+    {
+    	Application.Current.MainPage = new ListaCostureiraPage();
+    }
+
+	void clicouBotaoFornecedor(object sender, EventArgs e)
+    {
+    	Application.Current.MainPage = new ListaFornecedorPage();
     }
 	
 }

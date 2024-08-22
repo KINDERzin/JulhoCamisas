@@ -4,6 +4,9 @@ namespace JulhoCamisas
 {
     public partial class CadastrarCostureira : ContentPage
     {
+
+        public Costureira costureira{ get; set; }
+
         public CadastrarCostureira()
         {
             InitializeComponent();

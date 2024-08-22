@@ -10,6 +10,7 @@
             <RowDefinition Height="250"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -43,6 +44,20 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 Clicked="clicouBotaoAcabamento"/>
+
+        <Button Text="Empregados"
+                BackgroundColor="#8b8b8b"
+                Margin="50,100, 10, 5"
+                Grid.Row="2"
+                Grid.Column="0"
+                Clicked="clicouBotaoEmpregado"/>
+
+        <Button Text="Fornecedores"
+                BackgroundColor="#8b8b8b"
+                Margin="50,100, 10, 5"
+                Grid.Row="2"
+                Grid.Column="1"
+                Clicked="clicouBotaoFornecedor"/>
 
     </Grid>
 </ContentPage>

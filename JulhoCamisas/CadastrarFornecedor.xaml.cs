@@ -4,6 +4,9 @@ namespace JulhoCamisas
 {
     public partial class CadastrarFornecedor : ContentPage
     {
+
+        public Fornecedor fornecedor{ get; set; }
+
         public CadastrarFornecedor()
         {
             InitializeComponent();
