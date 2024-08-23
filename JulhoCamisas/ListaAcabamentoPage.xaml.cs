@@ -10,10 +10,16 @@ public partial class ListaAcabamentoPage : ContentPage
 	{
 		InitializeComponent();
 
-    ListaAcabamento.ItemsSource = acabamentoControle.LerTodos();
+    
 	}
 
-  void itemSelecionado(object sender, SelectedItemChangedEventArgs e)
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        ListaAcabamento.ItemsSource = acabamentoControle.LerTodos();
+    }
+
+    void itemSelecionado(object sender, SelectedItemChangedEventArgs e)
   {
     var page = new CadastrarAcabamento();
     page.acabamento = e.SelectedItem as Acabamento;

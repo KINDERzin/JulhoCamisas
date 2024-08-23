@@ -3,19 +3,177 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JulhoCamisas.CadastrarFornecedor"
              Shell.NavBarIsVisible="False">
+
     <ScrollView>
-        <StackLayout Padding="30" Spacing="20">
-            <Image Source="logo.png" HeightRequest="100" VerticalOptions="CenterAndExpand" />
-            <Label Text="CADASTRAR FORNECEDOR" FontSize="24" HorizontalOptions="Center" />
-            <StackLayout Spacing="10">
-                <Entry Placeholder="Nome:" x:Name="nameEntry"/>
-                <Entry Placeholder="Email:" x:Name="emailEntry"/>
-                <Entry Placeholder="Endereço:" x:Name="addressEntry"/>
-                <Entry Placeholder="Produto:" x:Name="productEntry"/>
-                <Entry Placeholder="Qt:" x:Name="quantityEntry"/>
-            </StackLayout>
-            <Button Text="CONFIRMAR DADOS" Clicked="OnConfirmDataClicked" />
-            <Button Text="VOLTAR" Clicked="OnBackClicked" />
-        </StackLayout>
+        <Grid BackgroundColor="#d9d9d9">
+
+            <Grid.RowDefinitions>
+              <RowDefinition Height="250"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+
+            <HorizontalStackLayout Grid.Row="0"
+                                   Grid.ColumnSpan="2">
+                <Image Source="logo.png"
+                        Aspect="AspectFit"
+                        Margin="50, 20, 0, 0"
+                        Grid.Row="0"
+                        Grid.Column="0"/>
+
+                <Label Text="ACABAMENTO"
+                        FontSize="Title"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Margin="300, 20"
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+            </HorizontalStackLayout>
+
+            <Frame BackgroundColor="#d1d1d1"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="50, 20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+            
+                    <Label Text="ID:"
+                            TextColor="Black"
+                            Margin="20, 10, 0, 5"
+                            Grid.Row="0"
+                            Grid.Column="0"/>
+
+                    <Label Text="ARRUMAR"
+                            TextColor="Black"
+                            Margin="20, 10, 0, 5"
+                            Grid.Row="1"
+                            Grid.Column="0"/>
+                    
+                    <Label Text="Nome:"
+                            TextColor="Black"
+                            Margin="20, 10, 0, 5"
+                            Grid.Row="2"
+                            Grid.Column="0"/>
+
+                    <Entry x:Name="nomeEntry"
+                            TextColor="Black"
+                            IsEnabled="False"
+                            Margin="20, 0, 20, 10"
+                            Grid.Row="3"
+                            Grid.Column="0"/>
+                    <Button Text="EDITAR"
+                            TextColor="Black"
+                            HorizontalOptions="Start"
+                            Clicked="editarNome_Clicked"
+                            BackgroundColor="#d9d9d9"
+                            Grid.Row="3"
+                            Grid.Column="1"/>
+
+                    <Label Text="Sobrenome:"
+                            TextColor="Black"
+                            Margin="20, 10, 0, 5"
+                            Grid.Row="4"
+                            Grid.Column="0"/>
+
+                    <Entry x:Name="sobrenomeEntry"
+                            TextColor="Black"
+                            Margin="20, 0, 20, 10"
+                            IsEnabled="False"
+                            Grid.Row="5"
+                            Grid.Column="0"/>
+                    <Button Text="EDITAR"
+                            TextColor="Black"
+                            HorizontalOptions="Start"
+                            Clicked="editarSobrenome_Clicked"
+                            BackgroundColor="#d9d9d9"
+                            Grid.Row="5"
+                            Grid.Column="1"/>
+
+                    <Label Text="CPF:"
+                            TextColor="Black"
+                            Margin="20, 10, 0, 5"
+                            Grid.Row="6"
+                            Grid.Column="0"/>
+
+                    <Entry x:Name="cpfEntry"
+                            TextColor="Black"
+                            Margin="20, 0, 20, 10"
+                            IsEnabled="False"
+                            Keyboard="Text"
+                            Grid.Row="7"
+                            Grid.Column="0"/>
+                    <Button Text="EDITAR"
+                            TextColor="Black"
+                            HorizontalOptions="Start"
+                            Clicked="editarCpf_Clicked"
+                            BackgroundColor="#d9d9d9"
+                            Grid.Row="7"
+                            Grid.Column="1"/>
+
+                    <Label Text="Telefone:"
+                            TextColor="Black"
+                            Margin="20, 10, 0, 5"
+                            Grid.Row="8"
+                            Grid.Column="0"/>
+
+                    <Entry x:Name="telefoneEntry"
+                            TextColor="Black"
+                            Keyboard="Text"
+                            Margin="20, 0, 20, 10"
+                            IsEnabled="False"
+                            Grid.Row="9"
+                            Grid.Column="0"/>
+                    <Button Text="EDITAR"
+                            TextColor="Black"
+                            HorizontalOptions="Start"
+                            Clicked="editarTelefone_Clicked"
+                            BackgroundColor="#d9d9d9"
+                            Grid.Row="9"
+                            Grid.Column="1"/>
+
+                    <Button Text="SALVAR"
+                            TextColor="Black"
+                            Margin="20, 0, 20, 5"
+                            Clicked="Salvar_Clicked"
+                            BackgroundColor="#d9d9d9"
+                            Grid.Row="10"
+                            Grid.Column="0"/>
+
+                </Grid>
+            </Frame>
+            
+            <Button Text="CONFIRMAR DADOS" 
+                    Clicked="OnConfirmDataClicked" 
+                    Grid.Row="2"/>
+            <Button Text="VOLTAR" 
+                    Clicked="OnBackClicked" 
+                    Grid.Row="3"/>
+        
+        </Grid>
     </ScrollView>
 </ContentPage>

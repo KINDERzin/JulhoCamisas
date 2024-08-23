@@ -1,3 +1,4 @@
+using Controles;
 using Microsoft.Maui.Controls;
 
 namespace JulhoCamisas
@@ -5,21 +6,33 @@ namespace JulhoCamisas
     public partial class CadastrarCostureira : ContentPage
     {
 
-        public Costureira costureira{ get; set; }
+        public Modelos.Costureira costureira{ get; set; }
+
+        public CostureiraControle costureiraControle = new CostureiraControle();
 
         public CadastrarCostureira()
         {
             InitializeComponent();
         }
 
+        
+
         private async void OnConfirmClicked(object sender, EventArgs e)
         {
+
+            var costureira = new Modelos.Costureira();
+
+            costureira.Nome = NomeEntry.Text; 
+            costureira.Endereco = EnderecoEntry.Text;
+            costureira.Telefone = TelefoneEntry.Text;
+            costureira.Cpf = CpfEntry.Text;
+
             string nome = NomeEntry.Text;
             string endereco = EnderecoEntry.Text;
-            string email = EmailEntry.Text;
+            string telefone = TelefoneEntry.Text;
             string cpf = CpfEntry.Text;
 
-            // Adicione a lógica para registrar a costureira aqui
+            costureiraControle.CriarOuAtualizar(costureira);
 
             await DisplayAlert("Sucesso", "Costureira cadastrada com sucesso!", "OK");
         }

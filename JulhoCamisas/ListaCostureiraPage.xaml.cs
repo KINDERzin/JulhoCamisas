@@ -10,9 +10,13 @@ public partial class ListaCostureiraPage : ContentPage
   public ListaCostureiraPage()
 	{
 		InitializeComponent();
-
-    ListaCostureira.ItemsSource = costureiraControle.LerTodos();
 	}
+
+  protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        ListaCostureira.ItemsSource = costureiraControle.LerTodos();
+    }
 
   void itemSelecionado(object sender, SelectedItemChangedEventArgs e)
   {

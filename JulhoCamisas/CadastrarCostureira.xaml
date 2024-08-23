@@ -33,8 +33,7 @@
                 HorizontalTextAlignment="Center"
                 Margin="0, 20"
                 Grid.Row="1"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"/>
+                Grid.Column="0"/>
 
         <Label Text="Nome:"
                TextColor="Black"
@@ -60,7 +59,7 @@
                x:Name="EnderecoEntry"
                Grid.Row="5"/>
 
-        <Label Text="Email:"
+        <Label Text="Telefone:"
                TextColor="Black"
                Margin="20, 10, 0, 5"
                Grid.Row="6"/> 
@@ -69,7 +68,7 @@
                TextColor="Black"
                Keyboard="Text"
                Margin="20, 0, 20, 10"
-               x:Name="EmailEntry"
+               x:Name="TelefoneEntry"
                Grid.Row="7"/>
 
         <Label Text="CPF:"

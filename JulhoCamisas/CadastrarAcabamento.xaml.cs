@@ -1,3 +1,4 @@
+using Controles;
 using JulhoCamisas.Modelos;
 using Microsoft.Maui.Controls;
 
@@ -8,21 +9,27 @@ namespace JulhoCamisas
 
         public Acabamento acabamento{ get; set; }
 
+        public AcabamentoControle acabamentoControle = new AcabamentoControle();
         public CadastrarAcabamento()
         {
             InitializeComponent();
-
-            acabamento = new Acabamento();
         }
 
         private async void Confirmar_Clicked(object sender, EventArgs e)
         {
-            
+            var acabamento = new Modelos.Acabamento();
+
+            acabamento.Cor = corEntry.Text;
+            acabamento.Quantidade = quantidadeEntry.Text;
+            acabamento.Fornecedor = fornecedorEntry.Text;
+            acabamento.Tipo = tipoEntry.Text;
             
             corEntry.Text = acabamento.Cor;
             quantidadeEntry.Text = acabamento.Quantidade;
             fornecedorEntry.Text = acabamento.Fornecedor;
             tipoEntry.Text = acabamento.Tipo;
+
+            acabamentoControle.CriarOuAtualizar(acabamento);
 
             await DisplayAlert("Sucesso", "Acabamento cadastrado com sucesso!", "OK");
 
