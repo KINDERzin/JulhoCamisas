@@ -31,36 +31,36 @@
                Margin="50, 30"
                HeightRequest="300"
                Grid.Row="1">
-               <VerticalStackLayout>
-        <ListView x:Name="ListaCostureira"
-                  HasUnevenRows="True"
-                  ItemSelected="itemSelecionado"
-                  HorizontalOptions="Fill"
-                  VerticalOptions="Fill">
+            <VerticalStackLayout>
+                <ListView x:Name="ListaCostureira"
+                        HasUnevenRows="True"
+                        ItemSelected="itemSelecionado"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <VerticalStackLayout BackgroundColor="#d1d1d1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <VerticalStackLayout BackgroundColor="#d1d1d1">
 
-                        <HorizontalStackLayout>
+                                    <HorizontalStackLayout>
 
-                            <Label Text="{Binding Nome}"
-                                   TextColor="Black"
-                                   FontSize="20"/>
+                                        <Label Text="{Binding Nome}"
+                                               TextColor="Black"
+                                               FontSize="20"/>
 
-                        </HorizontalStackLayout>
+                                    </HorizontalStackLayout>
 
-                        <Label Text="{Binding Telefone}"
-                               TextColor="Black"
-                               FontSize="20"/>
+                                    <Label Text="{Binding Telefone}"
+                                           TextColor="Black"
+                                           FontSize="20"/>
 
-                        </VerticalStackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        </VerticalStackLayout>
+                                </VerticalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
         </Frame>
         
         <Button Text="Adicionar novo(a) costureiro(a)"

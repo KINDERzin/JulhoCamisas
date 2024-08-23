@@ -11,15 +11,18 @@ namespace JulhoCamisas
         public CadastrarAcabamento()
         {
             InitializeComponent();
+
+            acabamento = new Acabamento();
         }
 
         private async void Confirmar_Clicked(object sender, EventArgs e)
         {
             
-            tipoEntry.Text = acabamento.Tipo;
+            
             corEntry.Text = acabamento.Cor;
             quantidadeEntry.Text = acabamento.Quantidade;
             fornecedorEntry.Text = acabamento.Fornecedor;
+            tipoEntry.Text = acabamento.Tipo;
 
             await DisplayAlert("Sucesso", "Acabamento cadastrado com sucesso!", "OK");
 
@@ -29,7 +32,6 @@ namespace JulhoCamisas
 
         private void Voltar_Clicked(object sender, EventArgs e)
         {
-            // Navegar para a página anterior
             Application.Current.MainPage = new ListaAcabamentoPage();
         }
     }

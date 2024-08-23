@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JulhoCamisas.CadastrarCostureira"
              Shell.NavBarIsVisible="False">
-             
+    <ScrollView>
     <Grid BackgroundColor="#d9d9d9">
         <Grid.RowDefinitions>
             <RowDefinition Height="250"/>
@@ -99,4 +99,5 @@
                 Grid.Row="11"/>
         
     </Grid> 
+    </ScrollView>
 </ContentPage>

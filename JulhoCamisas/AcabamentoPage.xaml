@@ -35,8 +35,7 @@
        <Frame BackgroundColor="#d1d1d1"
               Grid.Row="1"
               Grid.ColumnSpan="2"
-              Margin="50"
-              IsVisible="False">
+              Margin="50">
               <Grid>
                      <Grid.RowDefinitions>
                      <RowDefinition Height="Auto"/>

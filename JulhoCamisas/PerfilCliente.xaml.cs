@@ -1,39 +1,66 @@
+using Controles;
 using Microsoft.Maui.Controls;
 
 namespace JulhoCamisas
 {
     public partial class PerfilCliente : ContentPage
     {
+
+        public Modelos.Cliente cliente;
+        public PerfilCliente perfilCliente;
+        ClienteControle clienteControle;
+
         public PerfilCliente()
         {
             InitializeComponent();
-        }
 
-        private void OnEditNameClicked(object sender, EventArgs e)
+            var cliente = new Modelos.Cliente();
+
+        }
+    
+        private async void editarNome_Clicked(object sender, EventArgs e)
         {
-            nameEntry.IsReadOnly = false;
-            nameEntry.Focus();
+            nomeEntry.IsEnabled = true;
         }
 
-        private void OnEditEmailClicked(object sender, EventArgs e)
+        private async void editarSobrenome_Clicked(object sender, EventArgs e)
         {
-            emailEntry.IsReadOnly = false;
-            emailEntry.Focus();
+            sobrenomeEntry.IsEnabled = true;
         }
 
-        private void OnEditAddressClicked(object sender, EventArgs e)
+        private async void editarCpf_Clicked(object sender, EventArgs e)
         {
-            addressEntry.IsReadOnly = false;
-            addressEntry.Focus();
+            cpfEntry.IsEnabled = true;
         }
 
-        private void OnEditPasswordClicked(object sender, EventArgs e)
+        private async void editarTelefone_Clicked(object sender, EventArgs e)
         {
-            passwordEntry.IsReadOnly = false;
-            passwordEntry.Focus();
+            telefoneEntry.IsEnabled = true;
         }
 
-        private async void OnDeleteAccountClicked(object sender, EventArgs e)
+        private async void Salvar_Clicked(object sender, EventArgs e)
+        {
+            // Obter os valores dos campos
+            nomeEntry.Text = cliente.Nome;
+            sobrenomeEntry.Text = cliente.Sobrenome;
+            cpfEntry.Text = cliente.Cpf;
+            telefoneEntry.Text = cliente.Telefone;
+
+            nomeEntry.IsEnabled = false;
+            sobrenomeEntry.IsEnabled = false;            
+            cpfEntry.IsEnabled = false;
+            telefoneEntry.IsEnabled = false;
+
+            if(nomeEntry.Text == string.Empty || sobrenomeEntry.Text == string.Empty || cpfEntry.Text == string.Empty || telefoneEntry.Text == string.Empty)
+            {
+                await DisplayAlert("Erro", "Os campos acima estão vazios.", "OK");
+            }
+            else{
+                await DisplayAlert("CONCUÍDO", "Os dados foram salvos", "Ok");
+            }
+        }
+
+        private async void clicouBotaoExcluirConta(object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Excluir Conta", "Você tem certeza que deseja excluir sua conta?", "Sim", "Não");
             if (answer)
@@ -43,10 +70,9 @@ namespace JulhoCamisas
             }
         }
 
-        private async void OnBackClicked(object sender, EventArgs e)
+        private async void Voltar_Clicked(object sender, EventArgs e)
         {
-            // Adicione a lógica para voltar à página anterior aqui
-            await Navigation.PopAsync();
+            Application.Current.MainPage = new ListaClientesPage();
         }
     }
 }

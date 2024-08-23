@@ -31,36 +31,36 @@
                Margin="50, 30"
                HeightRequest="300"
                Grid.Row="1">
-               <VerticalStackLayout>
-        <ListView x:Name="ListaAcabamento"
-                  HasUnevenRows="True"
-                  ItemSelected="itemSelecionado"
-                  HorizontalOptions="Fill"
-                  VerticalOptions="Fill">
+            <VerticalStackLayout>
+                <ListView x:Name="ListaAcabamento"
+                        HasUnevenRows="True"
+                        ItemSelected="itemSelecionado"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <VerticalStackLayout BackgroundColor="#d1d1d1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <VerticalStackLayout BackgroundColor="#d1d1d1">
 
-                        <HorizontalStackLayout>
+                                <HorizontalStackLayout>
 
-                            <Label Text="{Binding Tipo}"
-                                   TextColor="Black"
-                                   FontSize="20"/>
+                                    <Label Text="{Binding Tipo}"
+                                        TextColor="Black"
+                                        FontSize="20"/>
 
-                        </HorizontalStackLayout>
+                                </HorizontalStackLayout>
 
-                        <Label Text="{Binding Fornecedor}"
-                               TextColor="Black"
-                               FontSize="20"/>
+                                <Label Text="{Binding Fornecedor}"
+                                    TextColor="Black"
+                                    FontSize="20"/>
 
-                        </VerticalStackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        </VerticalStackLayout>
+                                </VerticalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
         </Frame>
         
         <Button Text="Adicionar novo acabamento"

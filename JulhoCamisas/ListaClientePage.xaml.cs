@@ -15,8 +15,8 @@ public partial class ListaClientesPage : ContentPage
 
   void itemSelecionado(object sender, SelectedItemChangedEventArgs e)
   {
-    var page = new CadastrarCliente();
-    page.cliente = e.SelectedItem as Cliente;
+    var page = new PerfilCliente();
+    page.perfilCliente = e.SelectedItem as PerfilCliente;
     Application.Current.MainPage = page;
   }
 

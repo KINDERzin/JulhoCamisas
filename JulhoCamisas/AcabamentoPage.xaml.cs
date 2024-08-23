@@ -58,10 +58,6 @@ namespace JulhoCamisas
             else{
                 await DisplayAlert("CONCUÍDO", "Os dados foram salvos", "Ok");
             }
-            
-
-            // Lógica para atualizar o acabamento (chamar sua API ou serviço)
-            
         }
 
         private void Voltar_Clicked(object sender, EventArgs e)

@@ -26,7 +26,7 @@ namespace JulhoCamisas
 
         private async void OnBackClicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            Application.Current.MainPage = new ListaCostureiraPage();
         }
     }
 }

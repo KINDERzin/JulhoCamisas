@@ -27,8 +27,7 @@ namespace JulhoCamisas
 
         private async void OnBackClicked(object sender, EventArgs e)
         {
-            // Adicione a lógica para voltar à página anterior aqui
-            await Navigation.PopAsync();
+            Application.Current.MainPage = new ListaFornecedorPage();
         }
     }
 }

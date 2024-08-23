@@ -4,9 +4,7 @@
              x:Class="JulhoCamisas.CadastrarCliente"
              Shell.NavBarIsVisible="False">
 
-    <ScrollView BackgroundColor="#d9d9d9">
-        <VerticalStackLayout Padding="20" Spacing="10">    
-
+    <ScrollView BackgroundColor="#d9d9d9">   
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="250"/>
@@ -118,7 +116,6 @@
                     BackgroundColor="#d9d9d9"
                     Grid.Row="18"
                     TextColor="Black"/>
-        </Grid>  
-        </VerticalStackLayout>
+        </Grid> 
     </ScrollView>
 </ContentPage>
