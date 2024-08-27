@@ -5,12 +5,13 @@ namespace JulhoCamisas;
 public partial class ListaAcabamentoPage : ContentPage
 {
   Controles.AcabamentoControle acabamentoControle = new Controles.AcabamentoControle();
+  Modelos.Acabamento acabamento = new Modelos.Acabamento();
 
   public ListaAcabamentoPage()
 	{
 		InitializeComponent();
 
-    
+    ListaAcabamento.ItemsSource = acabamentoControle.LerTodos();
 	}
 
     protected override void OnAppearing()
@@ -21,8 +22,8 @@ public partial class ListaAcabamentoPage : ContentPage
 
     void itemSelecionado(object sender, SelectedItemChangedEventArgs e)
   {
-    var page = new CadastrarAcabamento();
-    page.acabamento = e.SelectedItem as Acabamento;
+    var page = new AcabamentoPage();
+    page.acabamentoPage = e.SelectedItem as AcabamentoPage;
     Application.Current.MainPage = page;
   }
 

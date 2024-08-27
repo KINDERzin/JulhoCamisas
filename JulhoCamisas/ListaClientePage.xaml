@@ -37,6 +37,7 @@
                         ItemSelected="itemSelecionado"
                         HorizontalOptions="Fill"
                         VerticalOptions="Fill">
+                        
 
                     <ListView.ItemTemplate>
                         <DataTemplate>

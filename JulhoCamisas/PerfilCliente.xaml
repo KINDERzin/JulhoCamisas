@@ -19,11 +19,11 @@
                         Margin="50, 20, 0, 0"/>
 
                 <Label Text="Perfil cliente"
-                        FontSize="Title"
+                        FontSize="50"
                         TextColor="Black"
                         HorizontalTextAlignment="Center"
                         VerticalTextAlignment="Center"
-                        Margin="300, 20"/>
+                        Margin="200, 20"/>
             </HorizontalStackLayout>
 
             <Frame BackgroundColor="#d1d1d1"
@@ -64,17 +64,17 @@
                             Grid.Column="0"/>
                     
                     <Label Text="Nome:"
-                            TextColor="Black"
-                            Margin="20, 10, 0, 5"
-                            Grid.Row="2"
-                            Grid.Column="0"/>
+                           TextColor="Black"
+                           Margin="20, 10, 0, 5"
+                           Grid.Row="2"
+                           Grid.Column="0"/>
 
                     <Entry x:Name="nomeEntry"
-                            TextColor="Black"
-                            IsEnabled="False"
-                            Margin="20, 0, 20, 10"
-                            Grid.Row="3"
-                            Grid.Column="0"/>
+                           TextColor="Black"
+                           IsEnabled="False"
+                           Margin="20, 0, 20, 10"
+                           Grid.Row="3"
+                           Grid.Column="0"/>
                     <Button Text="EDITAR"
                             TextColor="Black"
                             HorizontalOptions="Start"
@@ -84,17 +84,17 @@
                             Grid.Column="1"/>
 
                     <Label Text="Sobrenome:"
-                            TextColor="Black"
-                            Margin="20, 10, 0, 5"
-                            Grid.Row="4"
-                            Grid.Column="0"/>
+                           TextColor="Black"
+                           Margin="20, 10, 0, 5"
+                           Grid.Row="4"
+                           Grid.Column="0"/>
 
                     <Entry x:Name="sobrenomeEntry"
-                            TextColor="Black"
-                            Margin="20, 0, 20, 10"
-                            IsEnabled="False"
-                            Grid.Row="5"
-                            Grid.Column="0"/>
+                           TextColor="Black"
+                           Margin="20, 0, 20, 10"
+                           IsEnabled="False"
+                           Grid.Row="5"
+                           Grid.Column="0"/>
                     <Button Text="EDITAR"
                             TextColor="Black"
                             HorizontalOptions="Start"
@@ -104,18 +104,18 @@
                             Grid.Column="1"/>
 
                     <Label Text="CPF:"
-                            TextColor="Black"
-                            Margin="20, 10, 0, 5"
-                            Grid.Row="6"
-                            Grid.Column="0"/>
+                           TextColor="Black"
+                           Margin="20, 10, 0, 5"
+                           Grid.Row="6"
+                           Grid.Column="0"/>
 
                     <Entry x:Name="cpfEntry"
-                            TextColor="Black"
-                            Margin="20, 0, 20, 10"
-                            IsEnabled="False"
-                            Keyboard="Text"
-                            Grid.Row="7"
-                            Grid.Column="0"/>
+                           TextColor="Black"
+                           Margin="20, 0, 20, 10"
+                           IsEnabled="False"
+                           Keyboard="Text"
+                           Grid.Row="7"
+                           Grid.Column="0"/>
                     <Button Text="EDITAR"
                             TextColor="Black"
                             HorizontalOptions="Start"
@@ -125,18 +125,18 @@
                             Grid.Column="1"/>
 
                     <Label Text="Telefone:"
-                            TextColor="Black"
-                            Margin="20, 10, 0, 5"
-                            Grid.Row="8"
-                            Grid.Column="0"/>
+                           TextColor="Black"
+                           Margin="20, 10, 0, 5"
+                           Grid.Row="8"
+                           Grid.Column="0"/>
 
                     <Entry x:Name="telefoneEntry"
-                            TextColor="Black"
-                            Keyboard="Text"
-                            Margin="20, 0, 20, 10"
-                            IsEnabled="False"
-                            Grid.Row="9"
-                            Grid.Column="0"/>
+                           TextColor="Black"
+                           Keyboard="Text"
+                           Margin="20, 0, 20, 10"
+                           IsEnabled="False"
+                           Grid.Row="9"
+                           Grid.Column="0"/>
                     <Button Text="EDITAR"
                             TextColor="Black"
                             HorizontalOptions="Start"
@@ -164,11 +164,11 @@
                     Grid.Row="2"/>
 
             <Button Text="VOLTAR"
-               TextColor="Black"
-               Margin="50, 10"
-               Clicked="Voltar_Clicked"
-               BackgroundColor="#8b8b8b"
-               Grid.Row="3"/>
+                    TextColor="Black"
+                    Margin="50, 10"
+                    Clicked="Voltar_Clicked"
+                    BackgroundColor="#8b8b8b"
+                    Grid.Row="3"/>
             
         </Grid>
     </ScrollView>

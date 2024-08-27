@@ -46,15 +46,6 @@ namespace JulhoCamisas
             }
         }
 
-        private void OnApagarDadosClicked(object sender, EventArgs e)
-        {
-            NomeEntry.Text = string.Empty;
-            SobrenomeEntry.Text = string.Empty;
-            TelefoneEntry.Text = string.Empty;
-            CpfEntry.Text = string.Empty;
-            EnderecoEntry.Text = string.Empty;
-        }
-
         async void OnSalvarDadosClicked(object sender, EventArgs e)
         {
             

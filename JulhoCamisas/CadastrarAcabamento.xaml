@@ -1,123 +1,101 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JulhoCamisas.CadastrarAcabamento"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#d9d9d9">
 
-    <ScrollView BackgroundColor="#d9d9d9">
-    <Grid>
-       <Grid.RowDefinitions>
-              <RowDefinition Height="250"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/> 
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-              <RowDefinition Height="Auto"/>
-       </Grid.RowDefinitions>
-       <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="*"/>
-              <ColumnDefinition Width="*"/>
-       </Grid.ColumnDefinitions>
-       
-       <Image Source="logo.png"
-              Aspect="AspectFit"
-              Grid.Row="0"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"
-              Margin="0, 20, 0, 0"/>
+       <ScrollView>
+              <Grid>
 
-       <Label Text="CADASTRAR ACABAMENTO"
-              TextColor="Black"
-              FontSize="Title"
-              HorizontalTextAlignment="Center"
-              Margin="0, 20"
-              Grid.Row="1"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+                     <Grid.RowDefinitions>
+                            <RowDefinition Height="250"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                     </Grid.RowDefinitions>
+                     <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                     </Grid.ColumnDefinitions>
 
-       <Label Text="Tipo:"
-              TextColor="Black"
-              Margin="20, 10, 0, 5"
-              Grid.Row="2"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>       
+                     <HorizontalStackLayout Grid.Row="0"
+                                            Grid.ColumnSpan="2">
+                            <Image Source="logo.png"
+                                   Aspect="AspectFit"
+                                   Margin="50, 20, 0, 0"/>
 
-       <Entry Placeholder="Tipo"
-              TextColor="Black"
-              Keyboard="Text"
-              Margin="20, 0, 20, 10"
-              x:Name="tipoEntry"
-              Grid.Row="3"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+                            <Label Text="Cadastrar acabamento"
+                                   FontSize="50"
+                                   TextColor="Black"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   Margin="200, 20"/>
+                     </HorizontalStackLayout>
 
-       <Label Text="Cor:"
-              TextColor="Black"
-              Margin="20, 10, 0, 5"
-              Grid.Row="4"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+                     <Frame BackgroundColor="#d1d1d1"
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Margin="50, 20">
+                            <VerticalStackLayout>
 
-       <Entry Placeholder="Cor"
-              TextColor="Black"
-              Keyboard="Text"
-              Margin="20, 0, 20, 10"
-              x:Name="corEntry"
-              Grid.Row="5"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+                                   <Label Text="Tipo:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>       
 
-       <Label Text="Quantidade:"
-              TextColor="Black"
-              Margin="20, 10, 0, 5"
-              Grid.Row="6"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+                                   <Entry Placeholder="Tipo"
+                                          TextColor="Black"
+                                          Keyboard="Text"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="tipoEntry"/>
 
-       <Entry Placeholder="Quantidade"
-              TextColor="Black"
-              Keyboard="Numeric"
-              Margin="20, 0, 20, 10"
-              x:Name="quantidadeEntry"
-              Grid.Row="7"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+                                   <Label Text="Cor:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
 
-       <Label Text="Fornecedor:"
-              TextColor="Black"
-              Margin="20, 10, 0, 5"
-              Grid.Row="8"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+                                   <Entry Placeholder="Cor"
+                                          TextColor="Black"
+                                          Keyboard="Text"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="corEntry"/>
 
-       <Entry Placeholder="Fornecedor"
-              TextColor="Black"
-              Keyboard="Text"
-              Margin="20, 0, 20, 10"
-              x:Name="fornecedorEntry"
-              Grid.Row="9"
-              Grid.Column="0"
-              Grid.ColumnSpan="2"/>
+                                   <Label Text="Quantidade:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
 
-       <Button Text="CONFIRMAR"
-               TextColor="Black"
-               BackgroundColor="#d9d9d9"
-               Margin="20, 40"
-               Clicked="Confirmar_Clicked"
-               Grid.Row="10"
-               Grid.Column="0"/>
+                                   <Entry Placeholder="Quantidade"
+                                          TextColor="Black"
+                                          Keyboard="Numeric"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="quantidadeEntry"/>
 
-       <Button Text="VOLTAR"
-               TextColor="Black"
-               BackgroundColor="#d9d9d9"
-               Margin="20, 10"
-               Clicked="Voltar_Clicked"
-               Grid.Row="10"
-               Grid.Column="1"/>
-    </Grid>
-    </ScrollView>
+                                   <Label Text="Fornecedor:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
+
+                                   <Entry Placeholder="Fornecedor"
+                                          TextColor="Black"
+                                          Keyboard="Text"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="fornecedorEntry"/>
+
+                            </VerticalStackLayout>
+                     </Frame>
+
+                     <Button Text="CONFIRMAR"
+                             TextColor="Black"
+                             BackgroundColor="#8b8b8b"
+                             Margin="50, 10, 10, 10"
+                             Clicked="Confirmar_Clicked"
+                             Grid.Row="2"
+                             Grid.Column="0"/>
+
+                     <Button Text="VOLTAR"
+                             TextColor="Black"
+                             BackgroundColor="#8b8b8b"
+                             Margin="10, 10, 50, 10"
+                             Clicked="Voltar_Clicked"
+                             Grid.Row="2"
+                             Grid.Column="1"/>
+              </Grid>
+       </ScrollView>
 </ContentPage>

@@ -2,100 +2,106 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JulhoCamisas.CadastrarCostureira"
-             Shell.NavBarIsVisible="False">
-    <ScrollView>
-    <Grid BackgroundColor="#d9d9d9">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="250"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/> 
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        
-        <Image Source="logo.png" 
-                Aspect="AspectFit"
-                Grid.Row="0"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Margin="0, 20, 0, 0"/>
-        
-        <Label Text="CADASTRAR COSTUREIRA"
-                TextColor="Black"
-                FontSize="Title"
-                HorizontalTextAlignment="Center"
-                Margin="0, 20"
-                Grid.Row="1"
-                Grid.Column="0"/>
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#d9d9d9">
+       <ScrollView>
+              <Grid>
+                     <Grid.RowDefinitions>
+                            <RowDefinition Height="250"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                     </Grid.RowDefinitions>
+                     <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                     </Grid.ColumnDefinitions>
 
-        <Label Text="Nome:"
-               TextColor="Black"
-               Margin="20, 10, 0, 5"
-               Grid.Row="2"/>  
+                     <HorizontalStackLayout Grid.Row="0"
+                                            Grid.ColumnSpan="2">
+                            <Image Source="logo.png"
+                                   Aspect="AspectFit"
+                                   Margin="50, 20, 0, 0"/>
 
-        <Entry Placeholder="Nome"
-               TextColor="Black"
-               Keyboard="Text"
-               Margin="20, 0, 20, 10"
-               x:Name="NomeEntry"
-               Grid.Row="3"/>
+                            <Label Text="Cadastrar costureira"
+                                   FontSize="50"
+                                   TextColor="Black"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   Margin="200, 20"/>
+                     </HorizontalStackLayout>
 
-        <Label Text="Endereço:"
-               TextColor="Black"
-               Margin="20, 10, 0, 5"
-               Grid.Row="4"/>  
+                     <Frame BackgroundColor="#d1d1d1"
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Margin="50, 20, 50, 0">
+                            <VerticalStackLayout>
 
-        <Entry Placeholder="Endereço"
-               TextColor="Black"
-               Keyboard="Text"
-               Margin="20, 0, 20, 10"
-               x:Name="EnderecoEntry"
-               Grid.Row="5"/>
+                                   <Label Text="Nome:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"
+                                          Grid.Row="2"/>  
 
-        <Label Text="Telefone:"
-               TextColor="Black"
-               Margin="20, 10, 0, 5"
-               Grid.Row="6"/> 
+                                   <Entry Placeholder="Nome"
+                                          TextColor="Black"
+                                          Keyboard="Text"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="NomeEntry"
+                                          Grid.Row="3"/>
 
-        <Entry Placeholder="Email"
-               TextColor="Black"
-               Keyboard="Text"
-               Margin="20, 0, 20, 10"
-               x:Name="TelefoneEntry"
-               Grid.Row="7"/>
+                                   <Label Text="Endereço:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"
+                                          Grid.Row="4"/>  
 
-        <Label Text="CPF:"
-               TextColor="Black"
-               Margin="20, 10, 0, 5"
-               Grid.Row="8"/> 
+                                   <Entry Placeholder="Endereço"
+                                          TextColor="Black"
+                                          Keyboard="Text"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="EnderecoEntry"
+                                          Grid.Row="5"/>
 
-        <Entry Placeholder="CPF"
-               TextColor="Black"
-               Keyboard="Text"
-               Margin="20, 0, 20, 10"
-               x:Name="CpfEntry"
-               Grid.Row="9"/>
+                                   <Label Text="Telefone:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"
+                                          Grid.Row="6"/> 
+
+                                   <Entry Placeholder="Email"
+                                          TextColor="Black"
+                                          Keyboard="Text"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="TelefoneEntry"
+                                          Grid.Row="7"/>
+
+                                   <Label Text="CPF:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"
+                                          Grid.Row="8"/> 
+
+                                   <Entry Placeholder="CPF"
+                                          TextColor="Black"
+                                          Keyboard="Text"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="CpfEntry"
+                                          Grid.Row="9"/>
+                            </VerticalStackLayout>
+                     </Frame>
 
         <Button Text="CONFIRMAR"
                 TextColor="Black"
-                BackgroundColor="#d9d9d9"
-                Margin="20, 5"
+                BackgroundColor="#8b8b8b"
+                Margin="50, 10, 10, 10"
                 Clicked="OnConfirmClicked"
-                Grid.Row="10"/>
+                Grid.Row="2"
+                Grid.Column="0"/>
 
         <Button Text="VOLTAR"
                 TextColor="Black"
-                BackgroundColor="#d9d9d9"
-                Margin="20, 5"
+                BackgroundColor="#8b8b8b"
+                Margin="10, 10, 50, 10"
                 Clicked="OnBackClicked"
-                Grid.Row="11"/>
+                Grid.Row="2"
+                Grid.Column="1"/>
         
     </Grid> 
     </ScrollView>

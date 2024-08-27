@@ -10,112 +10,120 @@
                 <RowDefinition Height="250"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
               
+       <HorizontalStackLayout Grid.Row="0"
+                              Grid.ColumnSpan="2">
+                <Image Source="logo.png"
+                       Aspect="AspectFit"
+                       Margin="50, 20, 0, 0"/>
 
-            <Image Source="logo.png"
-                   Aspect="AspectFit"
-                   Margin="0, 20, 0, 0"
-                   Grid.Row="0"
-                   Grid.Column="0"
-                   Grid.ColumnSpan="2"/>
+                <Label Text="Cadastrar cliente"
+                        FontSize="50"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Margin="300, 20"/>
+            </HorizontalStackLayout>   
 
-            <Label Text="CADASTRAR CLIENTE"
-                   TextColor="Black"
-                   FontSize="Title"
-                   HorizontalOptions="Center"
-                   Margin="0, 20"
-                   Grid.Row="1"/>
+       <Frame BackgroundColor="#d1d1d1"
+       Grid.Row="1"
+       Grid.ColumnSpan="2"
+       Margin="50, 20">
+
+              <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
             <Label Text="Nome:"
                    TextColor="Black"
                    Margin="20, 10, 0, 5"
-                   Grid.Row="2"/>
+                   Grid.Row="0"/>
 
             <Entry Placeholder="Digite o nome" 
                    TextColor="Black"
                    Margin="20, 0, 20, 10"
                    x:Name="NomeEntry"
-                   Grid.Row="3"/>
+                   Grid.Row="1"/>
 
             <Label Text="Sobrenome:"
                    Margin="20, 10, 0, 5"
                    TextColor="Black"
-                   Grid.Row="4" />
+                   Grid.Row="2" />
 
             <Entry Placeholder="Digite o sobrenome" 
                    TextColor="Black"
                    x:Name="SobrenomeEntry"
                    Margin="20, 0, 20, 10"
-                   Grid.Row="5"/>
+                   Grid.Row="3"/>
 
             <Label Text="CPF:"
                    TextColor="Black"
                    Margin="20, 10, 0, 5"
-                   Grid.Row="6"/>
+                   Grid.Row="4"/>
 
             <Entry Placeholder="Digite o CPF" 
                    TextColor="Black"
                    Margin="20, 0, 20, 10"
                    x:Name="CpfEntry"
-                   Grid.Row="7"/>
+                   Grid.Row="5"/>
 
             <Label Text="Telefone:"
                    TextColor="Black"
                    Margin="20, 10, 0, 5"
-                   Grid.Row="8"/>
+                   Grid.Row="6"/>
 
             <Entry Placeholder="Digite o telefone"
                    Keyboard="Telephone"  
                    TextColor="Black"
                    Margin="20, 0, 20, 10" 
                    x:Name="TelefoneEntry"
-                   Grid.Row="9"/>
+                   Grid.Row="7"/>
 
             <Label Text="Endereço:"
                    TextColor="Black"
                    Margin="20, 10, 0, 5"
-                   Grid.Row="10"/>
+                   Grid.Row="8"/>
 
             <Entry Placeholder="Digite o endereço c/ número" 
                    TextColor="Black"
                    Margin="20, 0, 20, 10"
                    x:Name="EnderecoEntry"
-                   Grid.Row="11"/>
+                   Grid.Row="9"/>
+              </Grid>
+           </Frame>
 
-           
+              <Button Text="CONFIRMAR"
+                      TextColor="Black"
+                      BackgroundColor="#8b8b8b"
+                      Clicked="OnSalvarDadosClicked"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Margin="50, 0, 10, 10"/>
 
-                <Button Text="LIMPAR"
-                        TextColor="Red"
-                        BackgroundColor="Transparent"
-                        Clicked="OnApagarDadosClicked"
-                        Grid.Row="12"/>
-
-                <Button Text="SALVAR DADOS"
-                        TextColor="Green"
-                        BackgroundColor="Transparent"
-                        Clicked="OnSalvarDadosClicked"
-                        Grid.Row="13"/>
-
-            <Button Text="VOLTAR"
-                    Clicked="VoltarClicked"
-                    BackgroundColor="#d9d9d9"
-                    Grid.Row="18"
-                    TextColor="Black"/>
+              <Button Text="VOLTAR"
+                      TextColor="Black"
+                      BackgroundColor="#8b8b8b"
+                      Clicked="VoltarClicked"
+                      Grid.Row="2"
+                      Grid.Column="1"
+                      Margin="10, 0, 50, 10"/>
         </Grid> 
     </ScrollView>
 </ContentPage>

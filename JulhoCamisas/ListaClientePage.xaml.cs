@@ -5,6 +5,7 @@ namespace JulhoCamisas;
 public partial class ListaClientesPage : ContentPage
 {
   Controles.ClienteControle clienteControle = new Controles.ClienteControle();
+  Modelos.Cliente cliente = new Modelos.Cliente();
 
   public ListaClientesPage()
 	{
@@ -18,6 +19,12 @@ public partial class ListaClientesPage : ContentPage
     var page = new PerfilCliente();
     page.perfilCliente = e.SelectedItem as PerfilCliente;
     Application.Current.MainPage = page;
+
+    var nome = cliente.Nome;
+    var sobrenome = cliente.Sobrenome;
+    var Telefone = cliente.Telefone;
+    var cpf = cliente.Cpf;
+    var endereco = cliente.Endereco;
   }
 
   void NovoClienteClicked(object sender, EventArgs e)

@@ -19,7 +19,7 @@
                 Aspect="AspectFit"
                 Margin="50, 20, 0, 0"/>
 
-            <Label Text="Lista de fornecedores"
+            <Label Text="Lista de Fornecedores"
                    TextColor="Black"
                    FontSize="50"
                    VerticalOptions="Center"
@@ -63,7 +63,7 @@
             </VerticalStackLayout>
         </Frame>
         
-        <Button Text="Adicionar novo acabamento"
+        <Button Text="Adicionar novo fornecedor"
                 BackgroundColor="#8b8b8b"
                 FontSize="16"
                 TextColor="Black"

@@ -7,8 +7,10 @@ namespace JulhoCamisas
     public partial class AcabamentoPage : ContentPage
     {
 
-        Acabamento acabamento;
+        public Modelos.Acabamento acabamento;
+        public AcabamentoPage acabamentoPage;
         AcabamentoControle acabamentoControle;
+        ListaAcabamentoPage listaAcabamentoPage = new ListaAcabamentoPage();
         
         public AcabamentoPage()
         {
@@ -62,7 +64,7 @@ namespace JulhoCamisas
 
         private void Voltar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PopAsync();
+            Application.Current.MainPage = new ListaAcabamentoPage();
         }
     }
 }

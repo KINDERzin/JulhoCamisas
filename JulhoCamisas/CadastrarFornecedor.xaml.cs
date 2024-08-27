@@ -13,20 +13,20 @@ namespace JulhoCamisas
             InitializeComponent();
         }
 
-        private async void OnConfirmDataClicked(object sender, EventArgs e)
+        private async void OnConfirmClicked(object sender, EventArgs e)
         {
 
             var fornecedor = new Modelos.Fornecedor();
 
-            fornecedor.Nome = nameEntry.Text;
+            fornecedor.Nome = nomeEntry.Text;
             fornecedor.Telefone = telefoneEntry.Text;
-            fornecedor.Endereco = addressEntry.Text;
+            fornecedor.Endereco = enderecoEntry.Text;
             fornecedor.Cnpj = cnpjEntry.Text;
             fornecedor.Produto = produtoEntry.Text;
 
-            string name = nameEntry.Text;
+            string name = nomeEntry.Text;
             string telefone = telefoneEntry.Text;
-            string address = addressEntry.Text;
+            string address = enderecoEntry.Text;
             string cnpj = cnpjEntry.Text;
             string produto  = produtoEntry.Text;
 

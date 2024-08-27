@@ -9,6 +9,8 @@ namespace JulhoCamisas
         public Modelos.Cliente cliente;
         public PerfilCliente perfilCliente;
         ClienteControle clienteControle;
+        ListaClientesPage listaClientesPage = new ListaClientesPage();
+
 
         public PerfilCliente()
         {
