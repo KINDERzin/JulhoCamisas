@@ -14,8 +14,10 @@ namespace JulhoCamisas
             InitializeComponent();
         }
 
+        /*
         private async void OnConfirmDataClicked(object sender, EventArgs e)
         {
+            
             string name = NomeEntry.Text;
             string sobrenome = SobrenomeEntry.Text;
             string email = CpfEntry.Text;
@@ -26,9 +28,7 @@ namespace JulhoCamisas
 
             await DisplayAlert("Cadastro", "Dados confirmados!", "OK");
         }
-
-        
-
+        */
         void VoltarClicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new ListaClientesPage();
@@ -40,6 +40,11 @@ namespace JulhoCamisas
 
             if (cliente != null)
             {
+                
+            labelIdCliente.IsVisible = true;
+            labelId.IsVisible = true;
+            labelTitulo.Text = "Editar cliente";
+            labelIdCliente.Text = cliente.Id.ToString(); 
             NomeEntry.Text = cliente.Nome;
             SobrenomeEntry.Text = cliente.Sobrenome;
             TelefoneEntry.Text = cliente.Telefone;
@@ -51,6 +56,11 @@ namespace JulhoCamisas
             
             var cliente = new Modelos.Cliente();
 
+            if (!String.IsNullOrEmpty(labelIdCliente.Text))
+                cliente.Id = int.Parse(labelIdCliente.Text);
+            else
+                cliente.Id = 0;
+                
             cliente.Nome = NomeEntry.Text;
             cliente.Sobrenome = SobrenomeEntry.Text;
             cliente.Telefone = TelefoneEntry.Text;
@@ -58,41 +68,32 @@ namespace JulhoCamisas
             cliente.Endereco = EnderecoEntry.Text;
 
             clienteControle.CriarOuAtualizar(cliente);
-            await DisplayAlert("CONCLUÍDO","Dados salvos com sucesso","OK");
-            
-            
-        }
 
-        private async Task<bool> VerificaSeDadosEstaoCorretos()
-        {
-            if (String.IsNullOrEmpty(NomeEntry.Text))
-            {
+            if (String.IsNullOrEmpty(NomeEntry.Text)){
             await DisplayAlert("Cadastrar", "O campo Nome é obrigatório", "OK");
-            return false;
-            }
-            else if (String.IsNullOrEmpty(SobrenomeEntry.Text))
-            {
-            await DisplayAlert("Cadastrar", "O campo Sobrenome é obrigatório", "OK");
-            return false;
-            }
-            else if (String.IsNullOrEmpty(TelefoneEntry.Text))
-            {
-            await DisplayAlert("Cadastrar", "O campo Telefone é obrigatório", "OK");
-            return false;
-            }
-            else if (!String.IsNullOrEmpty(CpfEntry.Text))
-            {
-                await DisplayAlert("Cadastrar", "O campo Cpf é obrigatório", "Ok");
-                return false;
             }
 
-            else if (!String.IsNullOrEmpty(EnderecoEntry.Text))
-            {
-                await DisplayAlert("Cadastrar", "O campo Endereco é obrigatório", "Ok");
-                return false;
+            else if (String.IsNullOrEmpty(SobrenomeEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo Sobrenome é obrigatório", "OK");
             }
-            else
-            return true;
+
+            else if (String.IsNullOrEmpty(TelefoneEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo Telefone é obrigatório", "OK");
+            }
+
+            else if (!String.IsNullOrEmpty(CpfEntry.Text)){
+                await DisplayAlert("Cadastrar", "O campo Cpf é obrigatório", "Ok");
+            }
+
+            else if (!String.IsNullOrEmpty(EnderecoEntry.Text)){
+                await DisplayAlert("Cadastrar", "O campo Endereco é obrigatório", "Ok");
+            }
+            else{
+                 await DisplayAlert("CONCLUÍDO","Dados salvos com sucesso","OK");
+            }
+           
+            
+            
         }
     }
 }

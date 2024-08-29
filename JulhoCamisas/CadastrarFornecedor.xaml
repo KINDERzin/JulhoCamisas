@@ -25,6 +25,7 @@
                                    Margin="50, 20, 0, 0"/>
 
                             <Label Text="Cadastrar fornecedor"
+                                   x:Name="labelTitulo"
                                    FontSize="50"
                                    TextColor="Black"
                                    HorizontalTextAlignment="Center"
@@ -39,10 +40,13 @@
                             <VerticalStackLayout>
             
                                    <Label Text="ID:"
+                                          x:Name="labelId"
+                                          IsVisible="False"
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"/>
 
-                                   <Label Text="ARRUMAR"
+                                   <Label x:Name="labelIdFornecedor"
+                                          IsVisible="False"
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"/>
                                    

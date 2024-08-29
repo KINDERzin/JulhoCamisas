@@ -5,12 +5,30 @@ namespace JulhoCamisas
     public partial class CadastrarFornecedor : ContentPage
     {
 
-        public Fornecedor fornecedor{ get; set; }
+        public Modelos.Fornecedor fornecedor{ get; set; }
         public Controles.FornecedorControle fornecedorControle = new Controles.FornecedorControle();
 
         public CadastrarFornecedor()
         {
             InitializeComponent();
+        }
+
+         protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (fornecedor != null)
+            {
+            labelIdFornecedor.IsVisible = true;
+            labelId.IsVisible = true;
+            labelTitulo.Text = "Editar fornecedor";
+            labelIdFornecedor.Text = fornecedor.Id.ToString();
+            nomeEntry.Text = fornecedor.Nome; 
+            telefoneEntry.Text = fornecedor.Telefone;
+            enderecoEntry.Text = fornecedor.Endereco;
+            cnpjEntry.Text = fornecedor.Cnpj;
+            produtoEntry.Text = fornecedor.Produto;
+            }
         }
 
         private async void OnConfirmClicked(object sender, EventArgs e)
@@ -23,12 +41,6 @@ namespace JulhoCamisas
             fornecedor.Endereco = enderecoEntry.Text;
             fornecedor.Cnpj = cnpjEntry.Text;
             fornecedor.Produto = produtoEntry.Text;
-
-            string name = nomeEntry.Text;
-            string telefone = telefoneEntry.Text;
-            string address = enderecoEntry.Text;
-            string cnpj = cnpjEntry.Text;
-            string produto  = produtoEntry.Text;
 
             fornecedorControle.CriarOuAtualizar(fornecedor);
 

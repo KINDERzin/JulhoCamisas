@@ -4,126 +4,115 @@
              x:Class="JulhoCamisas.CadastrarCliente"
              Shell.NavBarIsVisible="False">
 
-    <ScrollView BackgroundColor="#d9d9d9">   
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="250"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-              
-       <HorizontalStackLayout Grid.Row="0"
-                              Grid.ColumnSpan="2">
-                <Image Source="logo.png"
-                       Aspect="AspectFit"
-                       Margin="50, 20, 0, 0"/>
-
-                <Label Text="Cadastrar cliente"
-                        FontSize="50"
-                        TextColor="Black"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center"
-                        Margin="300, 20"/>
-            </HorizontalStackLayout>   
-
-       <Frame BackgroundColor="#d1d1d1"
-       Grid.Row="1"
-       Grid.ColumnSpan="2"
-       Margin="50, 20">
-
+       <ScrollView BackgroundColor="#d9d9d9">   
               <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
+                     <Grid.RowDefinitions>
+                            <RowDefinition Height="250"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                     </Grid.RowDefinitions>
+                     <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                     </Grid.ColumnDefinitions>
+              
+                     <HorizontalStackLayout Grid.Row="0"
+                                            Grid.ColumnSpan="2">
+                            <Image Source="logo.png"
+                                   Aspect="AspectFit"
+                                   Margin="50, 20, 0, 0"/>
 
-            <Label Text="Nome:"
-                   TextColor="Black"
-                   Margin="20, 10, 0, 5"
-                   Grid.Row="0"/>
+                            <Label Text="Cadastrar cliente"
+                                   x:Name="labelTitulo"
+                                   FontSize="50"
+                                   TextColor="Black"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   Margin="300, 20"/>
+                     </HorizontalStackLayout>   
 
-            <Entry Placeholder="Digite o nome" 
-                   TextColor="Black"
-                   Margin="20, 0, 20, 10"
-                   x:Name="NomeEntry"
-                   Grid.Row="1"/>
+                     <Frame BackgroundColor="#d1d1d1"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="50, 20">
 
-            <Label Text="Sobrenome:"
-                   Margin="20, 10, 0, 5"
-                   TextColor="Black"
-                   Grid.Row="2" />
+                            <VerticalStackLayout>
 
-            <Entry Placeholder="Digite o sobrenome" 
-                   TextColor="Black"
-                   x:Name="SobrenomeEntry"
-                   Margin="20, 0, 20, 10"
-                   Grid.Row="3"/>
+                                   <Label Text="ID cliente:"
+                                          x:Name="labelId"
+                                          IsVisible="False"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
 
-            <Label Text="CPF:"
-                   TextColor="Black"
-                   Margin="20, 10, 0, 5"
-                   Grid.Row="4"/>
+                                   <Label x:Name="labelIdCliente"
+                                          IsVisible="False"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
 
-            <Entry Placeholder="Digite o CPF" 
-                   TextColor="Black"
-                   Margin="20, 0, 20, 10"
-                   x:Name="CpfEntry"
-                   Grid.Row="5"/>
+                                   <Label Text="Nome:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
 
-            <Label Text="Telefone:"
-                   TextColor="Black"
-                   Margin="20, 10, 0, 5"
-                   Grid.Row="6"/>
+                                   <Entry Placeholder="Digite o nome" 
+                                          TextColor="Black"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="NomeEntry"/>
 
-            <Entry Placeholder="Digite o telefone"
-                   Keyboard="Telephone"  
-                   TextColor="Black"
-                   Margin="20, 0, 20, 10" 
-                   x:Name="TelefoneEntry"
-                   Grid.Row="7"/>
+                                   <Label Text="Sobrenome:"
+                                          Margin="20, 10, 0, 5"
+                                          TextColor="Black"/>
 
-            <Label Text="Endereço:"
-                   TextColor="Black"
-                   Margin="20, 10, 0, 5"
-                   Grid.Row="8"/>
+                                   <Entry Placeholder="Digite o sobrenome" 
+                                          TextColor="Black"
+                                          x:Name="SobrenomeEntry"
+                                          Margin="20, 0, 20, 10"/>
 
-            <Entry Placeholder="Digite o endereço c/ número" 
-                   TextColor="Black"
-                   Margin="20, 0, 20, 10"
-                   x:Name="EnderecoEntry"
-                   Grid.Row="9"/>
-              </Grid>
-           </Frame>
+                                   <Label Text="CPF:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
 
-              <Button Text="CONFIRMAR"
-                      TextColor="Black"
-                      BackgroundColor="#8b8b8b"
-                      Clicked="OnSalvarDadosClicked"
-                      Grid.Row="2"
-                      Grid.Column="0"
-                      Margin="50, 0, 10, 10"/>
+                                   <Entry Placeholder="Digite o CPF" 
+                                          TextColor="Black"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="CpfEntry"/>
 
-              <Button Text="VOLTAR"
-                      TextColor="Black"
-                      BackgroundColor="#8b8b8b"
-                      Clicked="VoltarClicked"
-                      Grid.Row="2"
-                      Grid.Column="1"
-                      Margin="10, 0, 50, 10"/>
-        </Grid> 
-    </ScrollView>
+                                   <Label Text="Telefone:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
+
+                                   <Entry Placeholder="Digite o telefone"
+                                          Keyboard="Telephone"  
+                                          TextColor="Black"
+                                          Margin="20, 0, 20, 10" 
+                                          x:Name="TelefoneEntry"/>
+
+                                   <Label Text="Endereço:"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
+
+                                   <Entry Placeholder="Digite o endereço c/ número" 
+                                          TextColor="Black"
+                                          Margin="20, 0, 20, 10"
+                                          x:Name="EnderecoEntry"/>
+                            </VerticalStackLayout>
+                     </Frame>
+
+                     <Button Text="CONFIRMAR"
+                            TextColor="Black"
+                            BackgroundColor="#8b8b8b"
+                            Clicked="OnSalvarDadosClicked"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="50, 0, 10, 10"/>
+
+                     <Button Text="VOLTAR"
+                            TextColor="Black"
+                            BackgroundColor="#8b8b8b"
+                            Clicked="VoltarClicked"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="10, 0, 50, 10"/>
+              </Grid> 
+       </ScrollView>
 </ContentPage>

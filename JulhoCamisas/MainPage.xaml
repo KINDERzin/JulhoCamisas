@@ -19,15 +19,18 @@
 
         <HorizontalStackLayout Grid.Row="0"
                                Grid.Column="0"
-                               Grid.ColumnSpan="2">
+                               Grid.ColumnSpan="2"
+                               HorizontalOptions="Center">
             <Image Source="logo.png"
-                Aspect="AspectFit"
-                Margin="50, 20, 0, 0"/>
+                   Aspect="AspectFit"
+                   Margin="50, 20, 0, 0"
+                   HorizontalOptions="Center"/>
 
             <Label Text="Menu principal"
                    TextColor="Black"
                    FontSize="50"
                    VerticalOptions="Center"
+                   HorizontalOptions="Center"
                    Margin="300, 10"/>
         </HorizontalStackLayout>
 
@@ -58,6 +61,6 @@
                 Grid.Row="2"
                 Grid.Column="1"
                 Clicked="clicouBotaoFornecedor"/>
-
+                
     </Grid>
 </ContentPage>

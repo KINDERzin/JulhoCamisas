@@ -1,6 +1,8 @@
-namespace JulhoCamisas;
+using JulhoCamisas;
+using JulhoCamisas.Modelos;
+namespace Modelos;
 
-public class Forn_MateriaPrima : Objeto{
+public class Forn_MateriaPrima : Registro{
 
     String Fornecedor;
     String MateriaPrima;

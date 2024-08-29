@@ -1,6 +1,7 @@
-namespace JulhoCamisas;
+using JulhoCamisas;
+namespace Controles;
 
-public class Forn_MateriaPrimaControle{
+public class Forn_MateriaPrimaControle : BaseControle{
 
     public virtual void Criar(Objeto o)
     {

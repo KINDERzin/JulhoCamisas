@@ -22,8 +22,8 @@ public partial class ListaAcabamentoPage : ContentPage
 
     void itemSelecionado(object sender, SelectedItemChangedEventArgs e)
   {
-    var page = new AcabamentoPage();
-    page.acabamentoPage = e.SelectedItem as AcabamentoPage;
+    var page = new CadastrarAcabamento();
+    page.acabamento = e.SelectedItem as Acabamento;
     Application.Current.MainPage = page;
   }
 

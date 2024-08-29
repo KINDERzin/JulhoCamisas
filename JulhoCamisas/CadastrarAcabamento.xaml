@@ -6,7 +6,7 @@
 
        <ScrollView>
               <Grid>
-
+              
                      <Grid.RowDefinitions>
                             <RowDefinition Height="250"/>
                             <RowDefinition Height="Auto"/>
@@ -25,6 +25,7 @@
                                    Margin="50, 20, 0, 0"/>
 
                             <Label Text="Cadastrar acabamento"
+                                   x:Name="labelTitulo"
                                    FontSize="50"
                                    TextColor="Black"
                                    HorizontalTextAlignment="Center"
@@ -37,6 +38,17 @@
                             Grid.ColumnSpan="2"
                             Margin="50, 20">
                             <VerticalStackLayout>
+
+                                   <Label Text="ID acabamento:"
+                                          x:Name="labelId"
+                                          IsVisible="False"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
+
+                                   <Label x:Name="labelIdAcabamento"
+                                          IsVisible="False"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>  
 
                                    <Label Text="Tipo:"
                                           TextColor="Black"
