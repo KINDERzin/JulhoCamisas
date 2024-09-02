@@ -14,7 +14,6 @@ namespace JulhoCamisas
             InitializeComponent();
         }
 
-        /*
         private async void OnConfirmDataClicked(object sender, EventArgs e)
         {
             
@@ -28,10 +27,17 @@ namespace JulhoCamisas
 
             await DisplayAlert("Cadastro", "Dados confirmados!", "OK");
         }
-        */
         void VoltarClicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new ListaClientesPage();
+        }
+
+        async void DeletarClicked(object sender, EventArgs e)
+        {
+            clienteControle.Apagar(cliente.Id);
+
+             await DisplayAlert("Deletar", "Cliente deletado!", "OK");
+             Application.Current.MainPage = new ListaClientesPage();
         }
 
         protected override void OnAppearing()
@@ -48,6 +54,8 @@ namespace JulhoCamisas
             NomeEntry.Text = cliente.Nome;
             SobrenomeEntry.Text = cliente.Sobrenome;
             TelefoneEntry.Text = cliente.Telefone;
+            CpfEntry.Text = cliente.Cpf;
+            EnderecoEntry.Text = cliente.Endereco;
             }
         }
 
