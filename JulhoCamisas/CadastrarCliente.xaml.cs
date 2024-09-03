@@ -94,7 +94,7 @@ namespace JulhoCamisas
                 await DisplayAlert("Cadastrar", "O campo Cpf é obrigatório", "Ok");
             }
 
-            else if (!String.IsNullOrEmpty(EnderecoEntry.Text)){
+            else if (String.IsNullOrEmpty(EnderecoEntry.Text)){
                 await DisplayAlert("Cadastrar", "O campo Endereco é obrigatório", "Ok");
             }
             else{
