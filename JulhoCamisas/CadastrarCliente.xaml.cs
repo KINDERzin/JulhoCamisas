@@ -19,7 +19,7 @@ namespace JulhoCamisas
             
             string name = NomeEntry.Text;
             string sobrenome = SobrenomeEntry.Text;
-            string email = CpfEntry.Text;
+            string cpf = CpfEntry.Text;
             string telefone = TelefoneEntry.Text;
             string address = EnderecoEntry.Text;
 
@@ -49,7 +49,10 @@ namespace JulhoCamisas
                 
             labelIdCliente.IsVisible = true;
             labelId.IsVisible = true;
+            deleteButton.IsVisible = true;
+
             labelTitulo.Text = "Editar cliente";
+            
             labelIdCliente.Text = cliente.Id.ToString(); 
             NomeEntry.Text = cliente.Nome;
             SobrenomeEntry.Text = cliente.Sobrenome;
@@ -75,8 +78,6 @@ namespace JulhoCamisas
             cliente.Cpf = CpfEntry.Text;
             cliente.Endereco = EnderecoEntry.Text;
 
-            clienteControle.CriarOuAtualizar(cliente);
-
             if (String.IsNullOrEmpty(NomeEntry.Text)){
             await DisplayAlert("Cadastrar", "O campo Nome é obrigatório", "OK");
             }
@@ -89,7 +90,7 @@ namespace JulhoCamisas
             await DisplayAlert("Cadastrar", "O campo Telefone é obrigatório", "OK");
             }
 
-            else if (!String.IsNullOrEmpty(CpfEntry.Text)){
+            else if (String.IsNullOrEmpty(CpfEntry.Text)){
                 await DisplayAlert("Cadastrar", "O campo Cpf é obrigatório", "Ok");
             }
 
@@ -100,7 +101,7 @@ namespace JulhoCamisas
                  await DisplayAlert("CONCLUÍDO","Dados salvos com sucesso","OK");
             }
            
-            
+            clienteControle.CriarOuAtualizar(cliente);
             
         }
     }

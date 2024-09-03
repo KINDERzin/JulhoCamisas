@@ -12,30 +12,31 @@
                             <RowDefinition Height="Auto"/>
                      </Grid.RowDefinitions>
                      <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
                      </Grid.ColumnDefinitions>
               
-                     <HorizontalStackLayout Grid.Row="0"
-                                            Grid.ColumnSpan="2">
                             <Image Source="logo.png"
                                    Aspect="AspectFit"
-                                   Margin="50, 20, 0, 0"/>
+                                   Margin="50, 20, 0, 0"
+                                   Grid.Row="0"
+                                   Grid.Column="0"/>
 
                             <Label Text="Cadastrar cliente"
                                    x:Name="labelTitulo"
                                    FontSize="50"
                                    TextColor="Black"
-                                   HorizontalTextAlignment="Center"
+                                   HorizontalTextAlignment="Start"
                                    VerticalTextAlignment="Center"
-                                   Margin="300, 20"/>
-                     </HorizontalStackLayout>   
+                                   Margin="0, 20, 50, 0"
+                                   Grid.Row="0"
+                                   Grid.Column="1"/> 
 
                      <Frame BackgroundColor="#d1d1d1"
                             Grid.Row="1"
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
-                            Margin="50, 20">
+                            Margin="150, 20">
 
                             <VerticalStackLayout>
 
@@ -98,6 +99,8 @@
 
                                    <Button Text="Deletar cliente"
                                            Clicked="DeletarClicked"
+                                           IsVisible="False"
+                                           x:Name="deleteButton"
                                            TextColor="Black"
                                            BackgroundColor="#8b8b8b"
                                            Margin="20, 0, 20, 10"/>
@@ -110,7 +113,7 @@
                              Clicked="OnSalvarDadosClicked"
                              Grid.Row="2"
                              Grid.Column="0"
-                             Margin="50, 0, 10, 10"/>
+                             Margin="150, 0, 10, 10"/>
 
                      <Button Text="VOLTAR"
                              TextColor="Black"
@@ -118,7 +121,7 @@
                              Clicked="VoltarClicked"
                              Grid.Row="2"
                              Grid.Column="1"
-                             Margin="10, 0, 50, 10"/>
+                             Margin="10, 0, 150, 10"/>
               </Grid> 
        </ScrollView>
 </ContentPage>

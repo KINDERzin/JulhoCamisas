@@ -21,7 +21,10 @@ namespace JulhoCamisas
             {
             labelIdFornecedor.IsVisible = true;
             labelId.IsVisible = true;
+            deleteButton.IsVisible = true;
+
             labelTitulo.Text = "Editar fornecedor";
+            
             labelIdFornecedor.Text = fornecedor.Id.ToString();
             nomeEntry.Text = fornecedor.Nome; 
             telefoneEntry.Text = fornecedor.Telefone;
@@ -50,6 +53,14 @@ namespace JulhoCamisas
         private async void OnBackClicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new ListaFornecedorPage();
+        }
+
+        private async void DeletarClicked(object sender, EventArgs e)
+        {
+            fornecedorControle.Apagar(fornecedor.Id);
+
+            await DisplayAlert("Deletar", "Fornecedor deletado com sucesso", "Ok");
+            Application.Current.MainPage =  new ListaFornecedorPage();
         }
     }
 }

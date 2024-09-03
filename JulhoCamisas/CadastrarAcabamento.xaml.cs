@@ -22,7 +22,10 @@ namespace JulhoCamisas
             {
             labelIdAcabamento.IsVisible = true;
             labelId.IsVisible = true;
+            deleteButton.IsVisible = true;
+
             labelTitulo.Text = "Editar acabamento";
+            
             labelIdAcabamento.Text = acabamento.Id.ToString();
             tipoEntry.Text = acabamento.Tipo; 
             corEntry.Text = acabamento.Cor;
@@ -51,10 +54,16 @@ namespace JulhoCamisas
 
         }
 
-        
-
         private void Voltar_Clicked(object sender, EventArgs e)
         {
+            Application.Current.MainPage = new ListaAcabamentoPage();
+        }
+
+        private async void DeletarClicked(object sender, EventArgs e)
+        {
+            acabamentoControle.Apagar(acabamento.Id);
+
+            await DisplayAlert("Deletar", "Acabamento deletado com sucesso!", "Ok");
             Application.Current.MainPage = new ListaAcabamentoPage();
         }
     }

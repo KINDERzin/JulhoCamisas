@@ -97,6 +97,14 @@
                                           TextColor="Black"
                                           Keyboard="Text"
                                           Margin="20, 0, 20, 10"/> 
+
+                                   <Button Text="Deletar acabamento"
+                                           Clicked="DeletarClicked"
+                                           IsVisible="False"
+                                           x:Name="deleteButton"
+                                           TextColor="Black"
+                                           BackgroundColor="#8b8b8b"
+                                           Margin="20, 0, 20, 10"/>
                             </VerticalStackLayout>
                      </Frame>
             

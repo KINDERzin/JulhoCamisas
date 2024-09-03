@@ -24,6 +24,7 @@
                                    Margin="50, 20, 0, 0"/>
 
                             <Label Text="Cadastrar costureira"
+                                   x:Name="labelTitulo"
                                    FontSize="50"
                                    TextColor="Black"
                                    HorizontalTextAlignment="Center"
@@ -36,6 +37,17 @@
                             Grid.ColumnSpan="2"
                             Margin="50, 20, 50, 0">
                             <VerticalStackLayout>
+
+                                   <Label Text="ID acabamento:"
+                                          x:Name="labelId"
+                                          IsVisible="False"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/>
+
+                                   <Label x:Name="labelIdCostureira"
+                                          IsVisible="False"
+                                          TextColor="Black"
+                                          Margin="20, 10, 0, 5"/> 
 
                                    <Label Text="Nome:"
                                           TextColor="Black"
@@ -84,6 +96,14 @@
                                           Margin="20, 0, 20, 10"
                                           x:Name="CpfEntry"
                                           Grid.Row="9"/>
+                                   
+                                   <Button Text="Deletar acabamento"
+                                           Clicked="DeletarClicked"
+                                           IsVisible="False"
+                                           x:Name="deleteButton"
+                                           TextColor="Black"
+                                           BackgroundColor="#8b8b8b"
+                                           Margin="20, 0, 20, 10"/>
                             </VerticalStackLayout>
                      </Frame>
 

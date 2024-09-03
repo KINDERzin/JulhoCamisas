@@ -15,22 +15,42 @@ namespace JulhoCamisas
             InitializeComponent();
         }
 
-        
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (costureira != null)
+            {
+            labelIdCostureira.IsVisible = true;
+            labelId.IsVisible = true;
+            deleteButton.IsVisible = true;
+
+            labelTitulo.Text = "Editar acabamento";
+            
+            labelIdCostureira.Text = costureira.Id.ToString();
+            NomeEntry.Text = costureira.Nome; 
+            EnderecoEntry.Text = costureira.Endereco;
+            TelefoneEntry.Text = costureira.Telefone;
+            CpfEntry.Text = costureira.Cpf;
+            }
+        }
+
+        private async void DeletarClicked(object sender, EventArgs e)
+        {
+            costureiraControle.Apagar(costureira.Id);
+
+            await DisplayAlert("Deletar", "Costureira deletada com sucesso", "Ok");
+            Application.Current.MainPage = new ListaCostureiraPage();
+        }
 
         private async void OnConfirmClicked(object sender, EventArgs e)
         {
-
             var costureira = new Modelos.Costureira();
 
             costureira.Nome = NomeEntry.Text; 
             costureira.Endereco = EnderecoEntry.Text;
             costureira.Telefone = TelefoneEntry.Text;
             costureira.Cpf = CpfEntry.Text;
-
-            string nome = NomeEntry.Text;
-            string endereco = EnderecoEntry.Text;
-            string telefone = TelefoneEntry.Text;
-            string cpf = CpfEntry.Text;
 
             costureiraControle.CriarOuAtualizar(costureira);
 

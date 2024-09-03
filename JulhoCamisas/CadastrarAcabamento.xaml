@@ -90,6 +90,14 @@
                                           Margin="20, 0, 20, 10"
                                           x:Name="fornecedorEntry"/>
 
+                                   <Button Text="Deletar acabamento"
+                                           Clicked="DeletarClicked"
+                                           IsVisible="False"
+                                           x:Name="deleteButton"
+                                           TextColor="Black"
+                                           BackgroundColor="#8b8b8b"
+                                           Margin="20, 0, 20, 10"/> 
+
                             </VerticalStackLayout>
                      </Frame>
 
