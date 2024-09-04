@@ -5,62 +5,61 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="#d9d9d9">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="250"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
+        <Grid>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-        <HorizontalStackLayout Grid.Row="0"
-                               Grid.Column="0"
-                               Grid.ColumnSpan="2"
-                               HorizontalOptions="Center">
+                <HorizontalStackLayout Grid.Row="0"
+                                       Grid.ColumnSpan="2" 
+                                       HorizontalOptions="Center">
+
             <Image Source="logo.png"
-                   Aspect="AspectFit"
-                   Margin="50, 20, 0, 0"
-                   HorizontalOptions="Center"/>
+                Aspect="AspectFit"
+                Margin="50, 20, 0, 0"/>
 
-            <Label Text="Menu principal"
+            <Label Text="Lista de acabamentos"
                    TextColor="Black"
                    FontSize="50"
                    VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Margin="300, 10"/>
+                   Margin="100, 10"/>
+
         </HorizontalStackLayout>
 
-        <Button Text="Clientes"
-                BackgroundColor="#8b8b8b"
-                Margin="50,100, 10, 5"
-                Grid.Row="1"
-                Grid.Column="0"
-                Clicked="clicouBotaoClientes"/>
-        
-        <Button Text="Acabamento"
-                BackgroundColor="#8b8b8b"
-                Margin="50,100, 10, 5"
-                Grid.Row="1"
-                Grid.Column="1"
-                Clicked="clicouBotaoAcabamento"/>
-
-        <Button Text="Empregados"
-                BackgroundColor="#8b8b8b"
-                Margin="50,100, 10, 5"
-                Grid.Row="2"
-                Grid.Column="0"
-                Clicked="clicouBotaoEmpregado"/>
-
-        <Button Text="Fornecedores"
-                BackgroundColor="#8b8b8b"
-                Margin="50,100, 10, 5"
-                Grid.Row="2"
-                Grid.Column="1"
-                Clicked="clicouBotaoFornecedor"/>
+                <Button Text="Clientes"
+                        BackgroundColor="#8b8b8b"
+                        Margin="50,100, 10, 5"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Clicked="clicouBotaoClientes"/>
                 
-    </Grid>
+                <Button Text="Acabamento"
+                        BackgroundColor="#8b8b8b"
+                        Margin="10,100, 50, 5"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Clicked="clicouBotaoAcabamento"/>
+
+                <Button Text="Funcionários"
+                        BackgroundColor="#8b8b8b"
+                        Margin="50,100, 10, 5"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Clicked="clicouBotaoEmpregado"/>
+
+                <Button Text="Fornecedores"
+                        BackgroundColor="#8b8b8b"
+                        Margin="10,100, 50, 5"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Clicked="clicouBotaoFornecedor"/>
+                        
+        </Grid>
 </ContentPage>

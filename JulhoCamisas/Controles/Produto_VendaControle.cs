@@ -2,45 +2,45 @@ using JulhoCamisas.Modelos;
 
 namespace Controles;
 
-public class Forn_MateriaPrimaControle : BaseControle
+public class Produto_VendaControle : BaseControle
 {
   //----------------------------------------------------------------------------
 
-  public Forn_MateriaPrimaControle() : base()
+  public Produto_VendaControle() : base()
   {
-    NomeDaTabela = "Fornecedor_MateriaPrima";
+    NomeDaTabela = "Produto e Venda";
   }
 
   //----------------------------------------------------------------------------
 
   public virtual Registro? Ler(int id)
   {
-    var collection = liteDB.GetCollection<Forn_MateriaPrima>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Produto_Venda>(NomeDaTabela);
     return collection.FindOne(d => d.Id == id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Forn_MateriaPrima>? LerTodos()
+  public virtual List<Produto_Venda>? LerTodos()
   {
-    var tabela = liteDB.GetCollection<Forn_MateriaPrima>(NomeDaTabela);
-    return new List<Forn_MateriaPrima>(tabela.FindAll().OrderBy(d => d.Id));
+    var tabela = liteDB.GetCollection<Produto_Venda>(NomeDaTabela);
+    return new List<Produto_Venda>(tabela.FindAll().OrderBy(d => d.Id));
   }
 
   //----------------------------------------------------------------------------
 
   public virtual void Apagar(int id)
   {
-    var collection = liteDB.GetCollection<Forn_MateriaPrima>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Produto_Venda>(NomeDaTabela);
     collection.Delete(id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Forn_MateriaPrima forn_MateriaPrima)
+  public virtual void CriarOuAtualizar(Produto_Venda produto_Venda)
   {
-    var collection = liteDB.GetCollection<Forn_MateriaPrima>(NomeDaTabela);
-    collection.Upsert(forn_MateriaPrima);
+    var collection = liteDB.GetCollection<Produto_Venda>(NomeDaTabela);
+    collection.Upsert(produto_Venda);
   }
 
   //----------------------------------------------------------------------------

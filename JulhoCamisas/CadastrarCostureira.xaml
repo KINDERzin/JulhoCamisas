@@ -17,19 +17,21 @@
                             <ColumnDefinition Width="*"/>
                      </Grid.ColumnDefinitions>
 
-                     <HorizontalStackLayout Grid.Row="0"
-                                            Grid.ColumnSpan="2">
+                    <HorizontalStackLayout Grid.Row="0"
+                                            Grid.ColumnSpan="2"
+                                            HorizontalOptions="Center">
+
                             <Image Source="logo.png"
                                    Aspect="AspectFit"
                                    Margin="50, 20, 0, 0"/>
 
-                            <Label Text="Cadastrar costureira"
+                            <Label Text="Cadastrar funcionário"
                                    x:Name="labelTitulo"
-                                   FontSize="50"
                                    TextColor="Black"
-                                   HorizontalTextAlignment="Center"
-                                   VerticalTextAlignment="Center"
-                                   Margin="200, 20"/>
+                                   FontSize="50"
+                                   VerticalOptions="Center"
+                                   Margin="100, 10"/>
+
                      </HorizontalStackLayout>
 
                      <Frame BackgroundColor="#d1d1d1"
@@ -107,22 +109,22 @@
                             </VerticalStackLayout>
                      </Frame>
 
-        <Button Text="CONFIRMAR"
-                TextColor="Black"
-                BackgroundColor="#8b8b8b"
-                Margin="50, 10, 10, 10"
-                Clicked="OnConfirmClicked"
-                Grid.Row="2"
-                Grid.Column="0"/>
+                     <Button Text="CONFIRMAR"
+                            TextColor="Black"
+                            BackgroundColor="#8b8b8b"
+                            Margin="50, 10, 10, 10"
+                            Clicked="OnConfirmClicked"
+                            Grid.Row="2"
+                            Grid.Column="0"/>
 
-        <Button Text="VOLTAR"
-                TextColor="Black"
-                BackgroundColor="#8b8b8b"
-                Margin="10, 10, 50, 10"
-                Clicked="OnBackClicked"
-                Grid.Row="2"
-                Grid.Column="1"/>
+                     <Button Text="VOLTAR"
+                            TextColor="Black"
+                            BackgroundColor="#8b8b8b"
+                            Margin="10, 10, 50, 10"
+                            Clicked="OnBackClicked"
+                            Grid.Row="2"
+                            Grid.Column="1"/>
         
-    </Grid> 
-    </ScrollView>
+              </Grid> 
+       </ScrollView>
 </ContentPage>

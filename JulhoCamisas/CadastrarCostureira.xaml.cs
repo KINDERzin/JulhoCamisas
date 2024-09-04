@@ -25,7 +25,7 @@ namespace JulhoCamisas
             labelId.IsVisible = true;
             deleteButton.IsVisible = true;
 
-            labelTitulo.Text = "Editar acabamento";
+            labelTitulo.Text = "Editar funcionário";
             
             labelIdCostureira.Text = costureira.Id.ToString();
             NomeEntry.Text = costureira.Nome; 
@@ -52,9 +52,26 @@ namespace JulhoCamisas
             costureira.Telefone = TelefoneEntry.Text;
             costureira.Cpf = CpfEntry.Text;
 
-            costureiraControle.CriarOuAtualizar(costureira);
+            if (String.IsNullOrEmpty(NomeEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo Nome é obrigatório", "OK");
+            }
 
-            await DisplayAlert("Sucesso", "Costureira cadastrada com sucesso!", "OK");
+            else if (String.IsNullOrEmpty(EnderecoEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo Endereço é obrigatório", "OK");
+            }
+
+            else if (String.IsNullOrEmpty(TelefoneEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo Telefone é obrigatório", "OK");
+            }
+
+            else if (String.IsNullOrEmpty(CpfEntry.Text)){
+                await DisplayAlert("Cadastrar", "O campo Cpf é obrigatório", "Ok");
+            }
+
+            else{
+                costureiraControle.CriarOuAtualizar(costureira);
+                await DisplayAlert("CONCLUÍDO","Funcionário cadastrado com sucesso","OK");
+            }
         }
 
         private async void OnBackClicked(object sender, EventArgs e)

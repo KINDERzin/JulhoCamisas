@@ -45,9 +45,30 @@ namespace JulhoCamisas
             fornecedor.Cnpj = cnpjEntry.Text;
             fornecedor.Produto = produtoEntry.Text;
 
-            fornecedorControle.CriarOuAtualizar(fornecedor);
+            if (String.IsNullOrEmpty(nomeEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo Nome é obrigatório", "OK");
+            }
 
-            await DisplayAlert("Cadastro", "Fornecedor cadastrado com sucesso!", "OK");
+            else if (String.IsNullOrEmpty(telefoneEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo Telefone é obrigatório", "OK");
+            }
+
+            else if (String.IsNullOrEmpty(enderecoEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo Endereço é obrigatório", "OK");
+            }
+
+            else if (String.IsNullOrEmpty(cnpjEntry.Text)){
+                await DisplayAlert("Cadastrar", "O campo CNPJ é obrigatório", "Ok");
+            }
+
+            else if (String.IsNullOrEmpty(produtoEntry.Text)){
+                await DisplayAlert("Cadastrar", "O campo Produto é obrigatório", "Ok");
+            }
+
+            else{
+                fornecedorControle.CriarOuAtualizar(fornecedor);
+                await DisplayAlert("CONCLUÍDO","Funcionário cadastrado com sucesso","OK");
+            }
         }
 
         private async void OnBackClicked(object sender, EventArgs e)

@@ -15,26 +15,26 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                      </Grid.ColumnDefinitions>
-              
+                     
+                     <HorizontalStackLayout Grid.Row="0"
+                                            Grid.ColumnSpan="2"
+                                            HorizontalOptions="Center">
+
                             <Image Source="logo.png"
                                    Aspect="AspectFit"
-                                   Margin="50, 20, 0, 0"
-                                   Grid.Row="0"
-                                   Grid.Column="0"/>
+                                   Margin="50, 20, 0, 0"/>
 
                             <Label Text="Cadastrar cliente"
                                    x:Name="labelTitulo"
-                                   FontSize="50"
                                    TextColor="Black"
-                                   HorizontalTextAlignment="Start"
-                                   VerticalTextAlignment="Center"
-                                   Margin="0, 20, 50, 0"
-                                   Grid.Row="0"
-                                   Grid.Column="1"/> 
+                                   FontSize="50"
+                                   VerticalOptions="Center"
+                                   Margin="100, 10"/>
+
+                     </HorizontalStackLayout>
 
                      <Frame BackgroundColor="#d1d1d1"
                             Grid.Row="1"
-                            Grid.Column="0"
                             Grid.ColumnSpan="2"
                             Margin="150, 20">
 

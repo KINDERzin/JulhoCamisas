@@ -23,8 +23,6 @@ namespace JulhoCamisas
             string telefone = TelefoneEntry.Text;
             string address = EnderecoEntry.Text;
 
-            // Adicione a lógica de validação e registro aqui
-
             await DisplayAlert("Cadastro", "Dados confirmados!", "OK");
         }
         void VoltarClicked(object sender, EventArgs e)
@@ -98,10 +96,10 @@ namespace JulhoCamisas
                 await DisplayAlert("Cadastrar", "O campo Endereco é obrigatório", "Ok");
             }
             else{
-                 await DisplayAlert("CONCLUÍDO","Dados salvos com sucesso","OK");
+                clienteControle.CriarOuAtualizar(cliente);
+                await DisplayAlert("CONCLUÍDO","Cliente cadastrado com sucesso","OK");
             }
            
-            clienteControle.CriarOuAtualizar(cliente);
             
         }
     }

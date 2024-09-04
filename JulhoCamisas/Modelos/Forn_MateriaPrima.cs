@@ -1,46 +1,14 @@
-using JulhoCamisas;
-using JulhoCamisas.Modelos;
-namespace Modelos;
+using LiteDB;
+
+namespace JulhoCamisas.Modelos;
 
 public class Forn_MateriaPrima : Registro{
 
-    String Fornecedor;
-    String MateriaPrima;
-    int Preco;
-    Int64 Id;
+    [BsonId]
+    public Int64 Id;
 
-    public Forn_MateriaPrima()
-    {
+    public int Preco;
 
-    }
-
-    public void SetFornecedor(String f)
-    {
-        Fornecedor = f;
-    }
-
-    public void SetMateriaPrima(String m)
-    {
-        MateriaPrima = m;
-    }
-
-    public void SetId(Int64 i)
-    {
-        Id = i;
-    }
-
-    public String GetFornecedor()
-    {
-        return Fornecedor;
-    }
-
-    public String GetMateriaPrima()
-    {
-        return MateriaPrima;
-    }
-
-    public Int64 GetId()
-    {
-        return Id;
-    }
+    public string Fornecedor;
+    public string MateriaPrima;  
 }

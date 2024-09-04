@@ -13,17 +13,18 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
     
-        <HorizontalStackLayout Grid.Row="0">
+        <HorizontalStackLayout Grid.Row="0"
+                               HorizontalOptions="Center">
 
             <Image Source="logo.png"
                 Aspect="AspectFit"
                 Margin="50, 20, 0, 0"/>
 
-            <Label Text="Lista de funcionarios"
+            <Label Text="Lista de funcionários"
                    TextColor="Black"
                    FontSize="50"
                    VerticalOptions="Center"
-                   Margin="300, 10"/>
+                   Margin="100, 10"/>
 
         </HorizontalStackLayout>
 
@@ -42,7 +43,6 @@
                         <DataTemplate>
                             <ViewCell>
                                 <VerticalStackLayout BackgroundColor="#d1d1d1">
-
                                     <HorizontalStackLayout>
 
                                         <Label Text="{Binding Nome}"
@@ -63,7 +63,7 @@
             </VerticalStackLayout>
         </Frame>
         
-        <Button Text="Adicionar novo(a) costureiro(a)"
+        <Button Text="Adicionar novo(a) funcionário(a)"
                 BackgroundColor="#8b8b8b"
                 FontSize="16"
                 TextColor="Black"

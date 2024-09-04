@@ -13,7 +13,8 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
     
-        <HorizontalStackLayout Grid.Row="0">
+        <HorizontalStackLayout Grid.Row="0"
+                               HorizontalOptions="Center">
 
             <Image Source="logo.png"
                 Aspect="AspectFit"
@@ -23,7 +24,7 @@
                    TextColor="Black"
                    FontSize="50"
                    VerticalOptions="Center"
-                   Margin="300, 10"/>
+                   Margin="100, 10"/>
 
         </HorizontalStackLayout>
 
@@ -42,18 +43,15 @@
                         <DataTemplate>
                             <ViewCell>
                                 <VerticalStackLayout BackgroundColor="#d1d1d1">
+                                    <HorizontalStackLayout>
+                                        <Label Text="{Binding Tipo}"
+                                            TextColor="Black"
+                                            FontSize="20"/>
+                                    </HorizontalStackLayout>
 
-                                <HorizontalStackLayout>
-
-                                    <Label Text="{Binding Tipo}"
-                                        TextColor="Black"
-                                        FontSize="20"/>
-
-                                </HorizontalStackLayout>
-
-                                <Label Text="{Binding Fornecedor}"
-                                    TextColor="Black"
-                                    FontSize="20"/>
+                                    <Label Text="{Binding Fornecedor}"
+                                           TextColor="Black"
+                                           FontSize="20"/>
 
                                 </VerticalStackLayout>
                             </ViewCell>

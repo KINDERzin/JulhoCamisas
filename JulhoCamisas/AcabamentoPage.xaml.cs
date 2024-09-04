@@ -42,7 +42,6 @@ namespace JulhoCamisas
 
         private async void Salvar_Clicked(object sender, EventArgs e)
         {
-            // Obter os valores dos campos
             TipoEntry.Text = acabamento.Tipo;
             CorEntry.Text = acabamento.Cor;
             FornecedorEntry.Text = acabamento.Fornecedor;

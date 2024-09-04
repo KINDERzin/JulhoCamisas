@@ -48,10 +48,26 @@ namespace JulhoCamisas
             acabamento.Fornecedor = fornecedorEntry.Text;
             acabamento.Tipo = tipoEntry.Text;
 
-            acabamentoControle.CriarOuAtualizar(acabamento);
+            if (String.IsNullOrEmpty(corEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo cor é obrigatório", "OK");
+            }
 
-            await DisplayAlert("Sucesso", "Acabamento cadastrado com sucesso!", "OK");
+            else if (String.IsNullOrEmpty(quantidadeEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo quantidade é obrigatório", "OK");
+            }
 
+            else if (String.IsNullOrEmpty(fornecedorEntry.Text)){
+            await DisplayAlert("Cadastrar", "O campo fornecedor é obrigatório", "OK");
+            }
+
+            else if (String.IsNullOrEmpty(tipoEntry.Text)){
+                await DisplayAlert("Cadastrar", "O campo tipo é obrigatório", "Ok");
+            }
+
+            else{
+                acabamentoControle.CriarOuAtualizar(acabamento);
+                await DisplayAlert("Sucesso", "Acabamento cadastrado com sucesso!", "OK");
+            }
         }
 
         private void Voltar_Clicked(object sender, EventArgs e)
