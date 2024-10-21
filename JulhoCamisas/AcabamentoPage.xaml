@@ -3,30 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JulhoCamisas.AcabamentoPage"
              Shell.NavBarIsVisible="False">
-      <ScrollView>
-              <Grid BackgroundColor="#d9d9d9">
-                     <Grid.RowDefinitions>
-                            <RowDefinition Height="250"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                     </Grid.RowDefinitions>
-                     <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                     </Grid.ColumnDefinitions>
+       <ScrollView>
+              <VerticalStackLayout>
+                     <Image Source="logo.png"
+                            Aspect="AspectFit"
+                            Margin="20, 0, 20, 50"
+                            HeightRequest="200"/>
 
-                     <HorizontalStackLayout >
-                            <Image Source="logo.png"
-                                   Aspect="AspectFit"
-                                   Margin="50, 20, 0, 0"/>
-
-                            <Label Text="Página do Acabamento"
-                                   FontSize="50"
-                                   TextColor="Black"
-                                   HorizontalTextAlignment="Center"
-                                   VerticalTextAlignment="Center"
-                                   Margin="200, 20"/>
-                     </HorizontalStackLayout>
+                     <Label Text="Página do Acabamento"
+                            FontSize="30"
+                            TextColor="Black"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            Margin="20, 10"/>
 
                      <Frame BackgroundColor="#d1d1d1"
                             Grid.Row="1"
@@ -53,7 +42,7 @@
                                           <ColumnDefinition Width="*"/>
                                           <ColumnDefinition Width="80"/>
                                    </Grid.ColumnDefinitions>
-                            
+
                                    <Label Text="ID:"
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"
@@ -65,7 +54,7 @@
                                           Margin="20, 10, 0, 5"
                                           Grid.Row="1"
                                           Grid.Column="0"/>
-                                   
+
                                    <Label Text="Tipo:"
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"
@@ -79,12 +68,12 @@
                                           Grid.Row="3"
                                           Grid.Column="0"/>
                                    <Button Text="EDITAR"
-                                          TextColor="Black"
-                                          HorizontalOptions="Start"
-                                          Clicked="EditarTipo_Clicked"
-                                          BackgroundColor="#d9d9d9"
-                                          Grid.Row="3"
-                                          Grid.Column="1"/>
+                                           TextColor="Black"
+                                           HorizontalOptions="Start"
+                                           Clicked="EditarTipo_Clicked"
+                                           BackgroundColor="#d9d9d9"
+                                           Grid.Row="3"
+                                           Grid.Column="1"/>
 
                                    <Label Text="Cor:"
                                           TextColor="Black"
@@ -99,12 +88,12 @@
                                           Grid.Row="5"
                                           Grid.Column="0"/>
                                    <Button Text="EDITAR"
-                                          TextColor="Black"
-                                          HorizontalOptions="Start"
-                                          Clicked="EditarCor_Clicked"
-                                          BackgroundColor="#d9d9d9"
-                                          Grid.Row="5"
-                                          Grid.Column="1"/>
+                                           TextColor="Black"
+                                           HorizontalOptions="Start"
+                                           Clicked="EditarCor_Clicked"
+                                           BackgroundColor="#d9d9d9"
+                                           Grid.Row="5"
+                                           Grid.Column="1"/>
 
                                    <Label Text="Quantidade:"
                                           TextColor="Black"
@@ -120,12 +109,12 @@
                                           Grid.Row="7"
                                           Grid.Column="0"/>
                                    <Button Text="EDITAR"
-                                          TextColor="Black"
-                                          HorizontalOptions="Start"
-                                          Clicked="EditarQuantidade_Clicked"
-                                          BackgroundColor="#d9d9d9"
-                                          Grid.Row="7"
-                                          Grid.Column="1"/>
+                                           TextColor="Black"
+                                           HorizontalOptions="Start"
+                                           Clicked="EditarQuantidade_Clicked"
+                                           BackgroundColor="#d9d9d9"
+                                           Grid.Row="7"
+                                           Grid.Column="1"/>
 
                                    <Label Text="Fornecedor:"
                                           TextColor="Black"
@@ -141,12 +130,12 @@
                                           Grid.Row="9"
                                           Grid.Column="0"/>
                                    <Button Text="EDITAR"
-                                          TextColor="Black"
-                                          HorizontalOptions="Start"
-                                          Clicked="EditarFornecedor_Clicked"
-                                          BackgroundColor="#d9d9d9"
-                                          Grid.Row="9"
-                                          Grid.Column="1"/>
+                                           TextColor="Black"
+                                           HorizontalOptions="Start"
+                                           Clicked="EditarFornecedor_Clicked"
+                                           BackgroundColor="#d9d9d9"
+                                           Grid.Row="9"
+                                           Grid.Column="1"/>
                             </Grid>
                      </Frame>
                      <Button Text="SALVAR"
@@ -164,7 +153,6 @@
                              Clicked="Voltar_Clicked"
                              Grid.Row="2"
                              Grid.Column="1"/>
-                            
-              </Grid>
-        </ScrollView>
+              </VerticalStackLayout>
+       </ScrollView>
 </ContentPage>

@@ -13,35 +13,27 @@ public class Produto_VendaControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual Registro? Ler(int id)
-  {
-    var collection = liteDB.GetCollection<Produto_Venda>(NomeDaTabela);
-    return collection.FindOne(d => d.Id == id);
-  }
+  public virtual void Criar()
+    {
 
-  //----------------------------------------------------------------------------
+    }
+//----------------------------------------------------------------------------
 
-  public virtual List<Produto_Venda>? LerTodos()
-  {
-    var tabela = liteDB.GetCollection<Produto_Venda>(NomeDaTabela);
-    return new List<Produto_Venda>(tabela.FindAll().OrderBy(d => d.Id));
-  }
+    public virtual void Atualizar()
+    {
 
-  //----------------------------------------------------------------------------
+    }
+//----------------------------------------------------------------------------
 
-  public virtual void Apagar(int id)
-  {
-    var collection = liteDB.GetCollection<Produto_Venda>(NomeDaTabela);
-    collection.Delete(id);
-  }
+    public virtual Registro? LerTodos()
+    {
+        return  null;
+    }
+//----------------------------------------------------------------------------
+    public virtual void Apagar()
+    {
 
-  //----------------------------------------------------------------------------
-
-  public virtual void CriarOuAtualizar(Produto_Venda produto_Venda)
-  {
-    var collection = liteDB.GetCollection<Produto_Venda>(NomeDaTabela);
-    collection.Upsert(produto_Venda);
-  }
+    }
 
   //----------------------------------------------------------------------------
 }

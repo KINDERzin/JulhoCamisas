@@ -4,39 +4,25 @@
              x:Class="JulhoCamisas.CadastrarCliente"
              Shell.NavBarIsVisible="False">
 
-       <ScrollView BackgroundColor="#d9d9d9">   
-              <Grid>
-                     <Grid.RowDefinitions>
-                            <RowDefinition Height="250"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                     </Grid.RowDefinitions>
-                     <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                     </Grid.ColumnDefinitions>
-                     
-                     <HorizontalStackLayout Grid.Row="0"
-                                            Grid.ColumnSpan="2"
-                                            HorizontalOptions="Center">
+       <ScrollView BackgroundColor="#d9d9d9">
+              <VerticalStackLayout VerticalOptions="Center">
 
-                            <Image Source="logo.png"
-                                   Aspect="AspectFit"
-                                   Margin="50, 20, 0, 0"/>
 
-                            <Label Text="Cadastrar cliente"
-                                   x:Name="labelTitulo"
-                                   TextColor="Black"
-                                   FontSize="50"
-                                   VerticalOptions="Center"
-                                   Margin="100, 10"/>
+                     <Image Source="logo.png"
+                            Margin="20, 50, 20, 50"
+                            HeightRequest="200"
+                            HorizontalOptions="Center"/>
 
-                     </HorizontalStackLayout>
+                     <Label Text="Cadastrar cliente"
+                            x:Name="labelTitulo"
+                            TextColor="Black"
+                            FontSize="30"
+                            HorizontalOptions="Center"/>
 
                      <Frame BackgroundColor="#d1d1d1"
                             Grid.Row="1"
                             Grid.ColumnSpan="2"
-                            Margin="150, 20">
+                            Margin="10, 20">
 
                             <VerticalStackLayout>
 
@@ -55,7 +41,7 @@
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"/>
 
-                                   <Entry Placeholder="Digite o nome" 
+                                   <Entry Placeholder="Digite o nome"
                                           TextColor="Black"
                                           Margin="20, 0, 20, 10"
                                           x:Name="NomeEntry"/>
@@ -64,7 +50,7 @@
                                           Margin="20, 10, 0, 5"
                                           TextColor="Black"/>
 
-                                   <Entry Placeholder="Digite o sobrenome" 
+                                   <Entry Placeholder="Digite o sobrenome"
                                           TextColor="Black"
                                           x:Name="SobrenomeEntry"
                                           Margin="20, 0, 20, 10"/>
@@ -73,7 +59,7 @@
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"/>
 
-                                   <Entry Placeholder="Digite o CPF" 
+                                   <Entry Placeholder="Digite o CPF"
                                           TextColor="Black"
                                           Margin="20, 0, 20, 10"
                                           x:Name="CpfEntry"/>
@@ -83,16 +69,16 @@
                                           Margin="20, 10, 0, 5"/>
 
                                    <Entry Placeholder="Digite o telefone"
-                                          Keyboard="Telephone"  
+                                          Keyboard="Telephone"
                                           TextColor="Black"
-                                          Margin="20, 0, 20, 10" 
+                                          Margin="20, 0, 20, 10"
                                           x:Name="TelefoneEntry"/>
 
                                    <Label Text="Endereço:"
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"/>
 
-                                   <Entry Placeholder="Digite o endereço c/ número" 
+                                   <Entry Placeholder="Digite o endereço c/ número"
                                           TextColor="Black"
                                           Margin="20, 0, 20, 10"
                                           x:Name="EnderecoEntry"/>
@@ -113,7 +99,7 @@
                              Clicked="OnSalvarDadosClicked"
                              Grid.Row="2"
                              Grid.Column="0"
-                             Margin="150, 0, 10, 10"/>
+                             Margin="50, 10"/>
 
                      <Button Text="VOLTAR"
                              TextColor="Black"
@@ -121,7 +107,7 @@
                              Clicked="VoltarClicked"
                              Grid.Row="2"
                              Grid.Column="1"
-                             Margin="10, 0, 150, 10"/>
-              </Grid> 
+                             Margin="50, 10"/>
+              </VerticalStackLayout>
        </ScrollView>
 </ContentPage>

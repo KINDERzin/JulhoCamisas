@@ -4,89 +4,80 @@
              x:Class="JulhoCamisas.ListaClientesPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#d9d9d9">
-             
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="250"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-    
-        <HorizontalStackLayout Grid.Row="0"
-                               HorizontalOptions="Center">
+
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center">
 
             <Image Source="logo.png"
-                Aspect="AspectFit"
-                Margin="50, 20, 0, 0"/>
+                   Aspect="AspectFit"
+                   Margin="20, 0, 20, 50"
+                   HeightRequest="200"/>
 
             <Label Text="Lista de clientes"
                    TextColor="Black"
-                   FontSize="50"
-                   VerticalOptions="Center"
-                   Margin="100, 10"/>
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   Margin="20, 10"/>
 
-        </HorizontalStackLayout>
+            <Frame BackgroundColor="#d1d1d1"
+                   Margin="50, 30"
+                   HeightRequest="300"
+                   Grid.Row="1">
+                <VerticalStackLayout>
+                    <ListView x:Name="ListaClientes"
+                              HasUnevenRows="True"
+                              ItemSelected="itemSelecionado"
+                              HorizontalOptions="Fill"
+                              VerticalOptions="Fill">
 
-        <Frame BackgroundColor="#d1d1d1"
-               Margin="50, 30"
-               HeightRequest="300"
-               Grid.Row="1">
-            <VerticalStackLayout>
-                <ListView x:Name="ListaClientes"
-                        HasUnevenRows="True"
-                        ItemSelected="itemSelecionado"
-                        HorizontalOptions="Fill"
-                        VerticalOptions="Fill">
-                        
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <VerticalStackLayout BackgroundColor="#d1d1d1">
+                                        <HorizontalStackLayout>
 
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <VerticalStackLayout BackgroundColor="#d1d1d1">
-                                    <HorizontalStackLayout>
+                                            <Label Text="{Binding Nome}"
+                                                   x:Name="labelNome"
+                                                   TextColor="Black"
+                                                   FontSize="20"/>
 
-                                        <Label Text="{Binding Nome}"
-                                            x:Name="labelNome" 
-                                            TextColor="Black"
-                                            FontSize="20"/>
+                                            <Label Text="{Binding Sobrenome}"
+                                                   x:Name="labelSobrenome"
+                                                   TextColor="Black"
+                                                   FontSize="20"
+                                                   Margin="10,0,0,0"/>
 
-                                        <Label Text="{Binding Sobrenome}"
-                                            x:Name="labelSobrenome" 
-                                            TextColor="Black"
-                                            FontSize="20"
-                                            Margin="10,0,0,0"/>
+                                        </HorizontalStackLayout>
 
-                                    </HorizontalStackLayout>
+                                        <Label Text="{Binding Telefone}"
+                                               x:Name="labelTelefone"
+                                               TextColor="Black"
+                                               FontSize="20"/>
 
-                                    <Label Text="{Binding Telefone}"
-                                        x:Name="labelTelefone" 
-                                        TextColor="Black"
-                                        FontSize="20"/>
+                                    </VerticalStackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </VerticalStackLayout>
+            </Frame>
 
-                                </VerticalStackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+            <VerticalStackLayout Grid.Row="2"
+                                 VerticalOptions="End">
+                <Button Text="Criar novo cliente"
+                        BackgroundColor="#8b8b8b"
+                        FontSize="16"
+                        TextColor="Black"
+                        Clicked="NovoClienteClicked"
+                        Margin="50,5"/>
+
+                <Button Text="Voltar"
+                        BackgroundColor="#8b8b8b"
+                        FontSize="16"
+                        TextColor="Black"
+                        Clicked="clicouBotaoVoltar"
+                        Margin="50,5"/>
             </VerticalStackLayout>
-        </Frame>
-        
-        <Button Text="Criar novo cliente"
-                BackgroundColor="#8b8b8b"
-                FontSize="16"
-                TextColor="Black"
-                Clicked="NovoClienteClicked"
-                Margin="50,5"
-                Grid.Row="2"/>
-
-        <Button Text="Voltar"
-                BackgroundColor="#8b8b8b"
-                FontSize="16"
-                TextColor="Black"
-                Clicked="clicouBotaoVoltar"
-                Margin="50,5"
-                Grid.Row="3"/>
-        
-    </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

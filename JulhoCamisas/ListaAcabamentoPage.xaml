@@ -5,32 +5,23 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="#d9d9d9">
              
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="250"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    <VerticalStackLayout>
     
-        <HorizontalStackLayout Grid.Row="0"
-                               HorizontalOptions="Center">
-
             <Image Source="logo.png"
                 Aspect="AspectFit"
-                Margin="50, 20, 0, 0"/>
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                Margin="10, 20, 10, 0"/>
 
             <Label Text="Lista de acabamentos"
                    TextColor="Black"
-                   FontSize="50"
-                   VerticalOptions="Center"
-                   Margin="100, 10"/>
-
-        </HorizontalStackLayout>
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   Margin="20, 10"/>
 
         <Frame BackgroundColor="#d1d1d1"
-               Margin="50, 30"
-               HeightRequest="300"
+               Margin="20, 10"
+               HeightRequest="400"
                Grid.Row="1">
             <VerticalStackLayout>
                 <ListView x:Name="ListaAcabamento"
@@ -76,6 +67,5 @@
                 Clicked="clicouBotaoVoltar"
                 Margin="50,5"
                 Grid.Row="3"/>
-        
-    </Grid>
+        </VerticalStackLayout>
 </ContentPage>

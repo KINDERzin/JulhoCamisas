@@ -5,7 +5,7 @@ namespace JulhoCamisas.Modelos;
 public class Cliente : Registro{
 
   [BsonId]
-  public Int64 Id { get; set; }
+  public int Id { get; set; }
 
   public string Nome { get; set; }
   public string Sobrenome { get; set; }
