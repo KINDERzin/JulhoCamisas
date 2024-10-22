@@ -6,9 +6,10 @@
        <ScrollView>
               <VerticalStackLayout>
                      <Image Source="logo.png"
-                            Aspect="AspectFit"
-                            Margin="20, 0, 20, 50"
-                            HeightRequest="200"/>
+                                   Aspect="AspectFit"
+                                   Margin="0, 30, 0, 10"
+                                   HeightRequest="150"
+                                   HorizontalOptions="Center"/>
 
                      <Label Text="Página do Acabamento"
                             FontSize="30"

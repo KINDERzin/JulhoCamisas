@@ -10,18 +10,18 @@
 
             <Image Source="logo.png"
                    Aspect="AspectFit"
-                   Margin="20, 0, 20, 50"
-                   HeightRequest="200"/>
+                   Margin="0, 20, 0, 10"
+                   HeightRequest="150"
+                   HorizontalOptions="Center"/>
 
             <Label Text="Lista de clientes"
                    TextColor="Black"
                    FontSize="30"
-                   HorizontalOptions="Center"
-                   Margin="20, 10"/>
+                   HorizontalOptions="Center"/>
 
             <Frame BackgroundColor="#d1d1d1"
-                   Margin="50, 30"
-                   HeightRequest="300"
+                   Margin="30, 20"
+                   HeightRequest="400"
                    Grid.Row="1">
                 <VerticalStackLayout>
                     <ListView x:Name="ListaClientes"
@@ -29,7 +29,6 @@
                               ItemSelected="itemSelecionado"
                               HorizontalOptions="Fill"
                               VerticalOptions="Fill">
-
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -62,22 +61,19 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <VerticalStackLayout Grid.Row="2"
-                                 VerticalOptions="End">
                 <Button Text="Criar novo cliente"
                         BackgroundColor="#8b8b8b"
                         FontSize="16"
-                        TextColor="Black"
+                        TextColor="White"
                         Clicked="NovoClienteClicked"
-                        Margin="50,5"/>
+                        Margin="50, 5"/>
 
                 <Button Text="Voltar"
                         BackgroundColor="#8b8b8b"
                         FontSize="16"
-                        TextColor="Black"
+                        TextColor="White"
                         Clicked="clicouBotaoVoltar"
-                        Margin="50,5"/>
-            </VerticalStackLayout>
+                        Margin="50, 5"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

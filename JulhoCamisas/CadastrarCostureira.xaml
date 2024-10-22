@@ -17,13 +17,15 @@
                             <ColumnDefinition Width="*"/>
                      </Grid.ColumnDefinitions>
 
-                    <HorizontalStackLayout Grid.Row="0"
+                     <HorizontalStackLayout Grid.Row="0"
                                             Grid.ColumnSpan="2"
                                             HorizontalOptions="Center">
 
                             <Image Source="logo.png"
                                    Aspect="AspectFit"
-                                   Margin="50, 20, 0, 0"/>
+                                   Margin="0, 30, 0, 10"
+                                   HeightRequest="150"
+                                   HorizontalOptions="Center"/>
 
                             <Label Text="Cadastrar funcionário"
                                    x:Name="labelTitulo"
@@ -49,12 +51,12 @@
                                    <Label x:Name="labelIdCostureira"
                                           IsVisible="False"
                                           TextColor="Black"
-                                          Margin="20, 10, 0, 5"/> 
+                                          Margin="20, 10, 0, 5"/>
 
                                    <Label Text="Nome:"
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"
-                                          Grid.Row="2"/>  
+                                          Grid.Row="2"/>
 
                                    <Entry Placeholder="Nome"
                                           TextColor="Black"
@@ -66,7 +68,7 @@
                                    <Label Text="Endereço:"
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"
-                                          Grid.Row="4"/>  
+                                          Grid.Row="4"/>
 
                                    <Entry Placeholder="Endereço"
                                           TextColor="Black"
@@ -78,7 +80,7 @@
                                    <Label Text="Telefone:"
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"
-                                          Grid.Row="6"/> 
+                                          Grid.Row="6"/>
 
                                    <Entry Placeholder="Email"
                                           TextColor="Black"
@@ -90,7 +92,7 @@
                                    <Label Text="CPF:"
                                           TextColor="Black"
                                           Margin="20, 10, 0, 5"
-                                          Grid.Row="8"/> 
+                                          Grid.Row="8"/>
 
                                    <Entry Placeholder="CPF"
                                           TextColor="Black"
@@ -98,7 +100,7 @@
                                           Margin="20, 0, 20, 10"
                                           x:Name="CpfEntry"
                                           Grid.Row="9"/>
-                                   
+
                                    <Button Text="Deletar acabamento"
                                            Clicked="DeletarClicked"
                                            IsVisible="False"
@@ -110,21 +112,21 @@
                      </Frame>
 
                      <Button Text="CONFIRMAR"
-                            TextColor="Black"
-                            BackgroundColor="#8b8b8b"
-                            Margin="50, 10, 10, 10"
-                            Clicked="OnConfirmClicked"
-                            Grid.Row="2"
-                            Grid.Column="0"/>
+                             TextColor="Black"
+                             BackgroundColor="#8b8b8b"
+                             Margin="50, 10, 10, 10"
+                             Clicked="OnConfirmClicked"
+                             Grid.Row="2"
+                             Grid.Column="0"/>
 
                      <Button Text="VOLTAR"
-                            TextColor="Black"
-                            BackgroundColor="#8b8b8b"
-                            Margin="10, 10, 50, 10"
-                            Clicked="OnBackClicked"
-                            Grid.Row="2"
-                            Grid.Column="1"/>
-        
-              </Grid> 
+                             TextColor="Black"
+                             BackgroundColor="#8b8b8b"
+                             Margin="10, 10, 50, 10"
+                             Clicked="OnBackClicked"
+                             Grid.Row="2"
+                             Grid.Column="1"/>
+
+              </Grid>
        </ScrollView>
 </ContentPage>

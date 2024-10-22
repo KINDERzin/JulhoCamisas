@@ -4,31 +4,30 @@
              x:Class="JulhoCamisas.ListaAcabamentoPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#d9d9d9">
-             
-    <VerticalStackLayout>
-    
-            <Image Source="logo.png"
-                Aspect="AspectFit"
-                HeightRequest="200"
-                HorizontalOptions="Center"
-                Margin="10, 20, 10, 0"/>
 
-            <Label Text="Lista de acabamentos"
-                   TextColor="Black"
-                   FontSize="30"
-                   HorizontalOptions="Center"
-                   Margin="20, 10"/>
+    <VerticalStackLayout>
+
+        <Image Source="logo.png"
+               Aspect="AspectFit"
+               Margin="0, 30, 0, 10"
+               HeightRequest="150"
+               HorizontalOptions="Center"/>
+
+        <Label Text="Lista de acabamentos"
+               TextColor="Black"
+               FontSize="30"
+               HorizontalOptions="Center"/>
 
         <Frame BackgroundColor="#d1d1d1"
-               Margin="20, 10"
+               Margin="30, 20"
                HeightRequest="400"
                Grid.Row="1">
             <VerticalStackLayout>
                 <ListView x:Name="ListaAcabamento"
-                        HasUnevenRows="True"
-                        ItemSelected="itemSelecionado"
-                        HorizontalOptions="Fill"
-                        VerticalOptions="Fill">
+                          HasUnevenRows="True"
+                          ItemSelected="itemSelecionado"
+                          HorizontalOptions="Fill"
+                          VerticalOptions="Fill">
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -36,8 +35,8 @@
                                 <VerticalStackLayout BackgroundColor="#d1d1d1">
                                     <HorizontalStackLayout>
                                         <Label Text="{Binding Tipo}"
-                                            TextColor="Black"
-                                            FontSize="20"/>
+                                               TextColor="Black"
+                                               FontSize="20"/>
                                     </HorizontalStackLayout>
 
                                     <Label Text="{Binding Fornecedor}"
@@ -51,21 +50,21 @@
                 </ListView>
             </VerticalStackLayout>
         </Frame>
-        
+
         <Button Text="Adicionar novo acabamento"
                 BackgroundColor="#8b8b8b"
                 FontSize="16"
-                TextColor="Black"
+                TextColor="White"
                 Clicked="NovoAcabamentoClicked"
-                Margin="50,5"
+                Margin="50, 5"
                 Grid.Row="2"/>
 
         <Button Text="Voltar"
                 BackgroundColor="#8b8b8b"
                 FontSize="16"
-                TextColor="Black"
+                TextColor="White"
                 Clicked="clicouBotaoVoltar"
-                Margin="50,5"
+                Margin="50, 5"
                 Grid.Row="3"/>
-        </VerticalStackLayout>
+    </VerticalStackLayout>
 </ContentPage>

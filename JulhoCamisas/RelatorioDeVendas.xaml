@@ -7,13 +7,14 @@
        <Grid>
               <Image Source="logo.png"
                      Aspect="AspectFit"
-                     HorizontalOptions="Center"
-                     VerticalOptions="Start" />
+                     Margin="0, 30, 0, 10"
+                     HeightRequest="150"
+                     HorizontalOptions="Center"/>
 
               <Label Text="RELATÓRIO DE VENDAS"
                      FontSize="Title"
                      HorizontalTextAlignment="Center"
-                     Margin="0, 20" />
+                     Margin="0, 20"/>
 
               <Grid RowDefinitions="Auto, Auto, Auto"
                     ColumnDefinitions="*, Auto">
@@ -21,37 +22,37 @@
                      <Label Text="Cliente:"
                             Grid.Row="0"
                             Grid.Column="0"
-                            Margin="20, 0" />
+                            Margin="20, 0"/>
 
                      <Entry x:Name="clienteEntry"
                             Grid.Row="0"
                             Grid.Column="1"
-                            Margin="5, 0" />
+                            Margin="5, 0"/>
 
                      <Button Text="EDITAR"
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Clicked="Editar_Clicked" />
+                             Grid.Row="0"
+                             Grid.Column="1"
+                             Clicked="Editar_Clicked"/>
 
                      <Label Text="Produto:"
                             Grid.Row="1"
                             Grid.Column="0"
-                            Margin="20, 0" />
+                            Margin="20, 0"/>
 
                      <Entry x:Name="produtoEntry"
                             Grid.Row="1"
                             Grid.Column="1"
-                            Margin="5, 0" />
+                            Margin="5, 0"/>
 
                      <Button Text="EDITAR"
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            Clicked="Editar_Clicked" />
+                             Grid.Row="1"
+                             Grid.Column="1"
+                             Clicked="Editar_Clicked"/>
 
                      <Label Text="Quantidade:"
                             Grid.Row="2"
                             Grid.Column="0"
-                            Margin="20, 0" />
+                            Margin="20, 0"/>
 
                      <Entry x:Name="quantidadeEntry"
                             Grid.Row="2"
@@ -59,17 +60,17 @@
                             Margin="5, 0"/>
 
                      <Button Text="EDITAR"
-                            Grid.Row="2"
-                            Grid.Column="1"
-                            Clicked="Editar_Clicked" />
+                             Grid.Row="2"
+                             Grid.Column="1"
+                             Clicked="Editar_Clicked"/>
               </Grid>
 
               <Button Text="CONFIRMAR DADOS"
-                     Margin="20"
-                     Clicked="Confirmar_Clicked" />
+                      Margin="20"
+                      Clicked="Confirmar_Clicked"/>
 
               <Button Text="VOLTAR"
-                     Margin="20"
-                     Clicked="Voltar_Clicked" />
+                      Margin="20"
+                      Clicked="Voltar_Clicked"/>
        </Grid>
 </ContentPage>

@@ -4,172 +4,174 @@
              x:Class="JulhoCamisas.PerfilCliente"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#d9d9d9">
-    <ScrollView>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="250"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-        
-            <HorizontalStackLayout Grid.Row="0">
-                <Image Source="logo.png"
-                        Aspect="AspectFit"
-                        Margin="50, 20, 0, 0"/>
-
-                <Label Text="Perfil cliente"
-                        FontSize="50"
-                        TextColor="Black"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center"
-                        Margin="200, 20"/>
-            </HorizontalStackLayout>
-
-            <Frame BackgroundColor="#d1d1d1"
-                    Grid.Row="1"
-                    Grid.ColumnSpan="2"
-                    Margin="50, 20">
+        <ScrollView>
                 <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="80"/>
-                    </Grid.ColumnDefinitions>
-            
-                    <Label Text="ID:"
-                            TextColor="Black"
-                            Margin="20, 10, 0, 5"
-                            Grid.Row="0"
-                            Grid.Column="0"/>
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="250"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
 
-                    <Label Text="ARRUMAR"
-                            TextColor="Black"
-                            Margin="20, 10, 0, 5"
-                            Grid.Row="1"
-                            Grid.Column="0"/>
-                    
-                    <Label Text="Nome:"
-                           TextColor="Black"
-                           Margin="20, 10, 0, 5"
-                           Grid.Row="2"
-                           Grid.Column="0"/>
+                        <HorizontalStackLayout Grid.Row="0">
+                                <Image Source="logo.png"
+                                       Aspect="AspectFit"
+                                       Margin="0, 30, 0, 10"
+                                       HeightRequest="150"
+                                       HorizontalOptions="Center"/>
 
-                    <Entry x:Name="nomeEntry"
-                           TextColor="Black"
-                           IsEnabled="False"
-                           Margin="20, 0, 20, 10"
-                           Grid.Row="3"
-                           Grid.Column="0"/>
-                    <Button Text="EDITAR"
-                            TextColor="Black"
-                            HorizontalOptions="Start"
-                            Clicked="editarNome_Clicked"
-                            BackgroundColor="#d9d9d9"
-                            Grid.Row="3"
-                            Grid.Column="1"/>
+                                <Label Text="Perfil cliente"
+                                       FontSize="50"
+                                       TextColor="Black"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"
+                                       Margin="200, 20"/>
+                        </HorizontalStackLayout>
 
-                    <Label Text="Sobrenome:"
-                           TextColor="Black"
-                           Margin="20, 10, 0, 5"
-                           Grid.Row="4"
-                           Grid.Column="0"/>
+                        <Frame BackgroundColor="#d1d1d1"
+                               Grid.Row="1"
+                               Grid.ColumnSpan="2"
+                               Margin="50, 20">
+                                <Grid>
+                                        <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="80"/>
+                                        </Grid.ColumnDefinitions>
 
-                    <Entry x:Name="sobrenomeEntry"
-                           TextColor="Black"
-                           Margin="20, 0, 20, 10"
-                           IsEnabled="False"
-                           Grid.Row="5"
-                           Grid.Column="0"/>
-                    <Button Text="EDITAR"
-                            TextColor="Black"
-                            HorizontalOptions="Start"
-                            Clicked="editarSobrenome_Clicked"
-                            BackgroundColor="#d9d9d9"
-                            Grid.Row="5"
-                            Grid.Column="1"/>
+                                        <Label Text="ID:"
+                                               TextColor="Black"
+                                               Margin="20, 10, 0, 5"
+                                               Grid.Row="0"
+                                               Grid.Column="0"/>
 
-                    <Label Text="CPF:"
-                           TextColor="Black"
-                           Margin="20, 10, 0, 5"
-                           Grid.Row="6"
-                           Grid.Column="0"/>
+                                        <Label Text="ARRUMAR"
+                                               TextColor="Black"
+                                               Margin="20, 10, 0, 5"
+                                               Grid.Row="1"
+                                               Grid.Column="0"/>
 
-                    <Entry x:Name="cpfEntry"
-                           TextColor="Black"
-                           Margin="20, 0, 20, 10"
-                           IsEnabled="False"
-                           Keyboard="Text"
-                           Grid.Row="7"
-                           Grid.Column="0"/>
-                    <Button Text="EDITAR"
-                            TextColor="Black"
-                            HorizontalOptions="Start"
-                            Clicked="editarCpf_Clicked"
-                            BackgroundColor="#d9d9d9"
-                            Grid.Row="7"
-                            Grid.Column="1"/>
+                                        <Label Text="Nome:"
+                                               TextColor="Black"
+                                               Margin="20, 10, 0, 5"
+                                               Grid.Row="2"
+                                               Grid.Column="0"/>
 
-                    <Label Text="Telefone:"
-                           TextColor="Black"
-                           Margin="20, 10, 0, 5"
-                           Grid.Row="8"
-                           Grid.Column="0"/>
+                                        <Entry x:Name="nomeEntry"
+                                               TextColor="Black"
+                                               IsEnabled="False"
+                                               Margin="20, 0, 20, 10"
+                                               Grid.Row="3"
+                                               Grid.Column="0"/>
+                                        <Button Text="EDITAR"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                Clicked="editarNome_Clicked"
+                                                BackgroundColor="#d9d9d9"
+                                                Grid.Row="3"
+                                                Grid.Column="1"/>
 
-                    <Entry x:Name="telefoneEntry"
-                           TextColor="Black"
-                           Keyboard="Text"
-                           Margin="20, 0, 20, 10"
-                           IsEnabled="False"
-                           Grid.Row="9"
-                           Grid.Column="0"/>
-                    <Button Text="EDITAR"
-                            TextColor="Black"
-                            HorizontalOptions="Start"
-                            Clicked="editarTelefone_Clicked"
-                            BackgroundColor="#d9d9d9"
-                            Grid.Row="9"
-                            Grid.Column="1"/>
+                                        <Label Text="Sobrenome:"
+                                               TextColor="Black"
+                                               Margin="20, 10, 0, 5"
+                                               Grid.Row="4"
+                                               Grid.Column="0"/>
 
-                    <Button Text="SALVAR"
-                            TextColor="Black"
-                            Margin="20, 0, 20, 5"
-                            Clicked="Salvar_Clicked"
-                            BackgroundColor="#d9d9d9"
-                            Grid.Row="10"
-                            Grid.Column="0"/>
+                                        <Entry x:Name="sobrenomeEntry"
+                                               TextColor="Black"
+                                               Margin="20, 0, 20, 10"
+                                               IsEnabled="False"
+                                               Grid.Row="5"
+                                               Grid.Column="0"/>
+                                        <Button Text="EDITAR"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                Clicked="editarSobrenome_Clicked"
+                                                BackgroundColor="#d9d9d9"
+                                                Grid.Row="5"
+                                                Grid.Column="1"/>
+
+                                        <Label Text="CPF:"
+                                               TextColor="Black"
+                                               Margin="20, 10, 0, 5"
+                                               Grid.Row="6"
+                                               Grid.Column="0"/>
+
+                                        <Entry x:Name="cpfEntry"
+                                               TextColor="Black"
+                                               Margin="20, 0, 20, 10"
+                                               IsEnabled="False"
+                                               Keyboard="Text"
+                                               Grid.Row="7"
+                                               Grid.Column="0"/>
+                                        <Button Text="EDITAR"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                Clicked="editarCpf_Clicked"
+                                                BackgroundColor="#d9d9d9"
+                                                Grid.Row="7"
+                                                Grid.Column="1"/>
+
+                                        <Label Text="Telefone:"
+                                               TextColor="Black"
+                                               Margin="20, 10, 0, 5"
+                                               Grid.Row="8"
+                                               Grid.Column="0"/>
+
+                                        <Entry x:Name="telefoneEntry"
+                                               TextColor="Black"
+                                               Keyboard="Text"
+                                               Margin="20, 0, 20, 10"
+                                               IsEnabled="False"
+                                               Grid.Row="9"
+                                               Grid.Column="0"/>
+                                        <Button Text="EDITAR"
+                                                TextColor="Black"
+                                                HorizontalOptions="Start"
+                                                Clicked="editarTelefone_Clicked"
+                                                BackgroundColor="#d9d9d9"
+                                                Grid.Row="9"
+                                                Grid.Column="1"/>
+
+                                        <Button Text="SALVAR"
+                                                TextColor="Black"
+                                                Margin="20, 0, 20, 5"
+                                                Clicked="Salvar_Clicked"
+                                                BackgroundColor="#d9d9d9"
+                                                Grid.Row="10"
+                                                Grid.Column="0"/>
+
+                                </Grid>
+                        </Frame>
+
+                        <Button Text="EXCLUIR CONTA?"
+                                TextColor="Black"
+                                Margin="50, 10, 50, 0"
+                                BackgroundColor="#8b8b8b"
+                                Clicked="clicouBotaoExcluirConta"
+                                Grid.Row="2"/>
+
+                        <Button Text="VOLTAR"
+                                TextColor="Black"
+                                Margin="50, 10"
+                                Clicked="Voltar_Clicked"
+                                BackgroundColor="#8b8b8b"
+                                Grid.Row="3"/>
 
                 </Grid>
-            </Frame>
-            
-            <Button Text="EXCLUIR CONTA?"  
-                    TextColor="Black"
-                    Margin="50, 10, 50, 0"
-                    BackgroundColor="#8b8b8b"
-                    Clicked="clicouBotaoExcluirConta"
-                    Grid.Row="2"/>
-
-            <Button Text="VOLTAR"
-                    TextColor="Black"
-                    Margin="50, 10"
-                    Clicked="Voltar_Clicked"
-                    BackgroundColor="#8b8b8b"
-                    Grid.Row="3"/>
-            
-        </Grid>
-    </ScrollView>
+        </ScrollView>
 </ContentPage>

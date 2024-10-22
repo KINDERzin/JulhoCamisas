@@ -2,15 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JulhoCamisas.CadastrarCliente"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#d9d9d9">
 
-       <ScrollView BackgroundColor="#d9d9d9">
+       <ScrollView>
               <VerticalStackLayout VerticalOptions="Center">
 
-
                      <Image Source="logo.png"
-                            Margin="20, 50, 20, 50"
-                            HeightRequest="200"
+                            Aspect="AspectFill"
+                            Margin="0, 20, 0, 10"
+                            HeightRequest="150"
                             HorizontalOptions="Center"/>
 
                      <Label Text="Cadastrar cliente"
@@ -22,8 +23,7 @@
                      <Frame BackgroundColor="#d1d1d1"
                             Grid.Row="1"
                             Grid.ColumnSpan="2"
-                            Margin="10, 20">
-
+                            Margin="30, 20">
                             <VerticalStackLayout>
 
                                    <Label Text="ID cliente:"
@@ -94,7 +94,7 @@
                      </Frame>
 
                      <Button Text="CONFIRMAR"
-                             TextColor="Black"
+                             TextColor="White"
                              BackgroundColor="#8b8b8b"
                              Clicked="OnSalvarDadosClicked"
                              Grid.Row="2"
@@ -102,7 +102,7 @@
                              Margin="50, 10"/>
 
                      <Button Text="VOLTAR"
-                             TextColor="Black"
+                             TextColor="White"
                              BackgroundColor="#8b8b8b"
                              Clicked="VoltarClicked"
                              Grid.Row="2"

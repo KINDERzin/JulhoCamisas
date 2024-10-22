@@ -4,7 +4,7 @@
              x:Class="JulhoCamisas.ListaCostureiraPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#d9d9d9">
-             
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="250"/>
@@ -12,13 +12,15 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-    
+
         <HorizontalStackLayout Grid.Row="0"
                                HorizontalOptions="Center">
 
             <Image Source="logo.png"
-                Aspect="AspectFit"
-                Margin="50, 20, 0, 0"/>
+                   Aspect="AspectFit"
+                   Margin="0, 30, 0, 10"
+                   HeightRequest="150"
+                   HorizontalOptions="Center"/>
 
             <Label Text="Lista de funcionários"
                    TextColor="Black"
@@ -34,10 +36,10 @@
                Grid.Row="1">
             <VerticalStackLayout>
                 <ListView x:Name="ListaCostureira"
-                        HasUnevenRows="True"
-                        ItemSelected="itemSelecionado"
-                        HorizontalOptions="Fill"
-                        VerticalOptions="Fill">
+                          HasUnevenRows="True"
+                          ItemSelected="itemSelecionado"
+                          HorizontalOptions="Fill"
+                          VerticalOptions="Fill">
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -62,7 +64,7 @@
                 </ListView>
             </VerticalStackLayout>
         </Frame>
-        
+
         <Button Text="Adicionar novo(a) funcionário(a)"
                 BackgroundColor="#8b8b8b"
                 FontSize="16"
@@ -78,6 +80,6 @@
                 Clicked="clicouBotaoVoltar"
                 Margin="50,5"
                 Grid.Row="3"/>
-        
+
     </Grid>
 </ContentPage>
