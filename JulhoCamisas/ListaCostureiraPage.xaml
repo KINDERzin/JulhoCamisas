@@ -5,35 +5,21 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="#d9d9d9">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="250"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    <VerticalStackLayout VerticalOptions="Center">
 
-        <HorizontalStackLayout Grid.Row="0"
-                               HorizontalOptions="Center">
+        <Image Source="logo.png"
+               HeightRequest="150"
+               HorizontalOptions="Center"/>
 
-            <Image Source="logo.png"
-                   Aspect="AspectFit"
-                   Margin="0, 30, 0, 10"
-                   HeightRequest="150"
-                   HorizontalOptions="Center"/>
-
-            <Label Text="Lista de funcionários"
-                   TextColor="Black"
-                   FontSize="50"
-                   VerticalOptions="Center"
-                   Margin="100, 10"/>
-
-        </HorizontalStackLayout>
+        <Label Text="Lista de funcionários"
+               TextColor="Black"
+               FontSize="30"
+               Margin="0, 10"
+               HorizontalOptions="Center"/>
 
         <Frame BackgroundColor="#d1d1d1"
-               Margin="50, 30"
-               HeightRequest="300"
-               Grid.Row="1">
+               Margin="40, 30"
+               HeightRequest="300">
             <VerticalStackLayout>
                 <ListView x:Name="ListaCostureira"
                           HasUnevenRows="True"
@@ -70,16 +56,13 @@
                 FontSize="16"
                 TextColor="Black"
                 Clicked="NovaCostureiraClicked"
-                Margin="50,5"
-                Grid.Row="2"/>
+                Margin="50,5"/>
 
         <Button Text="Voltar"
                 BackgroundColor="#8b8b8b"
                 FontSize="16"
                 TextColor="Black"
                 Clicked="clicouBotaoVoltar"
-                Margin="50,5"
-                Grid.Row="3"/>
-
-    </Grid>
+                Margin="50,5"/>
+    </VerticalStackLayout>
 </ContentPage>

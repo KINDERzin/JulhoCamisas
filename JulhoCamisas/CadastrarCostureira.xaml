@@ -5,41 +5,24 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="#d9d9d9">
        <ScrollView>
-              <Grid>
-                     <Grid.RowDefinitions>
-                            <RowDefinition Height="250"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                     </Grid.RowDefinitions>
-                     <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                     </Grid.ColumnDefinitions>
+              <VerticalStackLayout VerticalOptions="Center">
 
-                     <HorizontalStackLayout Grid.Row="0"
-                                            Grid.ColumnSpan="2"
-                                            HorizontalOptions="Center">
+                     <Image Source="logo.png"
+                            Aspect="AspectFit"
+                            Margin="0, 30, 0, 10"
+                            HeightRequest="150"
+                            HorizontalOptions="Center"/>
 
-                            <Image Source="logo.png"
-                                   Aspect="AspectFit"
-                                   Margin="0, 30, 0, 10"
-                                   HeightRequest="150"
-                                   HorizontalOptions="Center"/>
-
-                            <Label Text="Cadastrar funcionário"
-                                   x:Name="labelTitulo"
-                                   TextColor="Black"
-                                   FontSize="50"
-                                   VerticalOptions="Center"
-                                   Margin="100, 10"/>
-
-                     </HorizontalStackLayout>
+                     <Label Text="Cadastrar funcionário"
+                            x:Name="labelTitulo"
+                            TextColor="Black"
+                            FontSize="30"
+                            HorizontalOptions="Center"/>
 
                      <Frame BackgroundColor="#d1d1d1"
                             Grid.Row="1"
                             Grid.ColumnSpan="2"
-                            Margin="50, 20, 50, 0">
+                            Margin="40, 20, 40, 0">
                             <VerticalStackLayout>
 
                                    <Label Text="ID acabamento:"
@@ -114,7 +97,7 @@
                      <Button Text="CONFIRMAR"
                              TextColor="Black"
                              BackgroundColor="#8b8b8b"
-                             Margin="50, 10, 10, 10"
+                             Margin="50, 15, 50, 5"
                              Clicked="OnConfirmClicked"
                              Grid.Row="2"
                              Grid.Column="0"/>
@@ -122,11 +105,10 @@
                      <Button Text="VOLTAR"
                              TextColor="Black"
                              BackgroundColor="#8b8b8b"
-                             Margin="10, 10, 50, 10"
+                             Margin="50, 5, 50, 10"
                              Clicked="OnBackClicked"
                              Grid.Row="2"
                              Grid.Column="1"/>
-
-              </Grid>
+              </VerticalStackLayout>
        </ScrollView>
 </ContentPage>
